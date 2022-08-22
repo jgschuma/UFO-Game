@@ -7,22 +7,21 @@ public class PlayerController : MonoBehaviour
     //The UFO's move speed
     public float moveSpeed = 40f;
 
-   public float horizontalInput;
-   public float verticalInput;
+    public float horizontalInput;
+    public float verticalInput;
 
 
     // Start is called when the game starts
     private void Start()
     {
-        //Assigns the horizontal and vertical axes to our controls
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //transform.Translate(1, 0, 0);
+
+        //Checks to see if the horzontal or vertical inputs are being pressed
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
