@@ -44,12 +44,12 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void TractorBeamAnim(){
-        while(Input.getKeyDown(Fire1) == true){
+    /*void TractorBeamAnim(){
+        while(Input.GetKeyDown(Fire1) == true){
             TractorBeamBack.spriteRenderer.enabled = true;
             TractorBeamFront.spriteRenderer.enabled = true;
         }
 
-    }
+    }*/
 
 }
