@@ -10,11 +10,18 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     public float verticalInput;
 
+    public Rigidbody2D rigidbody;
+    Vector3 movement;
+
+    public GameObject tractorBeamFront;
+    public GameObject tractorBeamBack;
+
+
 
     // Start is called when the game starts
     private void Start()
     {
-
+        rigidbody.freezeRotation = true;
     }
 
     // Update is called once per frame
@@ -25,8 +32,24 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
+
+
         //Move the UFO based on player input
-        transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime);
+        //transform.Translate(new Vector2(horizontalInput, verticalInput) * moveSpeed * Time.deltaTime);
+        movement = new Vector3(horizontalInput, verticalInput, 0).normalized;
+    }
+
+    void FixedUpdate(){
+        rigidbody.MovePosition(transform.position + movement * moveSpeed* Time.deltaTime);
+    }
+
+
+    void TractorBeamAnim(){
+        while(Input.getKeyDown(Fire1) == true){
+            TractorBeamBack.spriteRenderer.enabled = true;
+            TractorBeamFront.spriteRenderer.enabled = true;
+        }
+
     }
 
 }
