@@ -43,13 +43,4 @@ public class PlayerController : MonoBehaviour
         rigidbody.MovePosition(transform.position + movement * moveSpeed* Time.deltaTime);
     }
 
-
-    /*void TractorBeamAnim(){
-        while(Input.GetKeyDown(Fire1) == true){
-            TractorBeamBack.spriteRenderer.enabled = true;
-            TractorBeamFront.spriteRenderer.enabled = true;
-        }
-
-    }*/
-
 }
