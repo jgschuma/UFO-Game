@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rigidbody;
     Vector3 movement;
+    public Animator anim;
 
     public GameObject tractorBeamFront;
     public GameObject tractorBeamBack;
@@ -22,16 +24,17 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rigidbody.freezeRotation = true;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
         //Checks to see if the horzontal or vertical inputs are being pressed
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
-
+        anim.SetInteger("HoriInput", Math.Sign(horizontalInput));
+        anim.SetInteger("VertiInput", Math.Sign(verticalInput));
 
 
         //Move the UFO based on player input
