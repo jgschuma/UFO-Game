@@ -846,6 +846,7 @@ MonoBehaviour:
   horizontalInput: 0
   verticalInput: 0
   rigidbody: {fileID: 939284806}
+  anim: {fileID: 0}
   tractorBeamFront: {fileID: 0}
   tractorBeamBack: {fileID: 0}
 --- !u!61 &939284805
