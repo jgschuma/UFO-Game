@@ -1,10 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
     public Rigidbody2D ShieldRigidBody;
+    public GameObject ShieldPickup;
+    public string thisName = "ShieldPickup";
 
     // Start is called before the first frame update
     void Start()
@@ -14,15 +16,19 @@ public class Shield : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && Input.GetButton("Fire1"))
         {
-            Pickup();
+            Pickup(other);
         }
     }
 
-    void Pickup()
+    void Pickup(Collider2D player)
     {
         Debug.Log("Power up picked up");
-
+        player.GetComponent<BeamController>().hasItem = true;
+        player.GetComponent<BeamController>().StartCooldown();
+        player.GetComponent<BeamController>().currentItem = GameObject.Find("ShieldPickup");
+        ShieldPickup.SetActive(false);
+        
     }
 }
