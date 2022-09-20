@@ -13,16 +13,12 @@ public class PlayerController : MonoBehaviour
     public float verticalInput;
     public Rigidbody2D UFO_Rigidbody;
     Vector3 movement;
-    public Animator anim;
 
 
     // Start is called when the game starts
     private void Start()
     {
-
         UFO_Rigidbody.freezeRotation = true;
-
-        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,14 +28,7 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
-        // Set the movement vector for use in FixedUpdate()
-
-        anim.SetInteger("HoriInput", Math.Sign(horizontalInput));
-        anim.SetInteger("VertiInput", Math.Sign(verticalInput));
-
-
         movement = new Vector3(horizontalInput, verticalInput, 0).normalized;
-
     }
 
     // We use FixedUpdate to actually move the player to avoid frame rate causing a difference in move speed
