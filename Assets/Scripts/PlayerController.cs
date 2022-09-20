@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float verticalInput;
     public Rigidbody2D UFO_Rigidbody;
     Vector3 movement;
+    public Animator anim;
 
     // /*These variables allow for the use of the tractorBeam
     // game object*/
@@ -25,20 +27,26 @@ public class PlayerController : MonoBehaviour
     // Start is called when the game starts
     private void Start()
     {
+
         UFO_Rigidbody.freezeRotation = true;
-        //tractorBeam.SetActive(false);
-        //hasItem = false;
+
+        anim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
         // Checks to see if the horzontal or vertical inputs are being pressed
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
         // Set the movement vector for use in FixedUpdate()
+
+        anim.SetInteger("HoriInput", Math.Sign(horizontalInput));
+        anim.SetInteger("VertiInput", Math.Sign(verticalInput));
+
+
         movement = new Vector3(horizontalInput, verticalInput, 0).normalized;
 
         // calls manager for the tractor beam
