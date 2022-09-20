@@ -738,6 +738,7 @@ GameObject:
   - component: {fileID: 939284806}
   - component: {fileID: 939284805}
   - component: {fileID: 939284807}
+  - component: {fileID: 939284808}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Player
@@ -847,7 +848,6 @@ MonoBehaviour:
   horizontalInput: 0
   verticalInput: 0
   UFO_Rigidbody: {fileID: 939284806}
-  anim: {fileID: 939284801}
 --- !u!61 &939284805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -913,6 +913,18 @@ MonoBehaviour:
   beamCoolDuration: 0.5
   currentItem: {fileID: 0}
   ItemSpawn: {fileID: 1029591632}
+--- !u!114 &939284808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939284800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f10ff832811e2a64493275536ad4268c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &953449140
 GameObject:
   m_ObjectHideFlags: 0
