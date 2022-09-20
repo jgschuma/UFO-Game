@@ -846,10 +846,8 @@ MonoBehaviour:
   moveSpeed: 3.5
   horizontalInput: 0
   verticalInput: 0
-
   UFO_Rigidbody: {fileID: 939284806}
-  anim: {fileID: 0}
-
+  anim: {fileID: 939284801}
 --- !u!61 &939284805
 BoxCollider2D:
   m_ObjectHideFlags: 0
