@@ -9,6 +9,7 @@ public class Enemy_AirShoot : MonoBehaviour
     public float wanderRadius;
     public float alertRadius;
     public float shootingDistance;
+    public Rigidbody2D enemyRigidBody;
 
     private Vector2 homebase;
     private float distanceToPlayer;
@@ -17,6 +18,7 @@ public class Enemy_AirShoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        enemyRigidBody.freezeRotation = true;
         homebase = transform.position;
     }
 
