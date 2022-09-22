@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
         UFO_Rigidbody.freezeRotation = true;
 
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
 
     }
 
