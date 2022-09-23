@@ -1,43 +1,28 @@
 fileFormatVersion: 2
-guid: 65968537480bd7e478df89c5c84866f0
+guid: 922b270b193060148bc36658e02531cc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9062421519713537516
-    second: Tractor_Beam_Full-Sheet_0
+      213: 3067655468263692154
+    second: NME_FlyChase-Sheet_0
   - first:
-      213: 5107670110895408894
-    second: Tractor_Beam_Full-Sheet_1
+      213: 8626337689519506300
+    second: NME_FlyChase-Sheet_1
   - first:
-      213: 1509756735343237429
-    second: Tractor_Beam_Full-Sheet_2
+      213: -8996424577274412327
+    second: NME_FlyChase-Sheet_2
   - first:
-      213: 1457165282406212626
-    second: Tractor_Beam_Full-Sheet_3
+      213: 1784468115292068312
+    second: NME_FlyChase-Sheet_3
   - first:
-      213: -4177295342241590547
-    second: Tractor_Beam_Full-Sheet_4
+      213: 101835986099146808
+    second: NME_FlyChase-Sheet_4
   - first:
-      213: 8627611225799027813
-    second: Tractor_Beam_Full-Sheet_5
+      213: 7922051896136146285
+    second: NME_FlyChase-Sheet_5
   - first:
-      213: 6282057120611007031
-    second: Tractor_Beam_Full-Sheet_6
-  - first:
-      213: -6696389051380472267
-    second: Tractor_Beam_Full-Sheet_7
-  - first:
-      213: 2156696976175766287
-    second: Tractor_Beam_Full-Sheet_8
-  - first:
-      213: 1025997553310358331
-    second: Tractor_Beam_Full-Sheet_9
-  - first:
-      213: -6764738036610713479
-    second: Tractor_Beam_Full-Sheet_10
-  - first:
-      213: 7367811854156427502
-    second: Tractor_Beam_Full-Sheet_11
+      213: -5675460681682483917
+    second: NME_FlyChase-Sheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,13 +108,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tractor_Beam_Full-Sheet_0
+      name: NME_FlyChase-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
-        width: 32
-        height: 48
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +122,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ced816f7b5034cd70800000000000000
-      internalID: 9062421519713537516
+      spriteID: a77542f2560829a20800000000000000
+      internalID: 3067655468263692154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tractor_Beam_Full-Sheet_1
+      name: NME_FlyChase-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73cf50ac68e6b770800000000000000
+      internalID: 8626337689519506300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NME_FlyChase-Sheet_2
       rect:
         serializedVersion: 2
         x: 32
-        y: 48
-        width: 32
-        height: 48
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,104 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef60dcd77e612e640800000000000000
-      internalID: 5107670110895408894
+      spriteID: 9d207f61387462380800000000000000
+      internalID: -8996424577274412327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tractor_Beam_Full-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 48
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 539136370cbb3f410800000000000000
-      internalID: 1509756735343237429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tractor_Beam_Full-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 48
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 214aadc9a14e83410800000000000000
-      internalID: 1457165282406212626
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tractor_Beam_Full-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 48
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de2dbcbb4044706c0800000000000000
-      internalID: -4177295342241590547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tractor_Beam_Full-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 48
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56c6ce5e2be6bb770800000000000000
-      internalID: 8627611225799027813
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tractor_Beam_Full-Sheet_6
+      name: NME_FlyChase-Sheet_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +185,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73a7bbcdaa95e2750800000000000000
-      internalID: 6282057120611007031
+      spriteID: 8d99efcdb44b3c810800000000000000
+      internalID: 1784468115292068312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tractor_Beam_Full-Sheet_7
+      name: NME_FlyChase-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8309ac03a4bc96100800000000000000
+      internalID: 101835986099146808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NME_FlyChase-Sheet_5
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 32
-        height: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 536e6a203a5a113a0800000000000000
-      internalID: -6696389051380472267
+      spriteID: d6d97690a38c0fd60800000000000000
+      internalID: 7922051896136146285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tractor_Beam_Full-Sheet_8
+      name: NME_FlyChase-Sheet_6
       rect:
         serializedVersion: 2
-        x: 64
+        x: 48
         y: 0
-        width: 32
-        height: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,71 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0b9d1129702eed10800000000000000
-      internalID: 2156696976175766287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tractor_Beam_Full-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3bdb79b6531d3e00800000000000000
-      internalID: 1025997553310358331
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tractor_Beam_Full-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 978be39c892de12a0800000000000000
-      internalID: -6764738036610713479
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tractor_Beam_Full-Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee0f7e258d9bf3660800000000000000
-      internalID: 7367811854156427502
+      spriteID: 3358e937496bc31b0800000000000000
+      internalID: -5675460681682483917
       vertices: []
       indices: 
       edges: []
