@@ -12,6 +12,7 @@ public class BeamController : MonoBehaviour
     public float beamCoolDuration;
     public GameObject currentItem;
     public GameObject ItemSpawn;
+    public GameObject currentPower;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,10 @@ public class BeamController : MonoBehaviour
             tractorBeam.SetActive(true);
         } // If key is pressed and an Item is held, drop the item
         else if (Input.GetButton("Fire1") && hasItem == true && beamOnCooldown == false){
+            if(currentPower != null)
+            {
+                currentPower.SetActive(false);
+            }
             currentItem.SetActive(true);
             currentItem.transform.position = ItemSpawn.transform.position;
             Debug.Log("Item has been dropped");
