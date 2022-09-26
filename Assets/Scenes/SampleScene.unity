@@ -175,8 +175,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 293351024}
-  - component: {fileID: 293351026}
   - component: {fileID: 293351025}
+  - component: {fileID: 293351026}
   m_Layer: 0
   m_Name: ShieldEffect
   m_TagString: Untagged
@@ -192,7 +192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293351023}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08, y: 0.23, z: -1}
+  m_LocalPosition: {x: 0, y: 0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 16106418}
@@ -395,7 +395,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.03
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -1757,6 +1757,7 @@ GameObject:
   - component: {fileID: 1788289957}
   - component: {fileID: 1788289961}
   - component: {fileID: 1788289962}
+  - component: {fileID: 1788289963}
   m_Layer: 0
   m_Name: ShieldPickup
   m_TagString: ItemPickup
@@ -1899,6 +1900,25 @@ MonoBehaviour:
   ShieldPower: {fileID: 16106417}
   TractorBeam: {fileID: 953449140}
   thisName: ShieldPickup
+--- !u!95 &1788289963
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788289956}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 39d5492e5cdd9154a81636a0950c887f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1896262771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,6 +1962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2033893581}
+  - component: {fileID: 2033893582}
   m_Layer: 0
   m_Name: Items
   m_TagString: Untagged
@@ -1957,10 +1978,22 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033893580}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.07891503, y: -0.21154733, z: -14.585651}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 16106418}
   m_Father: {fileID: 939284803}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2033893582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033893580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db43e8c024017c3439c6f1ef505be908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

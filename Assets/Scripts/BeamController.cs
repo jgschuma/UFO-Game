@@ -36,8 +36,7 @@ public class BeamController : MonoBehaviour
             tractorBeam.SetActive(true);
         } // If key is pressed and an Item is held, drop the item
         else if (Input.GetButton("Fire1") && hasItem == true && beamOnCooldown == false){
-            if(currentPower != null)
-            {
+            if(currentPower != null){
                 currentPower.SetActive(false);
             }
             currentItem.SetActive(true);
