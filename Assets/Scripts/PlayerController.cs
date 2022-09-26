@@ -22,7 +22,12 @@ public class PlayerController : MonoBehaviour
 
         UFO_Rigidbody.freezeRotation = true;
 
+<<<<<<< HEAD
         anim = GetComponent<Animator>();
+=======
+        //anim = GetComponent<Animator>();
+
+>>>>>>> 4aa52268c6ba1f8fd6755f20a43c5a999b972fff
     }
 
     // Update is called once per frame
