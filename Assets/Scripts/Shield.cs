@@ -6,8 +6,9 @@ public class Shield : MonoBehaviour
 {
     public Rigidbody2D ShieldRigidBody;
     public GameObject ShieldPickup;
+    public GameObject ShieldPower;
+    public GameObject TractorBeam;
     public string thisName = "ShieldPickup";
-
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,9 @@ public class Shield : MonoBehaviour
         player.GetComponent<BeamController>().hasItem = true;
         player.GetComponent<BeamController>().StartCooldown();
         player.GetComponent<BeamController>().currentItem = GameObject.Find("ShieldPickup");
+        player.GetComponent<BeamController>().currentPower = ShieldPower;
+        ShieldPower.SetActive(true);
+
         ShieldPickup.SetActive(false);
-        
     }
 }
