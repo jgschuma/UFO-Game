@@ -109,7 +109,6 @@ MonoBehaviour:
   firePoint: {fileID: 657866525997187782}
   bulletPrefab: {fileID: 8341728407448644063, guid: 14f1ba500a8c6874596e43d34fb386d9,
     type: 3}
-  bulletSpeed: 25
 --- !u!95 &7388178859189159339
 Animator:
   serializedVersion: 3
@@ -120,7 +119,7 @@ Animator:
   m_GameObject: {fileID: 1749428442413796715}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6add0fb8639fdec47aced10f9c1480b0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
