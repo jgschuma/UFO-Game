@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1749428442413796712}
   - component: {fileID: 1749428442413796713}
   - component: {fileID: 1749428442413796714}
+  - component: {fileID: 7388178859189159339}
   - component: {fileID: 1749428442413796719}
   - component: {fileID: 1749428442413796718}
   m_Layer: 0
@@ -28,9 +29,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749428442413796715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.68, y: 1.23, z: -8.501953}
-  m_LocalScale: {x: 0.13426206, y: 0.14972037, z: 1}
-  m_Children: []
+  m_LocalPosition: {x: 2.6698, y: 1.2443, z: -8.501953}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 657866525997187782}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -73,9 +75,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d49a8f589a972e4f9a4c3b1c097027d, type: 3}
-  m_Color: {r: 0.8679245, g: 0.1514774, b: 0.1514774, a: 1}
-  m_FlipX: 0
+  m_Sprite: {fileID: -6826990926382648832, guid: 5df1a4661387e3041a02f79c2067096e,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -100,8 +103,32 @@ MonoBehaviour:
   speed: 2
   wanderRadius: 5
   alertRadius: 2
-  shootingDistance: 0.25
+  shootingDistance: 1
+  rateOfFire: 1
   enemyRigidBody: {fileID: 1749428442413796718}
+  firePoint: {fileID: 657866525997187782}
+  bulletPrefab: {fileID: 8341728407448644063, guid: 14f1ba500a8c6874596e43d34fb386d9,
+    type: 3}
+  bulletSpeed: 25
+--- !u!95 &7388178859189159339
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749428442413796715}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!58 &1749428442413796719
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -115,9 +142,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.01, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.09115588
 --- !u!50 &1749428442413796718
 Rigidbody2D:
   serializedVersion: 4
@@ -130,12 +157,42 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 1
+  m_Mass: 100
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!1 &3595532170684797193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 657866525997187782}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &657866525997187782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3595532170684797193}
+  m_LocalRotation: {x: -0, y: -0, z: -0.21398418, w: 0.97683716}
+  m_LocalPosition: {x: -0.03399992, y: -0.07500005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1749428442413796712}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -24.712002}
