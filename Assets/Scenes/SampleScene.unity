@@ -1009,10 +1009,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c352e466a63d09849be4f29b864b415c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3.5
+  moveSpeed: 7
+  moveAccel: 0.001
+  decelRate: 2
   horizontalInput: 0
   verticalInput: 0
-  UFO_Rigidbody: {fileID: 939284806}
+  xSpeed: 0
+  ySpeed: 0
+  movement: {x: 0, y: 0, z: 0}
 --- !u!61 &939284805
 BoxCollider2D:
   m_ObjectHideFlags: 0
