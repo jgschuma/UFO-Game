@@ -372,326 +372,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0912e9f5f8ae2b490800000000000000
-      internalID: -7731859708736298608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playable_UFO-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c059e9edd1ff36220800000000000000
-      internalID: 2478104723737974028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playable_UFO-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d433583a54abc89f0800000000000000
-      internalID: -464791853267078323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playable_UFO-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db861c195d400e190800000000000000
-      internalID: -7935337228106897219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playable_UFO-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41525476f37895e20800000000000000
-      internalID: 3339849305057207572
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playable_UFO-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e98c7102e5744960800000000000000
-      internalID: 7585317285946755557
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playable_UFO-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ec90f4b67881fc10800000000000000
-      internalID: 2085598145872436456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playable_UFO-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0df768a6d11fbd390800000000000000
-      internalID: -7792369621590966320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playable_UFO-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 116da4e3d2c3add90800000000000000
-      internalID: -7072274099815655919
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playable_UFO-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e7ee076d7cb54380800000000000000
-      internalID: -8987570234561992727
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playable_UFO-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a3a256dde2561980800000000000000
-      internalID: -8568570059569323098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playable_UFO-Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: afc8cd44734aae860800000000000000
-      internalID: 7560035481780260090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playable_UFO-Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ab6423f663dd2270800000000000000
-      internalID: 8227464533395139495
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playable_UFO-Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c9d3b21ef83e5f00800000000000000
-      internalID: 1107385222266345924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playable_UFO-Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4dcb3b7410a135d60800000000000000
-      internalID: 7877668766001380564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Playable_UFO-Sheet_15
       rect:
         serializedVersion: 2
         x: 0
-        y: 112
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -712,7 +397,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 112
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -733,7 +418,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 112
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -754,7 +439,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 112
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -775,7 +460,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 112
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -796,7 +481,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -817,7 +502,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 96
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -838,7 +523,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 96
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -859,7 +544,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 96
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -880,7 +565,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 96
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -901,7 +586,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -922,7 +607,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 80
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -943,7 +628,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 80
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -964,7 +649,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 80
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -985,7 +670,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 80
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -1006,7 +691,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1027,7 +712,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 64
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1048,7 +733,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 64
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1069,7 +754,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 64
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1090,7 +775,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -1111,7 +796,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1132,7 +817,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 48
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1153,7 +838,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 48
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1174,7 +859,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 48
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1195,7 +880,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 48
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -1212,11 +897,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_40
+      name: Playable_UFO-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -1226,18 +911,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79e7ec2a609f4de30800000000000000
-      internalID: 4527517332310752919
+      spriteID: dbe91f6dba0c3dbc0800000000000000
+      internalID: -3759449419646132547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_41
+      name: Playable_UFO-Sheet_1
       rect:
         serializedVersion: 2
         x: 16
-        y: 32
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -1247,18 +932,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f86872877014df70800000000000000
-      internalID: 9211005243355588851
+      spriteID: 0632374fe8e133cc0800000000000000
+      internalID: -3732606066824633504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_42
+      name: Playable_UFO-Sheet_2
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -1268,18 +953,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15568aadf3237e8e0800000000000000
-      internalID: -1664306287457311407
+      spriteID: 8ed3e536e2e921b80800000000000000
+      internalID: -8425498030783971864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_43
+      name: Playable_UFO-Sheet_3
       rect:
         serializedVersion: 2
         x: 48
-        y: 32
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -1289,18 +974,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22917a38dac7e7cc0800000000000000
-      internalID: -3711391958226757342
+      spriteID: df797ac91d03f35b0800000000000000
+      internalID: -5386532952477296643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_44
+      name: Playable_UFO-Sheet_4
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -1310,18 +995,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf68c86a84ac79a00800000000000000
-      internalID: 763301075243271931
+      spriteID: 4f6bf94b58c2736e0800000000000000
+      internalID: -1857967368494401804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_45
+      name: Playable_UFO-Sheet_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1331,18 +1016,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c48decf523d361b70800000000000000
-      internalID: 8869343802717821004
+      spriteID: 5e69ce97d996a8200800000000000000
+      internalID: 183074859938256613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_46
+      name: Playable_UFO-Sheet_6
       rect:
         serializedVersion: 2
         x: 16
-        y: 16
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1352,18 +1037,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f3e7bb293a0400b0800000000000000
-      internalID: -5763470382464506887
+      spriteID: 988c4dd227062c0f0800000000000000
+      internalID: -1098209315613521783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_47
+      name: Playable_UFO-Sheet_7
       rect:
         serializedVersion: 2
         x: 32
-        y: 16
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1373,18 +1058,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b27bfd1babfc268d0800000000000000
-      internalID: -2854490813044377813
+      spriteID: 49d3baf3bca6261d0800000000000000
+      internalID: -3359004950885876332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_48
+      name: Playable_UFO-Sheet_8
       rect:
         serializedVersion: 2
         x: 48
-        y: 16
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1394,18 +1079,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 966ff68357de247a0800000000000000
-      internalID: -6394287433198864791
+      spriteID: e7d6d9164de624850800000000000000
+      internalID: 6359767482250390910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_49
+      name: Playable_UFO-Sheet_9
       rect:
         serializedVersion: 2
         x: 64
-        y: 16
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1415,18 +1100,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6628c688727b49390800000000000000
-      internalID: -7812418073160547738
+      spriteID: 697d0c325f4363020800000000000000
+      internalID: 2321100885427541910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_50
+      name: Playable_UFO-Sheet_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1436,18 +1121,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adbe78b2bce604910800000000000000
-      internalID: 1819576068345424858
+      spriteID: db9d450e0c44ca8f0800000000000000
+      internalID: -527971461121123907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_51
+      name: Playable_UFO-Sheet_11
       rect:
         serializedVersion: 2
         x: 16
-        y: 0
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1457,18 +1142,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c63e49c312d69320800000000000000
-      internalID: 2564468020257633986
+      spriteID: 113b0a1b4cb7784b0800000000000000
+      internalID: -5438241940302679279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_52
+      name: Playable_UFO-Sheet_12
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1478,18 +1163,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa05f4ac2d1a55690800000000000000
-      internalID: -7614001668290555734
+      spriteID: f29ddce35c13fd970800000000000000
+      internalID: 8781792521627752751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_53
+      name: Playable_UFO-Sheet_13
       rect:
         serializedVersion: 2
         x: 48
-        y: 0
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1499,18 +1184,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a46de0e799182540800000000000000
-      internalID: 4983261127789864101
+      spriteID: 793bf3ca87b743430800000000000000
+      internalID: 3761767346977354647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playable_UFO-Sheet_54
+      name: Playable_UFO-Sheet_14
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1520,8 +1205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6634e24c538606c0800000000000000
-      internalID: -4177507172057074069
+      spriteID: a3f8b02b030415fd0800000000000000
+      internalID: -2355030552248348870
       vertices: []
       indices: 
       edges: []
