@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 40f;
 
     // These variables deal with Player movement
-    public float horizontalInput;
-    public float verticalInput;
+    private float horizontalInput;
+    private float verticalInput;
     public Rigidbody2D UFO_Rigidbody;
     Vector3 movement;
 
