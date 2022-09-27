@@ -33,8 +33,9 @@ public class ProjectileDirection : MonoBehaviour
     {
         return _degrees * Math.PI / 180;
     }
-
-    IEnumerator CountdownTimer(){
+    
+    IEnumerator CountdownTimer()
+    {
         yield return new WaitForSeconds(despawnTime);
         Destroy(gameObject);
     }
