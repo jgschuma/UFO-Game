@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749428442413796715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6698, y: 1.2443, z: -8.501953}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 657866525997187782}
@@ -104,7 +104,9 @@ MonoBehaviour:
   wanderRadius: 5
   alertRadius: 2
   shootingDistance: 1
-  rateOfFire: 1
+  rateOfFire: 0.1
+  isTrackingPlayer: 0
+  isShootingPlayer: 0
   enemyRigidBody: {fileID: 1749428442413796718}
   firePoint: {fileID: 657866525997187782}
   bulletPrefab: {fileID: 8341728407448644063, guid: 14f1ba500a8c6874596e43d34fb386d9,
@@ -188,10 +190,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3595532170684797193}
-  m_LocalRotation: {x: -0, y: -0, z: -0.21398418, w: 0.97683716}
-  m_LocalPosition: {x: -0.03399992, y: -0.07500005, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.043619405, w: 0.9990483}
+  m_LocalPosition: {x: -0.026799917, y: -0.07369995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1749428442413796712}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -24.712002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5}
