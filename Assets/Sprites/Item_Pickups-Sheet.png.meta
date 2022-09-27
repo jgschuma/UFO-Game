@@ -95,9 +95,6 @@ TextureImporter:
   - first:
       213: 3558327756164261066
     second: Item_Pickups-Sheet_30
-  - first:
-      213: -973604912747051302
-    second: Item_Pickups-Sheet_31
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -160,7 +157,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -172,7 +169,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0

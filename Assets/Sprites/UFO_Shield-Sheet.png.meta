@@ -14,6 +14,9 @@ TextureImporter:
   - first:
       213: 2320137424644063052
     second: UFO_Shield-Sheet_3
+  - first:
+      213: 7654826381717240795
+    second: UFO_Shield-Sheet_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -76,7 +79,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -88,7 +91,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0

@@ -62,6 +62,72 @@ TextureImporter:
   - first:
       213: -8581796508609800862
     second: NME_FlyShoot-Sheet_19
+  - first:
+      213: -6813368425519476406
+    second: NME_FlyShoot-Sheet_0
+  - first:
+      213: -4741596960347461391
+    second: NME_FlyShoot-Sheet_1
+  - first:
+      213: 6837054419935588043
+    second: NME_FlyShoot-Sheet_2
+  - first:
+      213: -6346020926866079605
+    second: NME_FlyShoot-Sheet_3
+  - first:
+      213: 2974711885614236900
+    second: NME_FlyShoot-Sheet_4
+  - first:
+      213: -701948634619185189
+    second: NME_FlyShoot-Sheet_5
+  - first:
+      213: -7677770926602101714
+    second: NME_FlyShoot-Sheet_6
+  - first:
+      213: 8122978557199343292
+    second: NME_FlyShoot-Sheet_7
+  - first:
+      213: 3053794951707709508
+    second: NME_FlyShoot-Sheet_8
+  - first:
+      213: 6642297068381159886
+    second: NME_FlyShoot-Sheet_9
+  - first:
+      213: 7874586636312481070
+    second: NME_FlyShoot-Sheet_10
+  - first:
+      213: -7594555119760176810
+    second: NME_FlyShoot-Sheet_11
+  - first:
+      213: -3106608000924428982
+    second: NME_FlyShoot-Sheet_12
+  - first:
+      213: 441027130894042865
+    second: NME_FlyShoot-Sheet_13
+  - first:
+      213: 6871482782813877188
+    second: NME_FlyShoot-Sheet_14
+  - first:
+      213: -4126440956257540068
+    second: NME_FlyShoot-Sheet_15
+  - first:
+      213: 814647464517122041
+    second: NME_FlyShoot-Sheet_16
+  - first:
+      213: 9050794897081332448
+    second: NME_FlyShoot-Sheet_17
+  - first:
+      213: 6103217589127394370
+    second: NME_FlyShoot-Sheet_18
+  - first:
+      213: 4269183094384879955
+    second: NME_FlyShoot-Sheet_19
+  - first:
+      213: -7910987932556703127
+    second: NME_FlyShoot-Sheet_20
+  - first:
+      213: -7445268784719320030
+    second: NME_FlyShoot-Sheet_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,7 +190,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,7 +202,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -173,8 +239,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 002b5246ce7a141a0800000000000000
-      internalID: -6826990926382648832
+      spriteID: a419c09048d0271a0800000000000000
+      internalID: -6813368425519476406
       vertices: []
       indices: 
       edges: []
@@ -194,8 +260,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70985c2dc175d28e0800000000000000
-      internalID: -1716620101651429113
+      spriteID: 1f8ea66cfa6723eb0800000000000000
+      internalID: -4741596960347461391
       vertices: []
       indices: 
       edges: []
@@ -215,8 +281,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5315151558cd5d00800000000000000
-      internalID: 963146163078632287
+      spriteID: bce664a45c812ee50800000000000000
+      internalID: 6837054419935588043
       vertices: []
       indices: 
       edges: []
@@ -236,8 +302,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d46dcb42a68466e0800000000000000
-      internalID: -1845201915700484904
+      spriteID: b80c3f4f6976ee7a0800000000000000
+      internalID: -6346020926866079605
       vertices: []
       indices: 
       edges: []
@@ -257,8 +323,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0d68f650f8842a00800000000000000
-      internalID: 730859605373512972
+      spriteID: 4e44b2303bc484920800000000000000
+      internalID: 2974711885614236900
       vertices: []
       indices: 
       edges: []
@@ -278,8 +344,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d31b5aed64323090800000000000000
-      internalID: -8056319136724479017
+      spriteID: bd7f3f69f6d2246f0800000000000000
+      internalID: -701948634619185189
       vertices: []
       indices: 
       edges: []
@@ -299,8 +365,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f334b02ec16c15710800000000000000
-      internalID: 1680341963339678527
+      spriteID: e2c5f055504137590800000000000000
+      internalID: -7677770926602101714
       vertices: []
       indices: 
       edges: []
@@ -320,8 +386,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49571ecaa6650d950800000000000000
-      internalID: 6471767680698381716
+      spriteID: cbe5bfbd5fd9ab070800000000000000
+      internalID: 8122978557199343292
       vertices: []
       indices: 
       edges: []
@@ -341,8 +407,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2b7e97962fc2f330800000000000000
-      internalID: 3743282004957756203
+      spriteID: 4405b613452416a20800000000000000
+      internalID: 3053794951707709508
       vertices: []
       indices: 
       edges: []
@@ -362,8 +428,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6dc9f84656696c00800000000000000
-      internalID: 894358521787305327
+      spriteID: ec14a75cdfd2e2c50800000000000000
+      internalID: 6642297068381159886
       vertices: []
       indices: 
       edges: []
@@ -372,8 +438,8 @@ TextureImporter:
       name: NME_FlyShoot-Sheet_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -383,8 +449,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e688618b7c53b940800000000000000
-      internalID: 5310690071121790688
+      spriteID: e2d817a03d6284d60800000000000000
+      internalID: 7874586636312481070
       vertices: []
       indices: 
       edges: []
@@ -393,8 +459,8 @@ TextureImporter:
       name: NME_FlyShoot-Sheet_11
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
+        x: 48
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -404,8 +470,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48bc23f427912ba50800000000000000
-      internalID: 6535313988013706116
+      spriteID: 65902933b58ba9690800000000000000
+      internalID: -7594555119760176810
       vertices: []
       indices: 
       edges: []
@@ -415,6 +481,48 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4553809b7c13e4d0800000000000000
+      internalID: -3106608000924428982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NME_FlyShoot-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f6cf31c6d7de1600800000000000000
+      internalID: 441027130894042865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NME_FlyShoot-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 16
         width: 16
         height: 16
@@ -425,14 +533,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d10c2cf56e5f3300800000000000000
-      internalID: 234009497762005460
+      spriteID: 4c375dd2f296c5f50800000000000000
+      internalID: 6871482782813877188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NME_FlyShoot-Sheet_13
+      name: NME_FlyShoot-Sheet_15
       rect:
         serializedVersion: 2
         x: 16
@@ -446,14 +554,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86d106eb0b717a290800000000000000
-      internalID: -7879302975185740440
+      spriteID: c1865a720dfebb6c0800000000000000
+      internalID: -4126440956257540068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NME_FlyShoot-Sheet_14
+      name: NME_FlyShoot-Sheet_16
       rect:
         serializedVersion: 2
         x: 32
@@ -467,14 +575,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2466080947187c170800000000000000
-      internalID: 8198663984291800642
+      spriteID: 9f737b38d853e4b00800000000000000
+      internalID: 814647464517122041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NME_FlyShoot-Sheet_15
+      name: NME_FlyShoot-Sheet_17
       rect:
         serializedVersion: 2
         x: 48
@@ -488,14 +596,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5b24c7a288f4d620800000000000000
-      internalID: 2798134508548008797
+      spriteID: 0e273777102ea9d70800000000000000
+      internalID: 9050794897081332448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NME_FlyShoot-Sheet_16
+      name: NME_FlyShoot-Sheet_18
       rect:
         serializedVersion: 2
         x: 0
@@ -509,14 +617,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 024105c63254640f0800000000000000
-      internalID: -1133142237793741792
+      spriteID: 244bad2af0cf2b450800000000000000
+      internalID: 6103217589127394370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NME_FlyShoot-Sheet_17
+      name: NME_FlyShoot-Sheet_19
       rect:
         serializedVersion: 2
         x: 16
@@ -530,14 +638,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecb3bea19d61fa510800000000000000
-      internalID: 1562492717436189646
+      spriteID: 359e9edb76f2f3b30800000000000000
+      internalID: 4269183094384879955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NME_FlyShoot-Sheet_18
+      name: NME_FlyShoot-Sheet_20
       rect:
         serializedVersion: 2
         x: 32
@@ -551,14 +659,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92767a21757d015c0800000000000000
-      internalID: -4246657679635290327
+      spriteID: 96a4e89b366863290800000000000000
+      internalID: -7910987932556703127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NME_FlyShoot-Sheet_19
+      name: NME_FlyShoot-Sheet_21
       rect:
         serializedVersion: 2
         x: 48
@@ -572,8 +680,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26510a13b8557e880800000000000000
-      internalID: -8581796508609800862
+      spriteID: 22c208dac771da890800000000000000
+      internalID: -7445268784719320030
       vertices: []
       indices: 
       edges: []
