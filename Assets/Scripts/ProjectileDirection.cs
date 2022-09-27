@@ -6,6 +6,7 @@ using UnityEngine;
 public class ProjectileDirection : MonoBehaviour
 {
     public double direction = 0;
+    public float despawnTime = 3;
     public float speed = 30f;
     private Rigidbody2D proj_Rigidbody;
     Vector3 movement;
@@ -15,6 +16,7 @@ public class ProjectileDirection : MonoBehaviour
     {
         proj_Rigidbody = GetComponent<Rigidbody2D>();
         direction = direction * Math.PI / 180;
+        StartCoroutine(CountdownTimer());
     }
 
     // Update is called once per frame
@@ -26,5 +28,10 @@ public class ProjectileDirection : MonoBehaviour
     void FixedUpdate()
     {
         proj_Rigidbody.MovePosition(transform.position + movement * speed * Time.deltaTime);
+    }
+
+    IEnumerator CountdownTimer(){
+        yield return new WaitForSeconds(despawnTime);
+        Destroy(gameObject);
     }
 }
