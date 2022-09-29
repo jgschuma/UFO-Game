@@ -7,7 +7,8 @@ public class ProjectileDirection : MonoBehaviour
 {
     public double direction = 0;
     public float despawnTime = 3;
-    public float speed = 30f;
+    public bool despawn = true;
+    public float speed = 1f;
     private Rigidbody2D proj_Rigidbody;
     Vector3 movement;
     
@@ -15,7 +16,8 @@ public class ProjectileDirection : MonoBehaviour
     void Start()
     {
         proj_Rigidbody = GetComponent<Rigidbody2D>();
-        StartCoroutine(CountdownTimer());
+        if (despawn)
+            StartCoroutine(CountdownTimer());
     }
 
     // Update is called once per frame
