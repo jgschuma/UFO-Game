@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     // These variables deal with Player movement
     private float xSpeed, ySpeed;
     private Rigidbody2D UFO_Rigidbody;
+    private GetControllerInput contInput;
     public float horizontalInput;
     public float verticalInput;
     Vector3 movement;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         UFO_Rigidbody = GetComponent<Rigidbody2D>();
         UFO_Rigidbody.freezeRotation = true;
+        contInput = GetComponent<GetControllerInput>();
         xSpeed = 0;
         ySpeed = 0;
     }
@@ -31,8 +33,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Checks to see if the horzontal or vertical inputs are being pressed
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        /*horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");*/
+        horizontalInput = contInput.horizontalInput;
+        verticalInput = contInput.verticalInput;
 
         //If no direction is being held, decelerate
         if (Math.Sign(horizontalInput) == 0)
