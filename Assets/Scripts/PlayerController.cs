@@ -6,12 +6,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     //The UFO's movement values
-    public float moveSpeed = 40f;
+    public float moveSpeed = 1f;
+    public float dashSpeed = 2f;
     public float moveAccel = 1f;
     public double decelRate = 2;
 
     // These variables deal with Player movement
-    private float xSpeed, ySpeed;
+    public float xSpeed, ySpeed;
     private Rigidbody2D UFO_Rigidbody;
     private GetControllerInput contInput;
     public float horizontalInput;

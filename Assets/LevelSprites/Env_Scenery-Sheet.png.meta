@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 5f10778742532cb439b75528885b8541
+guid: 52d9312d30b5cac41b9b959fab865df4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6479168673095220369
-    second: Env_BG-Sheet_0
+      213: -5805231244772327961
+    second: Env_Scenery-Sheet_0
   - first:
-      213: -4232867584039337649
-    second: Env_BG-Sheet_1
+      213: 3503625973049840811
+    second: Env_Scenery-Sheet_1
   - first:
-      213: -382903779371451910
-    second: Env_BG-Sheet_2
+      213: 2751082862265519093
+    second: Env_Scenery-Sheet_2
   - first:
-      213: -6988571399410305146
-    second: Env_BG-Sheet_3
-  - first:
-      213: 3668596588034885620
-    second: Env_BG-Sheet_4
+      213: -5577533142555487272
+    second: Env_Scenery-Sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -60,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,11 +95,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Env_BG-Sheet_0
+      name: Env_Scenery-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -110,20 +119,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6302508b6e5516a0800000000000000
-      internalID: -6479168673095220369
+      spriteID: 7edb858b0fcaf6fa0800000000000000
+      internalID: -5805231244772327961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_BG-Sheet_1
+      name: Env_Scenery-Sheet_1
       rect:
         serializedVersion: 2
         x: 16
@@ -131,77 +140,35 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f41c118eb55d145c0800000000000000
-      internalID: -4232867584039337649
+      spriteID: ba4d77d62416f9030800000000000000
+      internalID: 3503625973049840811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_BG-Sheet_2
+      name: Env_Scenery-Sheet_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
+        width: 32
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af9f8679a07afaaf0800000000000000
-      internalID: -382903779371451910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_BG-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 687b1bad65b930f90800000000000000
-      internalID: -6988571399410305146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_BG-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f78706e82979e230800000000000000
-      internalID: 3668596588034885620
+      spriteID: 5fb4001994fcd2620800000000000000
+      internalID: 2751082862265519093
       vertices: []
       indices: 
       edges: []
