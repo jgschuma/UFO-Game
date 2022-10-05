@@ -373,7 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 270
   dashSpeed: 600
-  moveAccel: 1
+  moveAccel: 3
   decelRate: 2
   xSpeed: 0
   ySpeed: 0
