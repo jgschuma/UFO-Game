@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7982308186999368363}
   - component: {fileID: 7982308186999368362}
   - component: {fileID: 7982308186999368365}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TractorBeamFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 7982308188266740646}
   - component: {fileID: 7982308188266740569}
   - component: {fileID: 7982308188266740568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TractorBeamBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7982308188600601195}
   - component: {fileID: 7982308188600601194}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShieldPower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -690,7 +690,7 @@ GameObject:
   - component: {fileID: 7982308188860114856}
   - component: {fileID: 7982308188860114859}
   - component: {fileID: 7982308188860114858}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShieldEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

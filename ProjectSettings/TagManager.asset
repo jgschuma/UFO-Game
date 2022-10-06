@@ -16,10 +16,10 @@ TagManager:
   - 
   - BehindItem
   - FrontItem
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - BGElement
+  - FGElement
+  - Terrain
   - 
   - 
   - 
@@ -39,6 +39,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1263788233
+    locked: 0
+  - name: BGElement
+    uniqueID: 54398591
+    locked: 0
   - name: BehindItem
     uniqueID: 3168339579
     locked: 0
@@ -47,4 +53,10 @@ TagManager:
     locked: 0
   - name: FrontItem
     uniqueID: 3381009233
+    locked: 0
+  - name: Terrain
+    uniqueID: 2265129189
+    locked: 0
+  - name: FGElement
+    uniqueID: 61748485
     locked: 0

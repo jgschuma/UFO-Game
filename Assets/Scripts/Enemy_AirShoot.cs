@@ -28,15 +28,14 @@ public class Enemy_AirShoot : MonoBehaviour
     private float distanceFromHome;
     public Vector3 direction;
     private bool allowFire;
-    private bool facingRight;
     // Start is called before the first frame update
     void Start()
     {
         enemyRigidBody.freezeRotation = true;
         homebase = transform.position;
         allowFire = true;
-        facingRight = true;
         anim = GetComponent<Animator>();
+        player = GameObject.Find("UFO");
     }
 
     private void FixedUpdate() {
