@@ -156,7 +156,6 @@ MonoBehaviour:
   ShieldPickup: {fileID: 5872255111036721361}
   ShieldPower: {fileID: 0}
   TractorBeam: {fileID: 0}
-  thisName: ShieldPickup
 --- !u!95 &5872255111036721374
 Animator:
   serializedVersion: 3
