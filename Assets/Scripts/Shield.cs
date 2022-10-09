@@ -19,7 +19,7 @@ public class Shield : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D other)
     {
-        if (other.CompareTag("Player") && Input.GetButton("Fire1"))
+        if (other.CompareTag("Player") && TractorBeam.activeInHierarchy)
         {
             Pickup(other);
         }
