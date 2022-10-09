@@ -8,11 +8,13 @@ public class Shield : MonoBehaviour
     public GameObject ShieldPickup;
     public GameObject ShieldPower;
     public GameObject TractorBeam;
-    public string thisName = "ShieldPickup";
     // Start is called before the first frame update
     void Start()
     {
         ShieldRigidBody.freezeRotation = true;
+        //ShieldPickup = GameObject.Find("ShieldPickup");
+        //ShieldPower = GameObject.Find("ShieldPower");
+        TractorBeam = GameObject.Find("TractorBeam");
     }
 
     void OnTriggerEnter2D (Collider2D other)
@@ -25,13 +27,13 @@ public class Shield : MonoBehaviour
 
     void Pickup(Collider2D player)
     {
+        BeamController beamCont = player.GetComponent<BeamController>();
         Debug.Log("Power up picked up");
-        player.GetComponent<BeamController>().hasItem = true;
-        player.GetComponent<BeamController>().StartCooldown();
-        player.GetComponent<BeamController>().currentItem = GameObject.Find("ShieldPickup");
-        player.GetComponent<BeamController>().currentPower = ShieldPower;
+        beamCont.hasItem = true;
+        beamCont.StartCooldown();
+        beamCont.currentItem = GameObject.Find("ShieldPickup");
+        beamCont.currentPower = ShieldPower;
         ShieldPower.SetActive(true);
-
         ShieldPickup.SetActive(false);
     }
 }
