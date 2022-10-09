@@ -266,8 +266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6766c0c53eb011c4aac3cd8602ae98a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  speed: 2
+  player: {fileID: 7982308188281278617, guid: e0c4500e7aade8340b1520ace36511f3, type: 3}
+  speed: 200
   wanderRadius: 500
   alertRadius: 200
   shootingDistance: 100

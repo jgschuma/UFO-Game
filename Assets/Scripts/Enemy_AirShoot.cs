@@ -59,12 +59,12 @@ public class Enemy_AirShoot : MonoBehaviour
             }
         }
 
-/*        // If the player is within the alert radius, outside shooting distance, and within wander radius
+        // If the player is within the alert radius, outside shooting distance, and within wander radius
         if (distanceToPlayer <= alertRadius && distanceToPlayer > shootingDistance && distanceFromHome < wanderRadius){
             //go towards player
             anim.SetBool("isTargetingPlayer", true);
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-        }*/
+        }
 
         // If outside of wander radius or player is outside of alert radius
         if (distanceFromHome >= wanderRadius || distanceToPlayer > alertRadius){
