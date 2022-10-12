@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CurrentItem { None, Gunner, Shield, Twister, Flame, Laser, Missile, Bomb, BlackHole, Warp }
+
 public class BeamController : MonoBehaviour
 {
     /*These variables allow for the use of the tractorBeam
