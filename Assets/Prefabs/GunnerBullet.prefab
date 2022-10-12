@@ -100,7 +100,7 @@ MonoBehaviour:
   direction: 0
   despawnTime: 3
   despawn: 0
-  speed: 5
+  speed: 500
 --- !u!95 &5795454818415582699
 Animator:
   serializedVersion: 3
