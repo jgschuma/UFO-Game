@@ -83,25 +83,6 @@ public class GunnerPower : MonoBehaviour
                 //Shoot RightDown
                 GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 315);
             }
-
-            
-
-            
-            
-            
-
-            
-
-            
-
-            
-
-            //if BulletDirection is null, set direction to right
-            // else if (BulletDirection == null){
-            //     GunnerFirePointRotator.transform.rotation = 0;
-
-
-            // }
     }
     
 
