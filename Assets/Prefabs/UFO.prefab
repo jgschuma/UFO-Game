@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &33265927200051960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4324119238774934537}
+  m_Layer: 0
+  m_Name: SpeedEchoes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4324119238774934537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33265927200051960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7982308187387988244}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7982308186999368360
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,6 +161,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7982308188600601195}
+  - {fileID: 4324119238774934537}
   m_Father: {fileID: 7982308188281278618}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -373,13 +404,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 270
-  dashSpeed: 600
   moveAccel: 3
   decelRate: 2
+  dashSpeed: 600
+  dashCooldownTime: 2
+  dashDecayTime: 0.5
   xSpeed: 0
   ySpeed: 0
+  currMaxSpeed: 0
+  dashCooldown: 0
+  dashDecay: 0
   horizontalInput: 0
   verticalInput: 0
+  movement: {x: 0, y: 0, z: 0}
 --- !u!50 &7982308188281278623
 Rigidbody2D:
   serializedVersion: 4

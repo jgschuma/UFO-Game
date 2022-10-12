@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GetControllerInput : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class GetControllerInput : MonoBehaviour
     void Update()
     {
         // Checks to see if the horzontal or vertical inputs are being pressed
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Math.Sign(Input.GetAxis("Horizontal"));
+        verticalInput = Math.Sign(Input.GetAxis("Vertical"));
     }
 }
