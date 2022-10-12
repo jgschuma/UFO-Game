@@ -14,6 +14,7 @@ public class ShieldPower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If the fire button is held down, the shield will appear
         if(Input.GetButton("Fire2")){
             ShieldEffect.SetActive(true);
         }
