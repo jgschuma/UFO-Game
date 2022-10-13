@@ -6,13 +6,18 @@ public class ItemPickup : MonoBehaviour
 {
     public Rigidbody2D ThisRigidBody;
     public GameObject ThisPickup;
-    public GameObject ThisPower;
-    public GameObject TractorBeam;
+    public GameObject UFO;
+    private GameObject ThisPower;
+    private GameObject TractorBeam;
     public string thisName;
     // Start is called before the first frame update
-    void Start()
+
+    // Awake is called when an item is instantiated
+    void Awake()
     {
         ThisRigidBody.freezeRotation = true;
+        TractorBeam = UFO.GetComponent<TractorBeam>();
+        ThisPower = UFO.GetComponent<
     }
 
     void OnTriggerEnter2D (Collider2D other)
