@@ -149,13 +149,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5872255111036721361}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a344f6cfe33100a4d810df1ccf95a027, type: 3}
+  m_Script: {fileID: 11500000, guid: fbf86ed9757091749a27545df740e103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShieldRigidBody: {fileID: 5872255111036721360}
-  ShieldPickup: {fileID: 5872255111036721361}
-  ShieldPower: {fileID: 0}
-  TractorBeam: {fileID: 0}
+  ThisRigidBody: {fileID: 5872255111036721360}
+  ThisPickup: {fileID: 5872255111036721361}
+  ThisPower: {fileID: 0}
+  TractorBeam: {fileID: 7982308188281278617, guid: e0c4500e7aade8340b1520ace36511f3,
+    type: 3}
+  thisName: ShieldPower
 --- !u!95 &5872255111036721374
 Animator:
   serializedVersion: 3
