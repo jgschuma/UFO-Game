@@ -84,8 +84,8 @@ public class Enemy_AirShoot : MonoBehaviour
         firePoint.transform.rotation = Quaternion.Slerp(firePoint.transform.rotation, Quaternion.Euler(0, 0, rotationZ), 100 * Time.deltaTime);
         yield return new WaitForSeconds(rateOfFire);
         //shoot
-        Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0,0,0));
         bulletPrefab.GetComponent<ProjectileDirection>().direction = rotationZ;
+        Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0,0,0));
         allowFire = true;
     }
 }
