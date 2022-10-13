@@ -14,7 +14,7 @@ public class Shield : MonoBehaviour
         ShieldRigidBody.freezeRotation = true;
         //ShieldPickup = GameObject.Find("ShieldPickup");
         //ShieldPower = GameObject.Find("ShieldPower");
-        TractorBeam = GameObject.Find("TractorBeam");
+        //TractorBeam = GameObject.Find("TractorBeam");
     }
 
     void OnTriggerEnter2D (Collider2D other)
