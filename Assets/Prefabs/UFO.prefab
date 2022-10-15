@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 7982308188281278608}
   - component: {fileID: 8236721324831678960}
   - component: {fileID: 1411353928}
+  - component: {fileID: 7242194566834679945}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Player
@@ -506,6 +507,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numOfEchoes: 3
   timeBetweenEchoes: 0.2
+  speedEcho: {fileID: 0}
+--- !u!114 &7242194566834679945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7982308188281278617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db43e8c024017c3439c6f1ef505be908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7982308188388105097
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,7 +837,7 @@ Animator:
   m_GameObject: {fileID: 7982308188860114870}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 464d11ba50dace04b987177d58b1c9d9, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
