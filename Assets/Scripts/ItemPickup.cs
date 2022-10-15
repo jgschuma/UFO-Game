@@ -10,14 +10,15 @@ public class ItemPickup : MonoBehaviour
     private GameObject ThisPower;
     private GameObject TractorBeam;
     public string thisName;
+    public string thisPower;
     // Start is called before the first frame update
 
     // Awake is called when an item is instantiated
     void Awake()
     {
         ThisRigidBody.freezeRotation = true;
-        TractorBeam = UFO.GetComponent<TractorBeam>();
-        ThisPower = UFO.GetComponent<
+        TractorBeam = GameObject.Find("TractorBeam");
+        ThisPower = GameObject.Find(thisPower.ToString());
     }
 
     void OnTriggerEnter2D (Collider2D other)
@@ -35,8 +36,9 @@ public class ItemPickup : MonoBehaviour
         player.GetComponent<BeamController>().StartCooldown();
         player.GetComponent<BeamController>().currentItem = GameObject.Find(thisName);
         player.GetComponent<BeamController>().currentPower = ThisPower;
+        Debug.Log("The active power is " + thisPower);
         ThisPower.SetActive(true);
 
-        ThisPickup.SetActive(false);
+        Destroy(ThisPickup);
     }
 }
