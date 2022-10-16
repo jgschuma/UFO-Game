@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GuidedMissileController : MonoBehaviour
 {
@@ -8,12 +9,16 @@ public class GuidedMissileController : MonoBehaviour
     private ProjectileDirection projDirect;
     private Animator anim;
     private float horiInput, vertiInput;
+
+   public static event Action MissileCollision;
+
     // Start is called before the first frame update
     void Start()
     {
         contInput = GetComponent<GetControllerInput>();
         projDirect = GetComponent<ProjectileDirection>();
         anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -42,5 +47,12 @@ public class GuidedMissileController : MonoBehaviour
 
         //Animate the missile
         anim.SetInteger("Direction", (int)(projDirect.direction));
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.CompareTag("Terrain")){
+            MissileCollision?.Invoke();
+            Destroy(this.gameObject);
+        }
     }
 }
