@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
         verticalInput = contInput.verticalInput;
 
         //If the button is pressed, the UFO has no item, and the cooldown has worn off, DASH
-        if (Input.GetButton("Fire2") && beamControl.hasItem == false && dashCooldown == 0 && (horizontalInput != 0 || verticalInput != 0))
+        if (contInput.GetButtonDown("Fire2") && beamControl.hasItem == false && dashCooldown == 0 && (horizontalInput != 0 || verticalInput != 0))
         {
             xSpeed = dashSpeed * horizontalInput;
             ySpeed = dashSpeed * verticalInput;
