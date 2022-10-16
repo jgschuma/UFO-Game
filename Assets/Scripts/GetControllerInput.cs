@@ -21,4 +21,25 @@ public class GetControllerInput : MonoBehaviour
         horizontalInput = Math.Sign(Input.GetAxis("Horizontal"));
         verticalInput = Math.Sign(Input.GetAxis("Vertical"));
     }
+
+    public bool GetButton(string _b)
+    {
+        return Input.GetButton(_b);
+    }
+
+    public bool GetButtonDown(string _b)
+    {
+        return Input.GetButtonDown(_b);
+    }
+
+    public bool GetButtonUp(string _b)
+    {
+        return Input.GetButtonUp(_b);
+    }
+
+    public void ResetDirections()
+    {
+        horizontalInput = 0;
+        verticalInput = 0;
+    }
 }
