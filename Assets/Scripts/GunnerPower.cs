@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GunnerPower : MonoBehaviour
 {
@@ -15,6 +16,11 @@ public class GunnerPower : MonoBehaviour
     public GameObject GunnerBulletPrefab;
 
     
+    void Start()
+    {
+        BeamController.DeactivatePower += DropPower;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -27,61 +33,68 @@ public class GunnerPower : MonoBehaviour
             StartCooldown();
             //GunnerBulletPrefab.direction = GunnerFirePoint.transform.rotation.z;
             var BulletInstance = Instantiate(GunnerBulletPrefab, GunnerFirePoint.transform.position, GunnerFirePointRotator.transform.rotation);
-            //BulletInstance.GetComponent<ProjectileDirection>().direction = 90;
-            
-
+            BulletInstance.GetComponent<ProjectileDirection>().direction = BulletDirection;
         }
     }
 
 
     public void DirectionDetection(){
         // Need 8 directions of movement for bullet
-            //Right = 0 
+            //Right
             if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") == 0){
-                //Shoot Right
+                // Shoot Right
                 GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 0);
+                BulletDirection = 90;
             }
 
-            //RightUp = 4
+            //RightUp
             else if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") > 0){
-                //Shoot RightUp
+                // Shoot RightUp
                 GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 45);
+                BulletDirection = 45;
             }
 
-            //Up = 3
+            //Up
             else if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") > 0){
-                //Shoot Up
+                // Shoot UP
                 GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 90);
+                BulletDirection = 0;
+                
             }
 
-            //LeftUp = 2
+            //LeftUp 
             else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") > 0){
                 //Shoot leftUp
                 GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 135);
-            }
+                BulletDirection = 315;
+            }  
 
-            //Left = 1
+            //Left
             else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") == 0){
                 //Shoot left
                 GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 180);
+                BulletDirection = 270;
             }
 
-            //LeftDown = 8
+            //LeftDown
             else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") < 0){
                 //Shoot leftDown
                 GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 225);
+                BulletDirection = 225;
             }
 
-            //Down = 7
+            //Down
             else if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") < 0){
                 //Shoot Down
                 GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 270);
+                BulletDirection = 180;
             }
 
-            //RightDown = 6
+            //RightDown
             else if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") < 0){
                 //Shoot RightDown
                 GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 315);
+                BulletDirection = 135;
             }
     }
     
@@ -96,6 +109,11 @@ public class GunnerPower : MonoBehaviour
 
     public void StartCooldown(){
         StartCoroutine(GunnerCooldown());
+    }
+
+    private void DropPower()
+    {
+        OnCooldown = false;
     }
 }
 

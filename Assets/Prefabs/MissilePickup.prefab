@@ -140,9 +140,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThisRigidBody: {fileID: 3680776298955555983}
+  TractorBeam: {fileID: 0}
   ThisPickup: {fileID: 3680776298955555987}
   ThisPower: {fileID: 0}
-  TractorBeam: {fileID: 0}
   thisName: MissilePickup
   thisPower: MissilePower
 --- !u!61 &3680776298955555978

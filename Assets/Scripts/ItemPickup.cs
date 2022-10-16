@@ -6,26 +6,18 @@ using System;
 public class ItemPickup : MonoBehaviour
 {
     public Rigidbody2D ThisRigidBody;
+    public GameObject TractorBeam;
     public GameObject ThisPickup;
     public GameObject ThisPower;
-    public GameObject TractorBeam;
     public string thisName;
-    public string thisPower;
 
-    // The event that will be called whenever an item is picked up
-    public static event Action<string> OnPickup;
-
+    //public string thisPower;
+    
     // Start is called before the first frame update
     void Start()
     {
         // We freeze the pickup rotation so that it stays upright at all times
         ThisRigidBody.freezeRotation = true;
-
-        /* These lines are neccessary because the objects are being moved to 
-         * prefabs and will need to have their variables set on creation
-         */
-        TractorBeam = UFO.GetComponent<transform>("TractorBeam");
-        ThisPower = GameObject.Find(thisPower);
     }
 
     // Whenever a pickup collides with an object, check to see if it is a player
@@ -40,24 +32,21 @@ public class ItemPickup : MonoBehaviour
 
     void Pickup(Collider2D player)
     {
-        OnPickup?.Invoke(thisName);
+        Debug.Log("Power up picked up");
+        // Tell the TractorBeam we have an item and to start it's cooldown
+        player.GetComponent<BeamController>().hasItem = true;
+        player.GetComponent<BeamController>().StartCooldown();
 
-
-
-        // Debug.Log("Power up picked up");
-        // // Tell the TractorBeam we have an item and to start it's cooldown
-        // player.GetComponent<BeamController>().hasItem = true;
-        // player.GetComponent<BeamController>().StartCooldown();
-
-        // // Set the current Item so that it knows what to spawn when we drop an item
-        // player.GetComponent<BeamController>().currentItem = GameObject.Find(thisName);
+        // Set the current Item so that it knows what to spawn when we drop an item
+        player.GetComponent<BeamController>().currentItem = GameObject.Find(thisName);
         
-        // /* These lines activates the power on the UFO and set the power on the TractorBeam
-        //  * so that it knows which power to disable on item drop
-        //  */
-        // player.GetComponent<BeamController>().currentPower = ThisPower;
-        // ThisPower.SetActive(true);
+        /* These lines activates the power on the UFO and set the power on the TractorBeam
+         * so that it knows which power to disable on item drop
+         */
+        player.GetComponent<BeamController>().currentPower = ThisPower;
+        ThisPower.SetActive(true);
 
-        // ThisPickup.SetActive(false);
+        // Deactivate the pickup
+        ThisPickup.SetActive(false);
     }
 }

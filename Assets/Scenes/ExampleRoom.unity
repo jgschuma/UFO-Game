@@ -28867,6 +28867,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Air_Shoot
       objectReference: {fileID: 0}
+    - target: {fileID: 1749428442413796715, guid: d8bc240d4f1aed740b316111fc20d238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8bc240d4f1aed740b316111fc20d238, type: 3}
 --- !u!1001 &709427265
@@ -28935,6 +28940,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy_Air_Shoot (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749428442413796715, guid: d8bc240d4f1aed740b316111fc20d238,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8bc240d4f1aed740b316111fc20d238, type: 3}
@@ -29416,6 +29426,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5276712403738241804, guid: 167e465eeb882174eb474a4bb4049202,
+        type: 3}
+      propertyPath: TractorBeam
+      value: 
+      objectReference: {fileID: 1827529214}
+    - target: {fileID: 5276712403738241804, guid: 167e465eeb882174eb474a4bb4049202,
+        type: 3}
+      propertyPath: ThisPower
+      value: 
+      objectReference: {fileID: 212699831}
     - target: {fileID: 5872255111036721361, guid: 167e465eeb882174eb474a4bb4049202,
         type: 3}
       propertyPath: m_Name

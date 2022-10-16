@@ -49,11 +49,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThisRigidBody: {fileID: 7121365119280051991}
+  TractorBeam: {fileID: 0}
   ThisPickup: {fileID: 7121365119280051985}
   ThisPower: {fileID: 0}
-  TractorBeam: {fileID: 0}
   thisName: TwisterPickup
-  thisPower: TwisterPower
 --- !u!212 &7121365119280052074
 SpriteRenderer:
   m_ObjectHideFlags: 0
