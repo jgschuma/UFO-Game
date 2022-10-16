@@ -8,7 +8,7 @@ public class ShieldPower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ShieldEffect = GameObject.Find("ShieldEffect");
+        //ShieldEffect = GameObject.Find("ShieldEffect");
     }
 
     // Update is called once per frame

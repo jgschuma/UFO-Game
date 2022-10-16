@@ -1,26 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ItemPickup : MonoBehaviour
 {
     public Rigidbody2D ThisRigidBody;
+    public GameObject TractorBeam;
     public GameObject ThisPickup;
     public GameObject ThisPower;
-    public GameObject TractorBeam;
     public string thisName;
-    public string thisPower;
+
+    //public string thisPower;
+    
     // Start is called before the first frame update
     void Start()
     {
         // We freeze the pickup rotation so that it stays upright at all times
         ThisRigidBody.freezeRotation = true;
-
-        /* These lines are neccessary because the objects are being moved to 
-         * prefabs and will need to have their variables set on creation
-         */
-        TractorBeam = GameObject.Find("TractorBeam");
-        ThisPower = GameObject.Find(thisPower);
     }
 
     // Whenever a pickup collides with an object, check to see if it is a player
@@ -49,6 +46,7 @@ public class ItemPickup : MonoBehaviour
         player.GetComponent<BeamController>().currentPower = ThisPower;
         ThisPower.SetActive(true);
 
+        // Deactivate the pickup
         ThisPickup.SetActive(false);
     }
 }

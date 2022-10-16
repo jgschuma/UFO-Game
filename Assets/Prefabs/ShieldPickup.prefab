@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5872255111036721373}
   - component: {fileID: 5872255111036721360}
   - component: {fileID: 5872255111036721372}
-  - component: {fileID: 5872255111036721375}
   - component: {fileID: 5872255111036721374}
+  - component: {fileID: 5276712403738241804}
   m_Layer: 0
   m_Name: ShieldPickup
   m_TagString: ItemPickup
@@ -140,22 +140,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 9
---- !u!114 &5872255111036721375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5872255111036721361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a344f6cfe33100a4d810df1ccf95a027, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShieldRigidBody: {fileID: 5872255111036721360}
-  ShieldPickup: {fileID: 5872255111036721361}
-  ShieldPower: {fileID: 0}
-  TractorBeam: {fileID: 0}
 --- !u!95 &5872255111036721374
 Animator:
   serializedVersion: 3
@@ -175,3 +159,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5276712403738241804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5872255111036721361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf86ed9757091749a27545df740e103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThisRigidBody: {fileID: 5872255111036721360}
+  TractorBeam: {fileID: 0}
+  ThisPickup: {fileID: 5872255111036721361}
+  ThisPower: {fileID: 0}
+  thisName: ShieldPickup

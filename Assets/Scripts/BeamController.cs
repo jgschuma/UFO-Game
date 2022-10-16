@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public enum CurrentItem { None, Gunner, Shield, Twister, Flame, Laser, Missile, Bomb, BlackHole, Warp }
 
@@ -15,6 +16,12 @@ public class BeamController : MonoBehaviour
     public GameObject currentItem;
     public GameObject ItemSpawn;
     public GameObject currentPower;
+
+    public static event Action DeactivatePower;
+
+
+    // This event will allow every 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +46,7 @@ public class BeamController : MonoBehaviour
         } // If key is pressed and an Item is held, drop the item
         else if (Input.GetButton("Fire1") && hasItem == true && beamOnCooldown == false){
             if(currentPower != null){
+                DeactivatePower?.Invoke();
                 currentPower.SetActive(false);
             }
             currentItem.SetActive(true);

@@ -102,7 +102,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.09
+  m_Radius: 9
 --- !u!50 &4078540576596802085
 Rigidbody2D:
   serializedVersion: 4
@@ -118,7 +118,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 100
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -139,7 +139,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 10
 --- !u!95 &4078540576596802083
 Animator:
   serializedVersion: 3
@@ -172,8 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThisRigidBody: {fileID: 4078540576596802085}
+  TractorBeam: {fileID: 0}
   ThisPickup: {fileID: 4078540576596802080}
   ThisPower: {fileID: 0}
-  TractorBeam: {fileID: 0}
   thisName: GunnerPickup
-  thisPower: GunnerPower
