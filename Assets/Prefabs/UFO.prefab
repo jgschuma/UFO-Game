@@ -439,6 +439,7 @@ GameObject:
   - component: {fileID: 7982308188281278608}
   - component: {fileID: 8236721324831678960}
   - component: {fileID: 1411353928}
+  - component: {fileID: 5929339704604932273}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Player
@@ -548,7 +549,7 @@ MonoBehaviour:
   moveSpeed: 270
   moveAccel: 3
   decelRate: 2
-  dashSpeed: 520
+  dashSpeed: 400
   dashCooldownTime: 2
   dashDecayTime: 0.5
   xSpeed: 0
@@ -678,7 +679,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numOfEchoes: 3
   timeBetweenEchoes: 0.2
-  speedEcho: {fileID: 0}
+  speedEcho: {fileID: 1837786113593464274, guid: 61296754464dd6643a4edf837b61ad1a,
+    type: 3}
+--- !u!114 &5929339704604932273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7982308188281278617}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ea491f2c4637c4c802bfbed8187fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 0
+  despawnTime: 3
+  despawn: 0
+  speed: 1
 --- !u!1 &7982308188388105097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,9 +1262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UFO: {fileID: 7982308188281278617}
-  startupDuration: 0.5
-  activeDuration: 3
-  winddownDuration: 0.5
+  twisterSpeed: 400
+  winddownDecel: 8
   contInput: {fileID: 7982308188281278608}
   anim: {fileID: 7982308188281278616}
-  twisterEffect: {fileID: 1298974345506871281}
