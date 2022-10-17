@@ -1247,7 +1247,6 @@ MonoBehaviour:
   startupDuration: 0.5
   activeDuration: 3
   winddownDuration: 0.5
-  timer: 0
   contInput: {fileID: 7982308188281278608}
   anim: {fileID: 7982308188281278616}
   twisterEffect: {fileID: 1298974345506871281}

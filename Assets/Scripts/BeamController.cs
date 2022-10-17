@@ -13,6 +13,7 @@ public class BeamController : MonoBehaviour
     public bool hasItem;
     public bool beamOnCooldown;
     public float beamCoolDuration;
+
     public GameObject currentItem;
     public GameObject ItemSpawn;
     public GameObject currentPower;

@@ -6,56 +6,39 @@ using System;
 public class TwisterPower : MonoBehaviour
 {
     public GameObject UFO;
-    public float startupDuration = 0.5f;
-    public float activeDuration = 3f;
-    public float winddownDuration = 0.5f;
     
-/*    public float timer = 0f;*/
     public GetControllerInput contInput;
     public Animator anim;
-    public GameObject twisterEffect;
     
     // Start is called before the first frame update
     void Start()
     {
         contInput = UFO.GetComponent<GetControllerInput>();
         anim = UFO.GetComponent<Animator>();
-        //twisterEffect = (GameObject)UFO.transform.Find("Items/Twister Power/Twister Power").gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Start the Twister
         if(contInput.GetButtonDown("Fire2") && anim.GetBool("twisterOn") == false)
         {
+            contInput.ResetDirections();
+            UFO.GetComponent<BeamController>().enabled = false;
+            contInput.enabled = false;
             anim.SetBool("twisterOn", true);
         }
-/*        if (timer > 0)
-            timer = Math.Max(0, timer - Time.deltaTime);
-
-        //If twister is available, enter startup state
-        if (contInput.GetButtonDown("Fire2") && anim.GetInteger("twisterState") == 0)
+        //The twister is over, restore control
+        else if (anim.GetCurrentAnimatorStateInfo(0).IsName("TwisterOver"))
         {
-            anim.SetInteger("twisterState", 1);
-            timer = startupDuration;
+            anim.SetBool("twisterOn", false);
+            UFO.GetComponent<BeamController>().enabled = true;
+            contInput.enabled = true;
         }
-        //If windup has completed, enter active state
-        else if (anim.GetInteger("twisterState") == 1 && timer == 0)
+        //Twister is in motion
+        else
         {
-            anim.SetInteger("twisterState", 2);
-            twisterEffect.SetActive(true);
-            timer = activeDuration;
+            
         }
-        //If active state has finished, enter winddown state
-        else if (anim.GetInteger("twisterState") == 2 && timer == 0)
-        {
-            anim.SetInteger("twisterState", 3);
-            timer = winddownDuration;
-        }
-        //If UFO has fully winded down, restor to neutral
-        else if (anim.GetInteger("twisterState") == 3 && timer == 0)
-        {
-            anim.SetInteger("twisterState", 0);
-        }*/
     }
 }

@@ -26,6 +26,7 @@ public class MissilePower : MonoBehaviour
             LiveMissile = Instantiate(MissilePrefab, MissileSpawnPoint.transform.position, MissileSpawnPoint.transform.rotation);
             HasMissile = true;
             UFO.GetComponent<GetControllerInput>().ResetDirections();
+            UFO.GetComponent<BeamController>().enabled = false;
             UFO.GetComponent<GetControllerInput>().enabled = false;
         }
         else if (HasMissile == true){
@@ -36,6 +37,7 @@ public class MissilePower : MonoBehaviour
     void OnDestroy(){
         HasMissile = false;
         MainCamera.transform.position = UFO.transform.position + new Vector3(0, 0, -10);
+        UFO.GetComponent<BeamController>().enabled = true;
         UFO.GetComponent<GetControllerInput>().enabled = true;
     }
 }
