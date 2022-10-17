@@ -362,8 +362,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1263788233
+  m_SortingLayer: -3
   m_SortingOrder: -99
   m_Sprite: {fileID: 21300000, guid: b95d377b8b880be40befef0ee262379b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -550,6 +550,12 @@ Transform:
   m_Father: {fileID: 1896262772}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &809846198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1298974345506871281, guid: e0c4500e7aade8340b1520ace36511f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7982308188610283993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &939284800 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7982308188281278617, guid: e0c4500e7aade8340b1520ace36511f3,
@@ -934,8 +940,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1263788233
+  m_SortingLayer: -3
   m_SortingOrder: -99
   m_Sprite: {fileID: 21300000, guid: b95d377b8b880be40befef0ee262379b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1322,12 +1328,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7982308188610283993}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &1978029174 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1599369317469860611, guid: e0c4500e7aade8340b1520ace36511f3,
-    type: 3}
-  m_PrefabInstance: {fileID: 7982308188610283993}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &149348843163429203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1667,12 +1667,12 @@ PrefabInstance:
     - target: {fileID: 1298974345506871281, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1599369317469860611, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1599369317469860611, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
@@ -1699,7 +1699,7 @@ PrefabInstance:
         type: 3}
       propertyPath: twisterEffect
       value: 
-      objectReference: {fileID: 1978029174}
+      objectReference: {fileID: 809846198}
     - target: {fileID: 2228078738824348267, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: UFO
@@ -1714,6 +1714,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982308186999368362, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -913958063
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982308186999368362, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982308188266740569, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1126627717
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982308188266740569, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982308188266740647, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_Name
+      value: TractorBeamBack
       objectReference: {fileID: 0}
     - target: {fileID: 7982308188281278617, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
@@ -1779,6 +1804,16 @@ PrefabInstance:
         type: 3}
       propertyPath: dashSpeed
       value: 520
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982308188860114856, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -913958063
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982308188860114856, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7982308188969726373, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
