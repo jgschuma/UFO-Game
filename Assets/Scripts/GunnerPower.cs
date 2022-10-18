@@ -10,7 +10,7 @@ public class GunnerPower : MonoBehaviour
     public float CooldownDuration;
     public float BulletSpeed;
     private bool OnCooldown;
-    private float BulletDirection;
+    private int BulletDirection;
     public GameObject GunnerFirePoint;
     public GameObject GunnerFirePointRotator;
     public GameObject GunnerBulletPrefab;
@@ -21,19 +21,26 @@ public class GunnerPower : MonoBehaviour
         BeamController.DeactivatePower += DropPower;
     }
 
+    void Awake()
+    {
+        BulletDirection = 90;
+    }
+
     // Update is called once per frame
     void Update()
     {
         //Check what direction to shoot
         DirectionDetection();
 
-        // MAKE SURE YOU SET ON COOLDOWN TO FALSE WHEN THE ITEM IS DROPPED TO AVOID BUGS
+        // Check to see if the Player is pressing the firebutton and fire the gunner
         if (Input.GetButton("Fire2") && OnCooldown == false){
-            Debug.Log("Fire in direction: " );
+            Debug.Log("Fire in direction: " + BulletDirection);
             StartCooldown();
-            //GunnerBulletPrefab.direction = GunnerFirePoint.transform.rotation.z;
-            var BulletInstance = Instantiate(GunnerBulletPrefab, GunnerFirePoint.transform.position, GunnerFirePointRotator.transform.rotation);
+            GameObject BulletInstance = Instantiate(GunnerBulletPrefab, GunnerFirePoint.transform.position, Quaternion.identity);
             BulletInstance.GetComponent<ProjectileDirection>().direction = BulletDirection;
+            BulletInstance.GetComponent<Animator>().SetInteger("Direction", BulletDirection);
+            BulletInstance.GetComponent<ProjectileDirection>().speed = BulletSpeed;
+            //BulletInstance.GetComponent<ProjectileDirection>().
         }
     }
 
@@ -58,8 +65,7 @@ public class GunnerPower : MonoBehaviour
             else if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") > 0){
                 // Shoot UP
                 GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 90);
-                BulletDirection = 0;
-                
+                BulletDirection = 0;                
             }
 
             //LeftUp 
@@ -111,6 +117,9 @@ public class GunnerPower : MonoBehaviour
         StartCoroutine(GunnerCooldown());
     }
 
+    /* If the TractorBeam drops an item, we set OnCooldown to false so we
+    don't lock ourselves out if the gunner is on cooldown when we drop
+    */
     private void DropPower()
     {
         OnCooldown = false;
