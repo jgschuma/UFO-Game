@@ -32,8 +32,7 @@ public class TwisterPower : MonoBehaviour
             //Maintain movement speed and direction and apply it to ProjectileDirection
             float xVelocity = UFO.GetComponent<PlayerController>().movement.x;
             float yVelocity = UFO.GetComponent<PlayerController>().movement.y;
-            UFO.GetComponent<ProjectileDirection>().speed = (float)Math.Sqrt(Math.Pow(xVelocity, 2) + Math.Pow(yVelocity, 2));
-            UFO.GetComponent<ProjectileDirection>().direction = Math.Atan(xVelocity / yVelocity) * (180 / Math.PI);
+            UFO.GetComponent<ProjectileDirection>().setSpeedAndDirection(xVelocity, yVelocity);
             UFO.GetComponent<ProjectileDirection>().enabled = true;
         }
         //Twister has picked up to full speed
