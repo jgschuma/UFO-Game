@@ -38,6 +38,8 @@ public class Enemy_AirCharge : MonoBehaviour
         homebase = transform.position;
         allowFire = true;
         facingRight = true;
+        Physics.IgnoreLayerCollision(0, 8);
+
     }
 
     private void FixedUpdate() {
