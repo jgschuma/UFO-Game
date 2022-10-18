@@ -7,6 +7,8 @@ TagManager:
   - ItemPickup
   - MissileCamera
   - Terrain
+  - EnemyAttack
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX
@@ -61,4 +63,7 @@ TagManager:
     locked: 0
   - name: FGElement
     uniqueID: 61748485
+    locked: 0
+  - name: UI
+    uniqueID: 2378462857
     locked: 0
