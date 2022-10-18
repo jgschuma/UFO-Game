@@ -31,6 +31,10 @@ public class Enemy_AirCharge : MonoBehaviour
     private Vector3 direction;
     private bool allowFire;
     private bool facingRight;
+
+    void Awake() {
+        player = GameObject.Find("UFO");
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -38,8 +42,8 @@ public class Enemy_AirCharge : MonoBehaviour
         homebase = transform.position;
         allowFire = true;
         facingRight = true;
-        Physics.IgnoreLayerCollision(0, 8);
-
+        Physics2D.IgnoreLayerCollision(0, 14, true);
+        
     }
 
     private void FixedUpdate() {
