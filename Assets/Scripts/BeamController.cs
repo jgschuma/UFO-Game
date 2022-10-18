@@ -13,6 +13,7 @@ public class BeamController : MonoBehaviour
     public bool hasItem;
     public bool beamOnCooldown;
     public float beamCoolDuration;
+
     public GameObject currentItem;
     public GameObject ItemSpawn;
     public GameObject currentPower;
@@ -40,11 +41,11 @@ public class BeamController : MonoBehaviour
     public void tractorBeamController()
     {
         // If key is pressed and no item is held, activate the tractorbeam
-        if (Input.GetButton("Fire1") && hasItem == false && beamOnCooldown == false)
+        if (GetComponent<GetControllerInput>().GetButton("Fire1") && hasItem == false && beamOnCooldown == false)
         {
             tractorBeam.SetActive(true);
         } // If key is pressed and an Item is held, drop the item
-        else if (Input.GetButton("Fire1") && hasItem == true && beamOnCooldown == false){
+        else if (GetComponent<GetControllerInput>().GetButtonDown("Fire1") && hasItem == true && beamOnCooldown == false){
             if(currentPower != null){
                 DeactivatePower?.Invoke();
                 currentPower.SetActive(false);

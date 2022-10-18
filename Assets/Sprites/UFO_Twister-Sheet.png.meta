@@ -11,6 +11,24 @@ TextureImporter:
   - first:
       213: 488454430798898750
     second: UFO_Twister-Sheet_2
+  - first:
+      213: -2812539554564499261
+    second: UFO_Twister-Sheet_0
+  - first:
+      213: -2998513033251073114
+    second: UFO_Twister-Sheet_1
+  - first:
+      213: -6757997185922202095
+    second: UFO_Twister-Sheet_2
+  - first:
+      213: 8709919442723224442
+    second: UFO_Twister-Sheet_3
+  - first:
+      213: 4175114845427726159
+    second: UFO_Twister-Sheet_4
+  - first:
+      213: 5421751014853141392
+    second: UFO_Twister-Sheet_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,6 +130,69 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 32
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c892753d2ad7f8d0800000000000000
+      internalID: -2812539554564499261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UFO_Twister-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 32
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a3d0b678442366d0800000000000000
+      internalID: -2998513033251073114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UFO_Twister-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11684046d55c632a0800000000000000
+      internalID: -6757997185922202095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UFO_Twister-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 24
         height: 32
@@ -122,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fff932ba022f7d8f0800000000000000
-      internalID: -515677410186518529
+      spriteID: a7b39c50699dfd870800000000000000
+      internalID: 8709919442723224442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UFO_Twister-Sheet_1
+      name: UFO_Twister-Sheet_4
       rect:
         serializedVersion: 2
         x: 24
@@ -143,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5accbaab508ba940800000000000000
-      internalID: 5308477716981140058
+      spriteID: f47fd2ac4dcf0f930800000000000000
+      internalID: 4175114845427726159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UFO_Twister-Sheet_2
+      name: UFO_Twister-Sheet_5
       rect:
         serializedVersion: 2
         x: 48
@@ -164,8 +245,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e36ebb487b657c600800000000000000
-      internalID: 488454430798898750
+      spriteID: 0936fe482dded3b40800000000000000
+      internalID: 5421751014853141392
       vertices: []
       indices: 
       edges: []

@@ -31,6 +31,15 @@ public class ProjectileDirection : MonoBehaviour
         proj_Rigidbody.MovePosition(transform.position + movement * speed * Time.deltaTime);
     }
 
+    //Sets speed and direction using an x-vector and a y-vector
+    public void setSpeedAndDirection(float _x, float _y)
+    {
+        speed = (float)Math.Sqrt(Math.Pow(_x, 2) + Math.Pow(_y, 2));
+        direction = Math.Atan(_x / _y) * (180 / Math.PI);
+        if (_y < 0)
+            direction += 180;
+    }
+
     double ConvertToRadians(double _degrees)
     {
         return _degrees * Math.PI / 180;

@@ -362,8 +362,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1263788233
+  m_SortingLayer: -3
   m_SortingOrder: -99
   m_Sprite: {fileID: 21300000, guid: b95d377b8b880be40befef0ee262379b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -550,9 +550,33 @@ Transform:
   m_Father: {fileID: 1896262772}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &809846198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1298974345506871281, guid: e0c4500e7aade8340b1520ace36511f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7982308188610283993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &939284800 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7982308188281278617, guid: e0c4500e7aade8340b1520ace36511f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7982308188610283993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &939284803 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7982308188281278608, guid: e0c4500e7aade8340b1520ace36511f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7982308188610283993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939284800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b0717c5819ffa42b06d8f38e0b6b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &939284809 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7982308188281278616, guid: e0c4500e7aade8340b1520ace36511f3,
     type: 3}
   m_PrefabInstance: {fileID: 7982308188610283993}
   m_PrefabAsset: {fileID: 0}
@@ -916,8 +940,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1263788233
+  m_SortingLayer: -3
   m_SortingOrder: -99
   m_Sprite: {fileID: 21300000, guid: b95d377b8b880be40befef0ee262379b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1566,6 +1590,47 @@ PrefabInstance:
       propertyPath: MainCamera
       value: 
       objectReference: {fileID: 1460918275}
+    - target: {fileID: 1298974345506871281, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599369317469860611, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599369317469860611, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5308477716981140058, guid: ec15324c3d0e045419a816287c6b0f8e,
+        type: 3}
+    - target: {fileID: 1599369317469860611, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2228078738824348267, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: contInput
+      value: 
+      objectReference: {fileID: 939284803}
+    - target: {fileID: 2228078738824348267, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 939284809}
+    - target: {fileID: 2228078738824348267, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: twisterEffect
+      value: 
+      objectReference: {fileID: 809846198}
+    - target: {fileID: 2228078738824348267, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: UFO
+      value: 
+      objectReference: {fileID: 939284800}
     - target: {fileID: 6880617545364653832, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -1575,6 +1640,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982308186999368362, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -913958063
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982308186999368362, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982308188266740569, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1126627717
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982308188266740569, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982308188266740647, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_Name
+      value: TractorBeamBack
       objectReference: {fileID: 0}
     - target: {fileID: 7982308188281278617, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
@@ -1639,7 +1729,17 @@ PrefabInstance:
     - target: {fileID: 7982308188281278621, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: dashSpeed
-      value: 520
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982308188860114856, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -913958063
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982308188860114856, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7982308188969726373, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
@@ -1652,6 +1752,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8341728407448644063, guid: 14f1ba500a8c6874596e43d34fb386d9,
         type: 3}
+    - target: {fileID: 9125611023260295678, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7242194566834679945, guid: e0c4500e7aade8340b1520ace36511f3, type: 3}
     - {fileID: 7982308187387988247, guid: e0c4500e7aade8340b1520ace36511f3, type: 3}
