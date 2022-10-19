@@ -6,7 +6,6 @@ using System;
 public class GunnerPower : MonoBehaviour
 {
     // variables on Gunner stats
-    public int BulletDamage;
     public float CooldownDuration;
     public float BulletSpeed;
     private bool OnCooldown;
@@ -15,6 +14,7 @@ public class GunnerPower : MonoBehaviour
     public GameObject GunnerFirePointRotator;
     public GameObject GunnerBulletPrefab;
 
+    public float bulletOffset = 1f;
     
     void Start()
     {
@@ -40,7 +40,9 @@ public class GunnerPower : MonoBehaviour
             BulletInstance.GetComponent<ProjectileDirection>().direction = BulletDirection;
             BulletInstance.GetComponent<Animator>().SetInteger("Direction", BulletDirection);
             BulletInstance.GetComponent<ProjectileDirection>().speed = BulletSpeed;
-            //BulletInstance.GetComponent<ProjectileDirection>().
+            //Offsets the bullets position slightly to achieve a gattling gun effect
+            BulletInstance.transform.position += new Vector3((float)(bulletOffset * Math.Cos(BulletDirection * Math.PI / 180)), (float)(bulletOffset * Math.Sin(BulletDirection * Math.PI / 180)), 0f);
+            bulletOffset *= -1;
         }
     }
 
