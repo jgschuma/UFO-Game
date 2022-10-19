@@ -675,13 +675,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb41021217ae9164998dd39784571884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletDamage: 0
-  CooldownDuration: 1
-  BulletSpeed: 5
+  CooldownDuration: 0.1
+  BulletSpeed: 500
   GunnerFirePoint: {fileID: 8907518886213084335}
   GunnerFirePointRotator: {fileID: 4189284486703974659}
-  GunnerBulletPrefab: {fileID: 8341728407448644063, guid: 14f1ba500a8c6874596e43d34fb386d9,
+  GunnerBulletPrefab: {fileID: 5795454818415582696, guid: 17940bb1311d194438539b5d13621d70,
     type: 3}
+  bulletOffset: 2
 --- !u!1 &7384310263458577747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,6 +1279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb700966f85f3440a3f6946a0513cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recoil: 0.5
 --- !u!1 &7982308188388105097
 GameObject:
   m_ObjectHideFlags: 0
