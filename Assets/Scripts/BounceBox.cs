@@ -6,7 +6,7 @@ using System;
 public class BounceBox : MonoBehaviour
 {
     public float recoil = 0.5f;
-/
+
     PlayerController playCon;
     ProjectileDirection projDir;
     
