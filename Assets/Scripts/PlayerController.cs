@@ -103,4 +103,16 @@ public class PlayerController : MonoBehaviour
         if (dashDecay > 0)
             dashDecay = Math.Max(dashDecay - Time.deltaTime, 0);
     }
+
+    public double GetDirectionInRadians()
+    {
+        double radians = Math.Atan(movement.x / movement.y);
+        if (movement.y < 0)
+            radians += Math.PI;
+        return radians;
+    }
+    public double GetDirectionInDegrees()
+    {
+        return GetDirectionInRadians() * 180 / Math.PI;
+    }
 }

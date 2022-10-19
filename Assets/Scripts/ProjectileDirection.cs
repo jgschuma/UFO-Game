@@ -23,7 +23,7 @@ public class ProjectileDirection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement = new Vector3((float)(Math.Sin(ConvertToRadians(direction)) * speed), (float)(Math.Cos(ConvertToRadians(direction)) * speed), 0).normalized;
+        movement = new Vector3((float)(Math.Sin(GetDirectionInRadians()) * speed), (float)(Math.Cos(GetDirectionInRadians()) * speed), 0).normalized;
     }
 
     void FixedUpdate()
@@ -31,18 +31,29 @@ public class ProjectileDirection : MonoBehaviour
         proj_Rigidbody.MovePosition(transform.position + movement * speed * Time.deltaTime);
     }
 
+    public void SetDirectionInRadians(double _r)
+    {
+        direction = _r * 180 / Math.PI;
+    }
+
     //Sets speed and direction using an x-vector and a y-vector
-    public void setSpeedAndDirection(float _x, float _y)
+    public void SetXAndYSpeed(float _x, float _y)
     {
         speed = (float)Math.Sqrt(Math.Pow(_x, 2) + Math.Pow(_y, 2));
-        direction = Math.Atan(_x / _y) * (180 / Math.PI);
+        SetDirectionInRadians(Math.Atan(_x / _y));
         if (_y < 0)
             direction += 180;
     }
 
-    double ConvertToRadians(double _degrees)
+    public void SetSpeedAndDirection(float _s, double _d)
     {
-        return _degrees * Math.PI / 180;
+        speed = _s;
+        direction = _d;
+    }
+
+    public double GetDirectionInRadians()
+    {
+        return direction * Math.PI / 180;
     }
     
     IEnumerator CountdownTimer()
