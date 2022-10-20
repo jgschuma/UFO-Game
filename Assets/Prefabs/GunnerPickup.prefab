@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4078540576596802082}
   - component: {fileID: 4078540576596802083}
   - component: {fileID: 4078540576596802137}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: GunnerPickup
   m_TagString: ItemPickup
   m_Icon: {fileID: 0}

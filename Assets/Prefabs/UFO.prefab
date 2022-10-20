@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 5929339704604932273}
   - component: {fileID: 8741227260328307439}
   - component: {fileID: 3040289145448461642}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: UFO
   m_TagString: Player
   m_Icon: {fileID: 0}
