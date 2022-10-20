@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -141.79999, y: 79.8}
+  m_AnchoredPosition: {x: -113.8, y: 63.999996}
   m_SizeDelta: {x: 46, y: 24}
   m_Pivot: {x: 0, y: 1}
 --- !u!95 &331216513
@@ -627,14 +627,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 1454728750444013590}
   FirePointRotator: {fileID: 3606215712733638885}
-  CooldownDuration: 0.05
+  playCon: {fileID: 7982308188281278621}
+  CooldownDuration: 0.04
   FirePointRotation: 0
   MaxRotateAngle: 90
-  RotateSpeed: 90
+  RotateSpeed: 180
   FirePrefab: {fileID: 8935035227894736605, guid: c2ce13917d83a0e4e85ccc0e4e15c1c9,
     type: 3}
-  MoveSpeed: 200
-  DespawnTime: 0.03
+  MoveSpeed: 120
+  DespawnTime: 0.5
 --- !u!1 &4189284486703974659
 GameObject:
   m_ObjectHideFlags: 0

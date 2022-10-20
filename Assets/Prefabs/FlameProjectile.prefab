@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8935035227894736547}
   - component: {fileID: 8935035227894736604}
   - component: {fileID: 8935035227894736551}
+  - component: {fileID: 1014937724216848197}
   m_Layer: 0
   m_Name: FlameProjectile
   m_TagString: Untagged
@@ -162,3 +163,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &1014937724216848197
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8935035227894736605}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f02aff117063be4da5e23865a1f22f2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
