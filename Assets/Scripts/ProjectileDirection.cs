@@ -8,6 +8,7 @@ public class ProjectileDirection : MonoBehaviour
     public double direction = 0;
     public float despawnTime = 3;
     public bool despawn = true;
+    public bool hasDestroyAnimation = false;
     public float speed = 1f;
     private Rigidbody2D proj_Rigidbody;
     Vector3 movement;
@@ -59,6 +60,12 @@ public class ProjectileDirection : MonoBehaviour
     IEnumerator CountdownTimer()
     {
         yield return new WaitForSeconds(despawnTime);
-        Destroy(gameObject);
+        if (hasDestroyAnimation)
+        {
+            GetComponent<Animator>().SetTrigger("Destroy");
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+        }
+        else
+            Destroy(gameObject);
     }
 }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 370197804699944795}
   - component: {fileID: 8295163624681210158}
   - component: {fileID: 1070641515175714865}
+  - component: {fileID: 4891250688660901434}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: EnemyAttack
@@ -102,6 +103,7 @@ MonoBehaviour:
   direction: 0
   despawnTime: 3
   despawn: 1
+  hasDestroyAnimation: 1
   speed: 100
 --- !u!50 &1818810911320337900
 Rigidbody2D:
@@ -172,3 +174,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!114 &4891250688660901434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8341728407448644063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62bbe269e35253d4d85f40abcd4cbbc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasDestroyAnimation: 1

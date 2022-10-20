@@ -41,7 +41,7 @@ public class GunnerPower : MonoBehaviour
             BulletInstance.GetComponent<Animator>().SetInteger("Direction", BulletDirection);
             BulletInstance.GetComponent<ProjectileDirection>().speed = BulletSpeed;
             //Offsets the bullets position slightly to achieve a gattling gun effect
-            BulletInstance.transform.position += new Vector3((float)(bulletOffset * Math.Cos(BulletDirection * Math.PI / 180)), (float)(bulletOffset * Math.Sin(BulletDirection * Math.PI / 180)), 0f);
+            BulletInstance.transform.position += new Vector3((float)(bulletOffset * Math.Cos(BulletDirection * Math.PI / 180)), (float)(bulletOffset * -Math.Sin(BulletDirection * Math.PI / 180)), 0f);
             bulletOffset *= -1;
         }
     }

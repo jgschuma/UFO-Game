@@ -20,7 +20,13 @@ public class EntityHealth : MonoBehaviour
 
     void Update()
     {
-        invincibilityLeft = Math.Max(0, invincibilityLeft - Time.deltaTime);
+        //Reduce iFrames if they exist
+        if (invincibilityLeft > 0)
+        {
+            invincibilityLeft = Math.Max(0, invincibilityLeft - Time.deltaTime);
+            if (invincibilityPeriod - invincibilityLeft > hurtPeriod)
+                anim.SetBool("hurt", false);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -28,8 +34,7 @@ public class EntityHealth : MonoBehaviour
         //If entity is invincible, ignore all collision and reduce iFrames
         if(invincibilityLeft > 0)
         {
-            if (invincibilityPeriod - invincibilityLeft > hurtPeriod)
-                anim.SetBool("hurt", false);
+            //Nothing for now
         }
         //If object is supposed to be hurt
         else if(hurtTag == other.gameObject.tag && invincibilityLeft == 0)
