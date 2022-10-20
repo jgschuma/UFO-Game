@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7121365119280051991}
   - component: {fileID: 7121365119280052072}
   - component: {fileID: 7121365119280052075}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TwisterPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
