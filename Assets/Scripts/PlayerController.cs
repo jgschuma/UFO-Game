@@ -115,4 +115,8 @@ public class PlayerController : MonoBehaviour
     {
         return GetDirectionInRadians() * 180 / Math.PI;
     }
+    public float GetSpeed()
+    {
+        return (float)Math.Sqrt(Math.Pow(movement.x, 2) + Math.Pow(movement.y, 2));
+    }
 }

@@ -128,14 +128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 331216512, guid: e0c4500e7aade8340b1520ace36511f3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -113.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 331216512, guid: e0c4500e7aade8340b1520ace36511f3, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 63.999996
-      objectReference: {fileID: 0}
     - target: {fileID: 7982308188281278617, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: m_Name
@@ -200,37 +192,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8362415930132573548, guid: e0c4500e7aade8340b1520ace36511f3,
-        type: 3}
-      propertyPath: MaxRotateAngle
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 8362415930132573548, guid: e0c4500e7aade8340b1520ace36511f3,
-        type: 3}
-      propertyPath: FirePrefab
-      value: 
-      objectReference: {fileID: 8935035227894736605, guid: c2ce13917d83a0e4e85ccc0e4e15c1c9,
-        type: 3}
-    - target: {fileID: 8362415930132573548, guid: e0c4500e7aade8340b1520ace36511f3,
-        type: 3}
-      propertyPath: CooldownDuration
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 8362415930132573548, guid: e0c4500e7aade8340b1520ace36511f3,
-        type: 3}
-      propertyPath: MoveSpeed
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 8362415930132573548, guid: e0c4500e7aade8340b1520ace36511f3,
-        type: 3}
-      propertyPath: DespawnTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8362415930132573548, guid: e0c4500e7aade8340b1520ace36511f3,
-        type: 3}
-      propertyPath: RotateSpeed
-      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0c4500e7aade8340b1520ace36511f3, type: 3}
