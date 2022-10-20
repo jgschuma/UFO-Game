@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: meter3
+  m_Name: health3UFO
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,10 +20,26 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
+      value: {fileID: -246347800431806511, guid: 68df95a458245014e92f164be7757bbb,
+        type: 3}
+    attribute: m_Sprite
+    path: HPText
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
       value: {fileID: 5525477680450167194, guid: 68df95a458245014e92f164be7757bbb,
         type: 3}
     attribute: m_Sprite
     path: HPMeter
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 1918424119385654420, guid: 68df95a458245014e92f164be7757bbb,
+        type: 3}
+    attribute: m_Sprite
+    path: HPNumber
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -34,14 +50,30 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
+      path: 3492229516
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
       path: 3219404832
       attribute: 0
       script: {fileID: 0}
       typeID: 212
       customType: 23
       isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 2624672839
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
     pptrCurveMapping:
+    - {fileID: -246347800431806511, guid: 68df95a458245014e92f164be7757bbb, type: 3}
     - {fileID: 5525477680450167194, guid: 68df95a458245014e92f164be7757bbb, type: 3}
+    - {fileID: 1918424119385654420, guid: 68df95a458245014e92f164be7757bbb, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
