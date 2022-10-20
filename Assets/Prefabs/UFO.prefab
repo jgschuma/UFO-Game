@@ -627,10 +627,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 1454728750444013590}
   FirePointRotator: {fileID: 3606215712733638885}
-  FirePrefab: {fileID: 0}
+  CooldownDuration: 0.05
   FirePointRotation: 0
   MaxRotateAngle: 90
   RotateSpeed: 90
+  FirePrefab: {fileID: 8935035227894736605, guid: c2ce13917d83a0e4e85ccc0e4e15c1c9,
+    type: 3}
+  MoveSpeed: 200
+  DespawnTime: 0.03
 --- !u!1 &4189284486703974659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,6 +1257,7 @@ MonoBehaviour:
   direction: 0
   despawnTime: 3
   despawn: 0
+  hasDestroyAnimation: 0
   speed: 1
 --- !u!114 &8741227260328307439
 MonoBehaviour:
