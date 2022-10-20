@@ -24,8 +24,8 @@ TagManager:
   - BGElement
   - FGElement
   - Terrain
-  - Player Layer
-  - Enemy Layer
+  - Player
+  - ItemPickups
   - 
   - 
   - 
