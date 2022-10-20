@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3680776298955555981}
   - component: {fileID: 3680776298955555978}
   - component: {fileID: 3680776298955555977}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: MissilePickup
   m_TagString: ItemPickup
   m_Icon: {fileID: 0}
@@ -144,7 +144,6 @@ MonoBehaviour:
   ThisPickup: {fileID: 3680776298955555987}
   ThisPower: {fileID: 0}
   thisName: MissilePickup
-  thisPower: MissilePower
 --- !u!61 &3680776298955555978
 BoxCollider2D:
   m_ObjectHideFlags: 0

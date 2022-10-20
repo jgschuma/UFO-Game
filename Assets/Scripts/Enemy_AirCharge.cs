@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -42,7 +42,7 @@ public class Enemy_AirCharge : MonoBehaviour
         homebase = transform.position;
         allowFire = true;
         facingRight = true;
-        Physics2D.IgnoreLayerCollision(0, 14, true);
+        Physics2D.IgnoreLayerCollision(0,14, true);
         
     }
 

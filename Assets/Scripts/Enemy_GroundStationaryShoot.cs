@@ -32,6 +32,7 @@ public class Enemy_GroundStationaryShoot: MonoBehaviour
         enemyRigidBody.freezeRotation = true;
         allowFire = true;
         facingRight = true;
+        player = GameObject.Find("UFO");
     }
 
     private void FixedUpdate() {
@@ -78,13 +79,22 @@ public class Enemy_GroundStationaryShoot: MonoBehaviour
     }
 
     IEnumerator shoot() {
+        // allowFire = false;
+        // direction = player.transform.position - firePoint.transform.position;
+        // float rotationZ = Mathf.Atan2 (direction.y, direction.x) * Mathf.Rad2Deg;
+        // firePoint.transform.rotation = Quaternion.Slerp(firePoint.transform.rotation, Quaternion.Euler(0, 0, rotationZ), 100 * Time.deltaTime);
+        // yield return new WaitForSeconds(rateOfFire);
+        // //shoot
+        // Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        // allowFire = true;
         allowFire = false;
         direction = player.transform.position - firePoint.transform.position;
-        float rotationZ = Mathf.Atan2 (direction.y, direction.x) * Mathf.Rad2Deg;
+        float rotationZ = Mathf.Atan2 (direction.x, direction.y) * Mathf.Rad2Deg;
         firePoint.transform.rotation = Quaternion.Slerp(firePoint.transform.rotation, Quaternion.Euler(0, 0, rotationZ), 100 * Time.deltaTime);
         yield return new WaitForSeconds(rateOfFire);
         //shoot
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bulletPrefab.GetComponent<ProjectileDirection>().direction = rotationZ;
+        Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0,0,0));
         allowFire = true;
     }
 }
