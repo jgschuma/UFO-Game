@@ -20,19 +20,10 @@ public class ProjectileDestroyOnImpact : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("yowhaddup");
+        //Debug.Log("yowhaddup");
         if (other.gameObject.tag == "Terrain")
         {
-            if (hasDestroyAnimation)
-            {
-                GetComponent<Animator>().SetTrigger("Destroy");
-                GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
-            }
-            else
-            {
-                Debug.Log("DO IT NOW GOHAN");
-                Destroy(gameObject);
-            }
+            gameObject.GetComponent<ProjectileDirection>().DestroyProjectile();
         }
     }
 }

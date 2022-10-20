@@ -24,7 +24,7 @@ public class EntityHealth : MonoBehaviour
         if (invincibilityLeft > 0)
         {
             invincibilityLeft = Math.Max(0, invincibilityLeft - Time.deltaTime);
-            if (invincibilityPeriod - invincibilityLeft > hurtPeriod)
+            if (invincibilityPeriod - invincibilityLeft >= hurtPeriod)
                 anim.SetBool("hurt", false);
         }
     }
@@ -39,9 +39,10 @@ public class EntityHealth : MonoBehaviour
         //If object is supposed to be hurt
         else if(hurtTag == other.gameObject.tag && invincibilityLeft == 0)
         {
+            doDamage(other.gameObject.GetComponent<DoesDamage>().damage);
             anim.SetBool("hurt", true);
             invincibilityLeft = invincibilityPeriod;
-            doDamage(other.gameObject.GetComponent<DoesDamage>().damage);
+            other.gameObject.GetComponent<ProjectileDirection>().DestroyProjectile();
         }
     }
 
@@ -51,6 +52,15 @@ public class EntityHealth : MonoBehaviour
         if (health <= 0)
         {
             //Kill the entity
+            if (gameObject.tag != "Player")
+            {
+                anim.SetBool("dead", true);
+            }
+            else
+            {
+                //Player has dies, PlayerDeath event here
+            }
+            this.enabled = false;
         }
     }
 }

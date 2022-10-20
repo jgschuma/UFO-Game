@@ -79,10 +79,10 @@ public class Enemy_AirShoot : MonoBehaviour
 
     IEnumerator shoot() {
         allowFire = false;
-        direction = player.transform.position - firePoint.transform.position;
-        float rotationZ = Mathf.Atan2 (direction.x, direction.y) * Mathf.Rad2Deg;
-        firePoint.transform.rotation = Quaternion.Slerp(firePoint.transform.rotation, Quaternion.Euler(0, 0, rotationZ), 100 * Time.deltaTime);
         yield return new WaitForSeconds(rateOfFire);
+        direction = player.transform.position - firePoint.transform.position;
+        float rotationZ = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
+        firePoint.transform.rotation = Quaternion.Slerp(firePoint.transform.rotation, Quaternion.Euler(0, 0, rotationZ), 100 * Time.deltaTime);
         //shoot
         bulletPrefab.GetComponent<ProjectileDirection>().direction = rotationZ;
         Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0,0,0));
