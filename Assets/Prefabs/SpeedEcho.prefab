@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1585432264587290546, guid: 5c96705c7fd5b034c96f0f0302e59f6f,
+  m_Sprite: {fileID: -9044700734017571593, guid: 5c96705c7fd5b034c96f0f0302e59f6f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   direction: 0
   despawnTime: 0.089999996
   despawn: 1
+  hasDestroyAnimation: 0
   speed: 0
 --- !u!50 &-4679373300846019107
 Rigidbody2D:

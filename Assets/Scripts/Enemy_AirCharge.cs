@@ -1,36 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Enemy_AirCharge : MonoBehaviour
 {
     [Tooltip("The player to follow.")]
     public GameObject player;
-    [Tooltip("Speed of the player.")]
+    [Tooltip("Speed of the enemy.")]
     public float speed;
     [Tooltip("Distance the enemy can wander away from their home base.")]
     public float wanderRadius;
     [Tooltip("Distance from which the enemy will be alerted to the player")]
     public float alertRadius;
-    [Tooltip("Distance enemy comes to before charging")]
-    public float stoppingDistance;
-    [Tooltip("Time in between shots")]
-    public float chargeCooldown;
-    [Tooltip("Time spent charging up before actually charging")]
-    public float chargeupTime;
-    [Tooltip("The distance the enemy will charge")]
-    public float chargeDistance;
+    [Tooltip("Distance to the left and right of homebase the enemy patrols")]
+    public float patrolRange = 60f;
     public bool isTrackingPlayer;
-    public bool isShootingPlayer;
     public Rigidbody2D enemyRigidBody;
-    public Transform firePoint;
+    public bool facingRight;
 
+    Animator anim;
+    private bool atHome = true;
     private Vector2 homebase;
     private float distanceToPlayer;
     private float distanceFromHome;
     private Vector3 direction;
-    private bool allowFire;
-    private bool facingRight;
 
     void Awake() {
         player = GameObject.Find("UFO");
@@ -40,64 +34,56 @@ public class Enemy_AirCharge : MonoBehaviour
     {
         enemyRigidBody.freezeRotation = true;
         homebase = transform.position;
-        allowFire = true;
         facingRight = true;
-        Physics2D.IgnoreLayerCollision(0,14, true);
-        
+        anim = GetComponent<Animator>();
+        anim.SetBool("faceRight", facingRight);
     }
 
     private void FixedUpdate() {
         //update distances
-        distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+        distanceToPlayer = Vector2.Distance(homebase, player.transform.position);
         distanceFromHome = Vector2.Distance(transform.position, homebase);
 
-
-        // If the player is within alert radius, and inside charge range
-        if (distanceToPlayer <= stoppingDistance && distanceToPlayer <= alertRadius){
-            //if we face right and player is left, or we face left and player is right
-            if(facingRight == true && player.transform.position.x < transform.position.x || facingRight == false && player.transform.position.x > transform.position.x){
-                flip();
+        if(!anim.GetBool("hurt"))
+        {
+            //Flip the sprite if the enemy is Agro'd
+            if (anim.GetBool("isTargetingPlayer"))
+                anim.SetBool("faceRight", (player.transform.position.x > transform.position.x));
+            else
+            {
+                //Normal patrol pattern
+                //Return to normal if it's reached home
+                if (!atHome && distanceFromHome < 1)
+                    atHome = true;
+                //Turn around if beyond patrol range
+                else if (distanceFromHome > patrolRange)
+                    anim.SetBool("faceRight", !anim.GetBool("faceRight"));
+                //Patrol left and right
+                if(anim.GetBool("faceRight") && atHome)
+                    transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+                else if (atHome)
+                    transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
             }
 
-            //shoot at the player
-            isShootingPlayer = true;
-            if (allowFire) {
-                StartCoroutine(shoot());
+            // If the player is within the alert radius and within wander radius
+            if (Vector2.Distance(transform.position, player.transform.position) <= alertRadius && distanceFromHome < wanderRadius && distanceToPlayer < wanderRadius)
+            {
+                //go towards player
+                isTrackingPlayer = true;
+                atHome = false;
+                anim.SetBool("isTargetingPlayer", true);
+                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+            }
+            // If outside of wander radius or player is outside of alert radius
+            //else if (distanceFromHome >= wanderRadius || distanceToPlayer > alertRadius)
+            else if (!atHome)
+            {
+                //go home
+                isTrackingPlayer = false;
+                anim.SetBool("isTargetingPlayer", false);
+                anim.SetBool("faceRight", transform.position.x < homebase.x);
+                transform.position = Vector2.MoveTowards(transform.position, homebase, Math.Min(speed * Time.deltaTime, distanceFromHome));
             }
         }
-
-        // If the player is within the alert radius, outside charge distance, and within wander radius
-        if (distanceToPlayer <= alertRadius && distanceToPlayer > stoppingDistance && distanceFromHome < wanderRadius){
-            //if we face right and player is left, or we face left and player is right
-            if(facingRight == true && player.transform.position.x < transform.position.x || facingRight == false && player.transform.position.x > transform.position.x){
-                flip();
-            }
-            //go towards player
-            isTrackingPlayer = true;
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-        }
-
-        // If outside of wander radius or player is outside of alert radius
-        if (distanceFromHome >= wanderRadius || distanceToPlayer > alertRadius){
-            //go home
-            isTrackingPlayer = false;
-            isShootingPlayer = false;
-            transform.position = Vector2.MoveTowards(this.transform.position, homebase, speed * Time.deltaTime);
-        }
-    }
-
-    void flip(){
-        facingRight = !facingRight;
-        transform.Rotate(0, 180, 0);
-    }
-
-    IEnumerator shoot() {
-        allowFire = false;
-        direction = player.transform.position - firePoint.transform.position;
-        float rotationZ = Mathf.Atan2 (direction.y, direction.x) * Mathf.Rad2Deg;
-        firePoint.transform.rotation = Quaternion.Slerp(firePoint.transform.rotation, Quaternion.Euler(0, 0, rotationZ), 100 * Time.deltaTime);
-        yield return new WaitForSeconds(chargeCooldown);
-        //code for afer cooldown here
-        allowFire = true;
     }
 }
