@@ -20,9 +20,9 @@ public class ProjectileDestroyOnImpact : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("yowhaddup");
         if (other.gameObject.tag == "Terrain")
         {
+            //Debug.Log("yowhaddup");
             if (hasDestroyAnimation)
             {
                 GetComponent<Animator>().SetTrigger("Destroy");
@@ -30,7 +30,7 @@ public class ProjectileDestroyOnImpact : MonoBehaviour
             }
             else
             {
-                Debug.Log("DO IT NOW GOHAN");
+                //Debug.Log("DO IT NOW GOHAN");
                 Destroy(gameObject);
             }
         }
