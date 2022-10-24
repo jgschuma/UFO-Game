@@ -23,7 +23,7 @@ public class ItemPickup : MonoBehaviour
     // Whenever a pickup collides with an object, check to see if it is a player
     void OnTriggerEnter2D (Collider2D other)
     {
-        if (other.CompareTag("Player") && TractorBeam.activeInHierarchy)
+        if (other.CompareTag("Player") && TractorBeam.activeInHierarchy && other.GetComponent<BeamController>().hasItem == false)
         {
             // If so, pickup the object
             Pickup(other);

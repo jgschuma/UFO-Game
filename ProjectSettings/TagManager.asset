@@ -9,6 +9,7 @@ TagManager:
   - Terrain
   - EnemyAttack
   - PlayerAttack
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Terrain
   - Player Layer
   - Enemy Layer
-  - 
+  - Pickup Layer
   - 
   - 
   - 
