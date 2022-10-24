@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class FlamethrowerPower : MonoBehaviour
 {
     public GameObject FirePoint;
     public GameObject FirePointRotator;
+    public PlayerController playCon;
 
     private bool OnCooldown;
 
@@ -40,7 +42,7 @@ public class FlamethrowerPower : MonoBehaviour
 
             GameObject FlameInstance = Instantiate(FirePrefab, FirePoint.transform.position, Quaternion.identity);
             FlameInstance.GetComponent<ProjectileDirection>().direction = 180 - FirePointRotation;
-            FlameInstance.GetComponent<ProjectileDirection>().speed = MoveSpeed;
+            FlameInstance.GetComponent<ProjectileDirection>().speed = MoveSpeed + playCon.GetSpeed();
             FlameInstance.GetComponent<ProjectileDirection>().despawnTime = DespawnTime;
         }
     }
