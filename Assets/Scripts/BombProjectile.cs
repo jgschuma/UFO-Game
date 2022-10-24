@@ -10,6 +10,7 @@ public class BombProjectile : MonoBehaviour
     public float BoomTimer;
     public bool isPrime;
     public Animator BombAnim;
+    public GameObject ExplosionPrefab;
 
     void Awake()
     {
@@ -36,6 +37,7 @@ public class BombProjectile : MonoBehaviour
         yield return new WaitForSeconds(PrimeTimer);
         BombAnim.SetBool("IsBoom",true);
         yield return new WaitForSeconds(BoomTimer);
+        GameObject Explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 
