@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 7613008995383479993}
   m_Layer: 0
   m_Name: Enemy_Air_Shoot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -349,6 +349,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  invincibilityPeriod: 2.5
+  hurtPeriod: 1
+  hurtTag: 
 --- !u!1 &3595532170684797193
 GameObject:
   m_ObjectHideFlags: 0
