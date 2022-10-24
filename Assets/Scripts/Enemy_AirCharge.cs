@@ -44,7 +44,13 @@ public class Enemy_AirCharge : MonoBehaviour
         distanceToPlayer = Vector2.Distance(homebase, player.transform.position);
         distanceFromHome = Vector2.Distance(transform.position, homebase);
 
-        if(!anim.GetBool("hurt"))
+        //Enemy is dead, float downward
+        if(anim.GetInteger("health") == 0)
+        {
+            transform.position -= new Vector3(0, 0.3f, 0);
+        }
+        //Enemy is not dead
+        else if(!anim.GetBool("hurt"))
         {
             //Flip the sprite if the enemy is Agro'd
             if (anim.GetBool("isTargetingPlayer"))
