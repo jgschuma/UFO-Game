@@ -34,33 +34,27 @@ public class EntityHealth : MonoBehaviour
         //If entity is invincible, ignore all collision and reduce iFrames
         if(invincibilityLeft > 0)
         {
+            Debug.Log("Invincible: No damage");
             //Nothing for now
         }
         //If object is supposed to be hurt
         else if(hurtTag == other.gameObject.tag && invincibilityLeft == 0)
         {
-            doDamage(other.gameObject.GetComponent<DoesDamage>().damage);
+
+            Debug.Log("How is this hitting me");
             anim.SetBool("hurt", true);
             invincibilityLeft = invincibilityPeriod;
-            other.gameObject.GetComponent<ProjectileDirection>().DestroyProjectile();
+            doDamage(other.gameObject.GetComponent<DoesDamage>().damage);
         }
     }
 
     public void doDamage(int _damageAmount)
     {
         health -= _damageAmount;
+        GetComponent<Animator>().SetInteger("health", Math.Max(health, 0));
         if (health <= 0)
         {
             //Kill the entity
-            if (gameObject.tag != "Player")
-            {
-                anim.SetBool("dead", true);
-            }
-            else
-            {
-                //Player has dies, PlayerDeath event here
-            }
-            this.enabled = false;
         }
     }
 }
