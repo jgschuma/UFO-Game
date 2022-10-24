@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 8425684994020552828}
   - component: {fileID: 5556523887451085770}
   - component: {fileID: 1614717606508051775}
+  - component: {fileID: 5040789600258672015}
   m_Layer: 0
   m_Name: Enemy_Air_Charge
   m_TagString: Enemy
@@ -241,3 +242,17 @@ MonoBehaviour:
   invincibilityPeriod: 1
   hurtPeriod: 1
   hurtTag: PlayerAttack
+--- !u!114 &5040789600258672015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8425684994020552825}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c91aadd864fe2f24284af1d0f7cdc984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondUntilPoof: 3
+  poof: {fileID: 2496758750920491041, guid: 7ec4d599a7635dc4dbf384c39fde59d1, type: 3}

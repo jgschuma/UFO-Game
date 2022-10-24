@@ -51,6 +51,7 @@ public class EntityHealth : MonoBehaviour
     public void doDamage(int _damageAmount)
     {
         health -= _damageAmount;
+        GetComponent<Animator>().SetInteger("health", Math.Max(health, 0));
         if (health <= 0)
         {
             //Kill the entity
