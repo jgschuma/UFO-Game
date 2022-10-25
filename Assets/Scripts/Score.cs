@@ -17,7 +17,7 @@ public class Score : MonoBehaviour
 
     //Start method
     void Start(){
-        //PlayerPrefs.SetInt(highScoreKey, 0); //resets the high score in the beginning. Testing only.
+        PlayerPrefs.SetInt(highScoreKey, 0); //resets the high score in the beginning. Testing only.
         LoadHiScore();
         
     }
