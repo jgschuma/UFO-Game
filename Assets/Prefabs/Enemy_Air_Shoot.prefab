@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 1749428442413796719}
   - component: {fileID: 1749428442413796718}
   - component: {fileID: 7613008995383479993}
+  - component: {fileID: 1918660495809350736}
   m_Layer: 0
   m_Name: Enemy_Air_Shoot
   m_TagString: Enemy
@@ -271,7 +272,7 @@ MonoBehaviour:
   wanderRadius: 500
   alertRadius: 200
   shootingDistance: 100
-  rateOfFire: 0.1
+  rateOfFire: 3
   isTrackingPlayer: 0
   isShootingPlayer: 0
   enemyRigidBody: {fileID: 1749428442413796718}
@@ -279,6 +280,10 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8341728407448644063, guid: 14f1ba500a8c6874596e43d34fb386d9,
     type: 3}
   anim: {fileID: 0}
+  deathFlyBackwards: 3
+  deathPopUp: 5
+  deathFallAccel: 0.5
+  deathMaxFallSpeed: 10
   direction: {x: 0, y: 0, z: 0}
 --- !u!95 &7388178859189159339
 Animator:
@@ -312,9 +317,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.09115588
+  m_Radius: 7
 --- !u!50 &1749428442413796718
 Rigidbody2D:
   serializedVersion: 4
@@ -349,9 +354,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  invincibilityPeriod: 2.5
+  invincibilityPeriod: 1
   hurtPeriod: 1
-  hurtTag: 
+  hurtTag: PlayerAttack
+--- !u!114 &1918660495809350736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749428442413796715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c31e38ad6ce6e3a47b53ad5630d9e71e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poof: {fileID: 2496758750920491041, guid: 7ec4d599a7635dc4dbf384c39fde59d1, type: 3}
 --- !u!1 &3595532170684797193
 GameObject:
   m_ObjectHideFlags: 0
