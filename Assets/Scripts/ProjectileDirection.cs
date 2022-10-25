@@ -60,6 +60,11 @@ public class ProjectileDirection : MonoBehaviour
     IEnumerator CountdownTimer()
     {
         yield return new WaitForSeconds(despawnTime);
+        DestroyProjectile();
+    }
+
+    public void DestroyProjectile()
+    {
         if (hasDestroyAnimation)
         {
             GetComponent<Animator>().SetTrigger("Destroy");
