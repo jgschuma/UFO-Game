@@ -31,6 +31,6 @@ public class Timer : MonoBehaviour
     }
 
     void UpdateTimer(){
-        timerText.text = minutes.ToString("D2") + ":" + seconds.ToString("D2") + "." + ((int)milliseconds).ToString("D3");
+        timerText.text = minutes.ToString("D2") + ":" + seconds.ToString("D2") + "." + ((int)milliseconds/10).ToString("D2");
     }
 }
