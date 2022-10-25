@@ -17,20 +17,26 @@ public class Score : MonoBehaviour
 
     //Start method
     void Start(){
+        //PlayerPrefs.SetInt(highScoreKey, 0); //resets the high score in the beginning. Testing only.
         LoadHiScore();
+        
+    }
+    void Update(){
+        DisplayScore();
+        CheckNewHighScore();
     }
 
     //Sub to events
     private void OnEnable() {
         AustinEventManager.onStartGame += ResetScore;
-        AustinEventManager.onPlayerDeath += CheckNewHighSchore;
+        AustinEventManager.onPlayerDeath += CheckNewHighScore;
         AustinEventManager.onScorePoints += AddScore;
     }
 
     //Unsub from events
     private void OnDisable() {
         AustinEventManager.onStartGame -= ResetScore;
-        AustinEventManager.onPlayerDeath -= CheckNewHighSchore;
+        AustinEventManager.onPlayerDeath -= CheckNewHighScore;
         AustinEventManager.onScorePoints -= AddScore;
     }
 
@@ -56,9 +62,11 @@ public class Score : MonoBehaviour
     }
 
     //Check to see if the score is greater than the high score, if so make it the new high score and write that to prefs
-    void CheckNewHighSchore(){
+    void CheckNewHighScore(){
         if (score > highScore){
             PlayerPrefs.SetInt(highScoreKey, score);
+            //updating the high score in game in real time
+            highScore = score;
             DisplayHighScore();
         }
     }
