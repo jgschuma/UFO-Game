@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 4845841199732976059}
   m_Layer: 0
   m_Name: Enemy_Ground_Stationary_Shooting
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,3 +191,4 @@ MonoBehaviour:
   invincibilityPeriod: 1
   hurtPeriod: 1
   hurtTag: PlayerAttack
+  invincible: 0

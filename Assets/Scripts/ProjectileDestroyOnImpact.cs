@@ -18,11 +18,12 @@ public class ProjectileDestroyOnImpact : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Terrain")
+        if (other.gameObject.tag == "Terrain" || 
+            (other.gameObject.tag == "Player" && gameObject.tag != "PlayerAttack") ||
+            (other.gameObject.tag == "Enemy" && gameObject.tag != "EnemyAttack"))
         {
-            //Debug.Log("yowhaddup");
             if (hasDestroyAnimation)
             {
                 GetComponent<Animator>().SetTrigger("Destroy");
