@@ -5,6 +5,7 @@ using System;
 
 public class EntityHealth : MonoBehaviour
 {
+    public int pointValue;
     public int health = 3;
     public float invincibilityPeriod = 2.5f;
     public float hurtPeriod = 1f;
@@ -55,6 +56,7 @@ public class EntityHealth : MonoBehaviour
         if (health <= 0)
         {
             //Kill the entity
+            AustinEventManager.ScorePoints(pointValue);
         }
     }
 }
