@@ -9,6 +9,7 @@ public class GuidedMissileController : MonoBehaviour
     private ProjectileDirection projDirect;
     private Animator anim;
     private float horiInput, vertiInput;
+    public GameObject explosionPrefab;
 
    public static event Action MissileCollision;
 
@@ -50,8 +51,10 @@ public class GuidedMissileController : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("Terrain")){
+        if(other.CompareTag("Terrain") || other.CompareTag("Enemy"))
+        {
             MissileCollision?.Invoke();
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }
