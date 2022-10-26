@@ -41,12 +41,12 @@ GameObject:
   - component: {fileID: 2568046227669940288}
   - component: {fileID: 2568046227669940289}
   - component: {fileID: 8037008355364968895}
+  - component: {fileID: 4845841199732976059}
   - component: {fileID: 2568046227669940295}
   - component: {fileID: 6091550063439461057}
-  - component: {fileID: 4845841199732976059}
   m_Layer: 0
   m_Name: Enemy_Ground_Stationary_Shooting
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,6 +140,23 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8341728407448644063, guid: 14f1ba500a8c6874596e43d34fb386d9,
     type: 3}
   anim: {fileID: 0}
+--- !u!114 &4845841199732976059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2568046227669940291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9d362d755aca34dac3b9ce371e5b0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointValue: 20
+  health: 3
+  invincibilityPeriod: 1
+  hurtPeriod: 1
+  hurtTag: PlayerAttack
 --- !u!58 &2568046227669940295
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -175,20 +192,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4845841199732976059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2568046227669940291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f9d362d755aca34dac3b9ce371e5b0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  invincibilityPeriod: 1
-  hurtPeriod: 1
-  hurtTag: PlayerAttack
-  invincible: 0
