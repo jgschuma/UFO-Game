@@ -462,9 +462,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3784227395381471585}
   - component: {fileID: 1599369317469860611}
+  - component: {fileID: 1000511068894737005}
+  - component: {fileID: 8109188226532217904}
   m_Layer: 0
   m_Name: TwisterEffect
-  m_TagString: Untagged
+  m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -522,7 +524,7 @@ SpriteRenderer:
   m_SortingLayerID: -913958063
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5308477716981140058, guid: ec15324c3d0e045419a816287c6b0f8e,
+  m_Sprite: {fileID: 4175114845427726159, guid: ec15324c3d0e045419a816287c6b0f8e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -534,6 +536,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1000511068894737005
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298974345506871281}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 24, y: 32}
+    newSize: {x: 24, y: 32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16, y: 26}
+  m_EdgeRadius: 0
+--- !u!114 &8109188226532217904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298974345506871281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61fea3ca1e6eae48ab0e00dd81f4f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  breakOnHit: 0
 --- !u!1 &1454728750444013590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,6 +1404,7 @@ MonoBehaviour:
   invincibilityPeriod: 2.5
   hurtPeriod: 1
   hurtTag: EnemyAttack
+  invincible: 0
 --- !u!114 &1411353928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1655,7 +1698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShieldEffect: {fileID: 7982308188860114870}
-  entHeal: {fileID: 8236721324831678960}
+  UFO: {fileID: 7982308188281278617}
 --- !u!1 &7982308188860114870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,7 +1713,7 @@ GameObject:
   - component: {fileID: 7982308188860114858}
   m_Layer: 9
   m_Name: ShieldEffect
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -41,12 +41,14 @@ public class TwisterPower : MonoBehaviour
             UFO.GetComponent<ProjectileDirection>().speed = twisterSpeed;
         }
         //Twister is winding down
-        else if (anim.GetCurrentAnimatorStateInfo(0).IsName("TwisterWinddown") && UFO.GetComponent<ProjectileDirection>().speed != 0)
+        else if (anim.GetCurrentAnimatorStateInfo(0).IsName("TwisterWinddown"))
         {
-            UFO.GetComponent<ProjectileDirection>().speed = Math.Max(UFO.GetComponent<ProjectileDirection>().speed - winddownDecel, 0);
+            if (UFO.GetComponent<ProjectileDirection>().speed != 0)
+                UFO.GetComponent<ProjectileDirection>().speed = Math.Max(UFO.GetComponent<ProjectileDirection>().speed - winddownDecel, 0);
         }
         //The twister is over, restore control
-        else if (anim.GetCurrentAnimatorStateInfo(0).IsName("TwisterOver"))
+        //else if (anim.GetCurrentAnimatorStateInfo(0).IsName("TwisterOver"))
+        else if (anim.GetBool("twisterOn") && !anim.GetCurrentAnimatorStateInfo(0).IsName("TwisterStartup"))
         {
             anim.SetBool("twisterOn", false);
             UFO.GetComponent<ProjectileDirection>().enabled = false;
