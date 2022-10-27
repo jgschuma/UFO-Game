@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8433202790322679102}
   - component: {fileID: 8433202790322679100}
   - component: {fileID: 7875692190136262382}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: BomberPickup
   m_TagString: ItemPickup
   m_Icon: {fileID: 0}
