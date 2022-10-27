@@ -1069,6 +1069,7 @@ MonoBehaviour:
   MissileSpawnPoint: {fileID: 7982308188388105097}
   MainCamera: {fileID: 7982308188969726373}
   UFO: {fileID: 7982308188281278617}
+  CameraHangTime: 0.7
 --- !u!1 &7982308186999368360
 GameObject:
   m_ObjectHideFlags: 0
