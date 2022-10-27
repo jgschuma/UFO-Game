@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3680776298955555981}
   - component: {fileID: 3680776298955555978}
   - component: {fileID: 3680776298955555977}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: MissilePickup
   m_TagString: ItemPickup
   m_Icon: {fileID: 0}

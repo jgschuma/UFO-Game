@@ -11,6 +11,7 @@ public class MissilePower : MonoBehaviour
     public GameObject UFO;
     private GameObject LiveMissile;
     private bool HasMissile = false;
+    public float CameraHangTime;
     
 
     void Start(){
@@ -36,8 +37,18 @@ public class MissilePower : MonoBehaviour
 
     void OnDestroy(){
         HasMissile = false;
+        CameraWait();
+    }
+
+    public IEnumerator CameraHang(){
+        yield return new WaitForSeconds(CameraHangTime);
+
         MainCamera.transform.position = UFO.transform.position + new Vector3(0, 0, -10);
         UFO.GetComponent<BeamController>().enabled = true;
         UFO.GetComponent<GetControllerInput>().enabled = true;
+    }
+
+    public void CameraWait(){
+        StartCoroutine(CameraHang());
     }
 }
