@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 529153863502780545}
   - component: {fileID: 529153863502780547}
   - component: {fileID: 2239199078728346449}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: BlackHolePickup
   m_TagString: ItemPickup
   m_Icon: {fileID: 0}

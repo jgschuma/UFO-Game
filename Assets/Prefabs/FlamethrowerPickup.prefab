@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8572729398623104746}
   - component: {fileID: 8572729398623104744}
   - component: {fileID: 7979436153631513914}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: FlamethrowerPickup
   m_TagString: ItemPickup
   m_Icon: {fileID: 0}
