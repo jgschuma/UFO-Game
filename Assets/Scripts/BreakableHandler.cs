@@ -14,7 +14,7 @@ public class BreakableHandler : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.GetComponent<IsExplosive>().explosive)
         {
