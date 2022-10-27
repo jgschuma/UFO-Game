@@ -5,10 +5,12 @@ using System;
 
 public class EntityHealth : MonoBehaviour
 {
+    public int pointValue;
     public int health = 3;
     public float invincibilityPeriod = 2.5f;
     public float hurtPeriod = 1f;
     public string hurtTag;
+    public bool invincible = false;
 
     float invincibilityLeft = 0;
     Animator anim;
@@ -29,10 +31,10 @@ public class EntityHealth : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         //If entity is invincible, ignore all collision and reduce iFrames
-        if(invincibilityLeft > 0)
+        if(invincibilityLeft > 0 || invincible)
         {
             //Debug.Log("Invincible: No damage");
             //Nothing for now
@@ -46,6 +48,9 @@ public class EntityHealth : MonoBehaviour
             invincibilityLeft = invincibilityPeriod;
             doDamage(other.gameObject.GetComponent<DoesDamage>().damage);
         }
+/*        //Destroys projectile if it's not supposed to pierce enemies (basically just the GunnerBullet)
+        if (other.gameObject.GetComponent<DoesDamage>().breakOnHit)
+            Destroy(other.gameObject);*/
     }
 
     public void doDamage(int _damageAmount)
@@ -55,6 +60,7 @@ public class EntityHealth : MonoBehaviour
         if (health <= 0)
         {
             //Kill the entity
+            AustinEventManager.ScorePoints(pointValue);
         }
     }
 }

@@ -124,6 +124,7 @@ MonoBehaviour:
   direction: 0
   despawnTime: 3
   despawn: 0
+  hasDestroyAnimation: 0
   speed: 100
 --- !u!114 &149348842739246837
 MonoBehaviour:
@@ -151,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a4f811e582a6a47bceeef0acface9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 6086677234599957039, guid: 8abc35d5e47b63343a82eebbcecded4f,
+    type: 3}
 --- !u!95 &149348842739246836
 Animator:
   serializedVersion: 3

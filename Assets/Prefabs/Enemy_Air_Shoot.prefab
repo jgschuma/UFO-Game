@@ -353,6 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9d362d755aca34dac3b9ce371e5b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointValue: 50
   health: 3
   invincibilityPeriod: 1
   hurtPeriod: 1
@@ -370,6 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poof: {fileID: 2496758750920491041, guid: 7ec4d599a7635dc4dbf384c39fde59d1, type: 3}
+  enabled: 0
 --- !u!1 &3595532170684797193
 GameObject:
   m_ObjectHideFlags: 0
