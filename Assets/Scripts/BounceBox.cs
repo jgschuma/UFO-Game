@@ -25,30 +25,29 @@ public class BounceBox : MonoBehaviour
 
             Vector2 contact = other.GetContact(0).normal;
             //Debug.Log("Contact: " + contact);
-            if (contact.y == 0)
-                normalAngle = Math.PI / 2 * Math.Sign(contact.x);
-            else
-                normalAngle = Math.Atan(contact.y / contact.x) + Math.PI / 2;
-            Debug.Log("Normal: " + (normalAngle * 180 / Math.PI));
+            normalAngle = Math.Atan(contact.x / contact.y);
+            if (contact.y < 0 || (contact.y == 0 && contact.x < 0))
+               normalAngle += Math.PI;
+            //Debug.Log("Normal: " + (normalAngle * 180 / Math.PI));
             Vector2 velocity = other.GetContact(0).relativeVelocity;
             //It's the player
             if (GetComponent<GetControllerInput>() != null && GetComponent<GetControllerInput>().enabled)
             {
                 playerAngle = playCon.GetDirectionInRadians();
-                Debug.Log("Player: " + playCon.GetDirectionInDegrees());
-                newAngle = normalAngle - (playerAngle+Math.PI-normalAngle) % (Math.PI*2);
-                Debug.Log("New a: " + (newAngle * 180 / Math.PI));
-                //FINISH THIS SEGMENT
-                Debug.Log("New x: " + playCon.movement.x * Math.Sin(newAngle));
-                Debug.Log("New y: " + playCon.movement.y * Math.Cos(newAngle));
-                //END OF UNFINISHED SEGMENT
+                //Debug.Log("Player: " + playCon.GetDirectionInDegrees());
+                newAngle = normalAngle - (playerAngle + Math.PI - normalAngle) % (Math.PI * 2);
+                //Debug.Log("New a: " + (newAngle * 180 / Math.PI));
+                    //FINISH THIS SEGMENT
+                //Debug.Log("New x: " + playCon.movement.x * Math.Sin(newAngle));
+                //Debug.Log("New y: " + playCon.movement.y * Math.Cos(newAngle));
+                    //END OF UNFINISHED SEGMENT
             }
             //It's probably the twister
             else if (projDir != null && projDir.enabled)
             {
-                Debug.Log(projDir.direction);
+                //Debug.Log(projDir.direction);
                 newAngle = normalAngle - (projDir.GetDirectionInRadians() + Math.PI - normalAngle) % (Math.PI * 2);
-                Debug.Log("New a: " + (newAngle * 180 / Math.PI));
+                //Debug.Log("New a: " + (newAngle * 180 / Math.PI));
                 projDir.SetSpeedAndDirection(projDir.speed, (newAngle * 180 / Math.PI));
             }
         }
