@@ -31,7 +31,6 @@ public class EntityHealth : MonoBehaviour
         }
     }
 
-    //void OnTriggerEnter2D(Collider2D other)
     void OnTriggerStay2D(Collider2D other)
     {
         //If entity is invincible, ignore all collision and reduce iFrames
