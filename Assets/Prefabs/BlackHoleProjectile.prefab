@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 793278001233673989}
   - component: {fileID: 793278001233673991}
   - component: {fileID: 793278001233673988}
+  - component: {fileID: 4644005689071435128}
   m_Layer: 0
   m_Name: TheSuckZone
-  m_TagString: Untagged
+  m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +68,21 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 100
+  m_Radius: 80
+--- !u!114 &4644005689071435128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793278001233673986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61fea3ca1e6eae48ab0e00dd81f4f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  breakOnHit: 0
 --- !u!1 &793278002603101985
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +223,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &-1266012173272921229
 Animator:
   serializedVersion: 3
