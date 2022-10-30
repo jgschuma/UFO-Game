@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -110.1001
       objectReference: {fileID: 0}
+    - target: {fileID: 1958563861010185755, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: TractorBeam
+      value: 
+      objectReference: {fileID: 800082900}
     - target: {fileID: 7982308188281278617, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: m_Name
@@ -215,7 +220,7 @@ PrefabInstance:
     - target: {fileID: 8425684994020552825, guid: c1094738f4d02c841ade3f2f71639478,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8425684994020552826, guid: c1094738f4d02c841ade3f2f71639478,
         type: 3}
@@ -272,6 +277,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8425684994020552828, guid: c1094738f4d02c841ade3f2f71639478,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1094738f4d02c841ade3f2f71639478, type: 3}
 --- !u!1 &375552091 stripped
@@ -320,7 +330,7 @@ PrefabInstance:
     - target: {fileID: 4078540576596802086, guid: fb229ca072bd53040853c82d0817a796,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.483731
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4078540576596802086, guid: fb229ca072bd53040853c82d0817a796,
         type: 3}
@@ -926,7 +936,7 @@ PrefabInstance:
     - target: {fileID: 3680776298955555980, guid: 112502265111a6943b9d2c997058bc80,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.483731
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3680776298955555980, guid: 112502265111a6943b9d2c997058bc80,
         type: 3}
@@ -1412,6 +1422,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1749428442413796718, guid: d8bc240d4f1aed740b316111fc20d238,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7613008995383479993, guid: d8bc240d4f1aed740b316111fc20d238,
         type: 3}
       propertyPath: m_Enabled
@@ -1751,7 +1766,7 @@ PrefabInstance:
     - target: {fileID: 7121365119280051990, guid: 9f3f63e2f613e7541b36c6948b94e54a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7121365119280051990, guid: 9f3f63e2f613e7541b36c6948b94e54a,
         type: 3}

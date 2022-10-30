@@ -58,4 +58,11 @@ public class GuidedMissileController : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    // Can be called by the MissilePower script if the user decides to blow up the missile early
+    public void RemoteDetonate(){
+        MissileCollision?.Invoke();
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Destroy(this.gameObject);
+    }
 }

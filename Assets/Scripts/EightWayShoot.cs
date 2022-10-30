@@ -6,23 +6,29 @@ using System;
 public class EightWayShoot : MonoBehaviour
 {
     // variables on projectile stats
+    [Tooltip("How many seconds between firing")]
     public float CooldownDuration;
     public float ProjectileSpeed;
     private bool OnCooldown;
     private int ProjectileDirection;
+    [Tooltip("Where does the projectile instantiate")]
     public GameObject ShootFirePoint;
+    [Tooltip("The GameObject Rotating our firePoint (usually it's parent)")]
     public GameObject ShootFirePointRotator;
+    [Tooltip("The prefab to instantiate")]
     public GameObject ProjectilePrefab;
 
     public float ProjectileOffset = 1f;
     
     void Start()
     {
+        // Allows DropPower to listen to the DeactivatePower Event
         BeamController.DeactivatePower += DropPower;
     }
 
     void Awake()
     {
+        // Set ProjectileDirection to the right to match firepoint direction default
         ProjectileDirection = 90;
     }
 
@@ -39,10 +45,13 @@ public class EightWayShoot : MonoBehaviour
             // Spawn a Projectile then define it's direction, Rotation, and Speed respectively
             GameObject ProjectileInstance = Instantiate(ProjectilePrefab, ShootFirePoint.transform.position, Quaternion.identity);
             ProjectileInstance.GetComponent<ProjectileDirection>().direction = ProjectileDirection;
+
+            // The gunner power's bullets require an animation change to rotate, others do not need this. Prevents warnings.
             if(string.Equals("GunnerPower", this.gameObject.name)){
                 ProjectileInstance.GetComponent<Animator>().SetInteger("Direction", ProjectileDirection);
             }
             ProjectileInstance.GetComponent<ProjectileDirection>().speed = ProjectileSpeed;
+            
             //Offsets the Projectile position slightly to achieve a gattling gun effect
             ProjectileInstance.transform.position += new Vector3((float)(ProjectileOffset * Math.Cos(ProjectileDirection * Math.PI / 180)), (float)(ProjectileOffset * -Math.Sin(ProjectileDirection * Math.PI / 180)), 0f);
             ProjectileOffset *= -1;

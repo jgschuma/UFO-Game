@@ -19,13 +19,15 @@ public class BombProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Terrain") && isPrime == false){
-            Debug.Log("Bomb Hit terrain");
-            StartCoroutine(PrimeBomb());
-        }
-        else if (other.CompareTag("Enemy") && isPrime ==false){
+        // If it's an enemy freeze it's position so it won't keep falling
+        if (other.CompareTag("Enemy") && isPrime ==false){
             Debug.Log("Bomb Hit Enemy: " + other.gameObject.name);
             ThisRigidBody.constraints = RigidbodyConstraints2D.FreezePosition;
+            StartCoroutine(PrimeBomb());
+        }
+        // Start blowing up the bomb when it impacts with anything but the player
+        else if(!other.CompareTag("Player") && isPrime == false){
+            Debug.Log("Bomb Hit something");
             StartCoroutine(PrimeBomb());
         }
     }
@@ -40,6 +42,7 @@ public class BombProjectile : MonoBehaviour
         GameObject Explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
+
 
 
 
