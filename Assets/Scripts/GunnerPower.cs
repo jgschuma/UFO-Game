@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -18,11 +18,13 @@ public class GunnerPower : MonoBehaviour
     
     void Start()
     {
+        // Allow DropPower to listen for the DeactivatePower event
         BeamController.DeactivatePower += DropPower;
     }
 
     void Awake()
     {
+        // Set the Bullet direction to be the same as the default fire direction.
         BulletDirection = 90;
     }
 
@@ -34,8 +36,9 @@ public class GunnerPower : MonoBehaviour
 
         // Check to see if the Player is pressing the firebutton and fire the gunner
         if (Input.GetButton("Fire2") && OnCooldown == false){
-            Debug.Log("Fire in direction: " + BulletDirection);
+            // Stop the gun from firing until the cooldown has finished
             StartCooldown();
+            // Spawn a bullet then define it's direction, Rotation, and Speed respectively
             GameObject BulletInstance = Instantiate(GunnerBulletPrefab, GunnerFirePoint.transform.position, Quaternion.identity);
             BulletInstance.GetComponent<ProjectileDirection>().direction = BulletDirection;
             BulletInstance.GetComponent<Animator>().SetInteger("Direction", BulletDirection);
@@ -120,7 +123,7 @@ public class GunnerPower : MonoBehaviour
     }
 
     /* If the TractorBeam drops an item, we set OnCooldown to false so we
-    don't lock ourselves out if the gunner is on cooldown when we drop
+    don't lock ourselves out if the gunner is on cooldown when we drop it
     */
     private void DropPower()
     {

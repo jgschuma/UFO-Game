@@ -1070,6 +1070,9 @@ MonoBehaviour:
   MainCamera: {fileID: 7982308188969726373}
   UFO: {fileID: 7982308188281278617}
   CameraHangTime: 0.7
+  BufferTime: 0.5
+  CooldownTime: 0.5
+  OnCooldown: 0
 --- !u!1 &7982308186999368360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,6 +1336,7 @@ GameObject:
   - component: {fileID: 5929339704604932273}
   - component: {fileID: 8741227260328307439}
   - component: {fileID: 3040289145448461642}
+  - component: {fileID: 1958563861010185755}
   m_Layer: 14
   m_Name: UFO
   m_TagString: Player
@@ -1440,7 +1444,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -1624,6 +1628,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recoil: 0.5
+--- !u!114 &1958563861010185755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7982308188281278617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e694ef2409242140841471e5e8bb376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TractorBeam: {fileID: 0}
 --- !u!1 &7982308188388105097
 GameObject:
   m_ObjectHideFlags: 0

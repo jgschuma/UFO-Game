@@ -10,6 +10,7 @@ public class BomberPower : MonoBehaviour
     private bool OnCooldown;
     
     void Start(){
+        BeamController.DeactivatePower += DropPower;
         OnCooldown = false;
     }
 
@@ -33,5 +34,13 @@ public class BomberPower : MonoBehaviour
 
     public void StartCooldown(){
         StartCoroutine(BomberCooldown());
+    }
+
+    /* If the TractorBeam drops an item, we set OnCooldown to false so we
+    don't lock ourselves out if the bomber is on cooldown when we drop it
+    */
+    private void DropPower()
+    {
+        OnCooldown = false;
     }
 }
