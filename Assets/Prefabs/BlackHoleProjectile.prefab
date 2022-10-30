@@ -97,9 +97,11 @@ GameObject:
   - component: {fileID: 793278002603101984}
   - component: {fileID: 793278002603101987}
   - component: {fileID: -1266012173272921229}
-  m_Layer: 0
+  - component: {fileID: -5504522267818073553}
+  - component: {fileID: -7933503337891004879}
+  m_Layer: 17
   m_Name: BlackHoleProjectile
-  m_TagString: Untagged
+  m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,3 +245,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-5504522267818073553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793278002603101985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2965439fea36c464a9ace185b0068f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7933503337891004879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793278002603101985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61fea3ca1e6eae48ab0e00dd81f4f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  breakOnHit: 0
