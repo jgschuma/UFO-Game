@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Env_Geyser_Flame
+  m_Controller: {fileID: 9100000, guid: 8f02aff117063be4da5e23865a1f22f2, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: b9ac7fe5eb8f57d41ab3b793a44a3143, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f40af89d3bf2a8a41bf69b7748a2e817, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: dc147e93b3be5dd478586631ab205627, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 01e70aa2908f7414285af37ac47b630a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4482b8c4c3bd4c7479a6c9bc63d585a4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a6ebf51e0b32ae04f95f8c8c0dd625ee, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d43a2cc823e02b04ca0b3d7ae818d605, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8772bf3aca1a38c43b61146f0fcd3266, type: 2}

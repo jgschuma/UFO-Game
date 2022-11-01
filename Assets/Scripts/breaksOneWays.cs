@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoesDamage : MonoBehaviour
+public class breaksOneWays : MonoBehaviour
 {
-    public int damage = 1;
+    public bool breaksOW = true;
 }

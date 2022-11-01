@@ -31,26 +31,24 @@ public class EntityHealth : MonoBehaviour
         }
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         //If entity is invincible, ignore all collision and reduce iFrames
-        if(invincibilityLeft > 0 || invincible)
+        if (invincibilityLeft > 0 || invincible)
         {
             //Debug.Log("Invincible: No damage");
             //Nothing for now
         }
         //If object is supposed to be hurt
-        else if(hurtTag == other.gameObject.tag && invincibilityLeft == 0)
+        //else if (hurtTag == other.gameObject.tag && invincibilityLeft == 0)
+        else if ((hurtTag == other.gameObject.tag || other.gameObject.tag == "EnvironHazard") && invincibilityLeft == 0)
         {
-
+            Debug.Log("Hit!");
             //Debug.Log("How is this hitting me");
             anim.SetBool("hurt", true);
             invincibilityLeft = invincibilityPeriod;
             doDamage(other.gameObject.GetComponent<DoesDamage>().damage);
         }
-/*        //Destroys projectile if it's not supposed to pierce enemies (basically just the GunnerBullet)
-        if (other.gameObject.GetComponent<DoesDamage>().breakOnHit)
-            Destroy(other.gameObject);*/
     }
 
     public void doDamage(int _damageAmount)
