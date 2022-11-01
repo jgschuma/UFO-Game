@@ -5,6 +5,7 @@ using UnityEngine;
 public class ProjectileDestroyOnImpact : MonoBehaviour
 {
     public bool hasDestroyAnimation = false;
+    public bool breakOnHit = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +22,8 @@ public class ProjectileDestroyOnImpact : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Terrain" || 
-            (other.gameObject.tag == "Player" && gameObject.tag != "PlayerAttack") ||
-            (other.gameObject.tag == "Enemy" && gameObject.tag != "EnemyAttack"))
+            (breakOnHit && (other.gameObject.tag == "Player" && gameObject.tag != "PlayerAttack") ||
+            (other.gameObject.tag == "Enemy" && gameObject.tag != "EnemyAttack")))
         {
             if (hasDestroyAnimation)
             {
@@ -31,7 +32,6 @@ public class ProjectileDestroyOnImpact : MonoBehaviour
             }
             else
             {
-                //Debug.Log("DO IT NOW GOHAN");
                 Destroy(gameObject);
             }
         }

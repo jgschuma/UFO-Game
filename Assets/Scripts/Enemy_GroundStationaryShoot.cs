@@ -45,27 +45,37 @@ public class Enemy_GroundStationaryShoot: MonoBehaviour
             GetComponent<EntityHealth>().enabled = false;
             GetComponent<Enemy_GroundStationaryShoot>().enabled = false;
         }
-        //If awake
-        else if(anim.GetBool("awake") && !anim.GetBool("hurt"))
+        //If not hurt
+        else if(!anim.GetBool("hurt"))
         {
-            //Set facing right relative to player position
-            anim.SetBool("faceRight", player.transform.position.x > transform.position.x);
+            //If awake
+            if (anim.GetBool("awake"))
+            {
+                //Set facing right relative to player position
+                //Mushroom is rightside up
+                if(transform.rotation.eulerAngles.z % 360 == 0)
+                    anim.SetBool("faceRight", player.transform.position.x > transform.position.x);
+                //Mushroom is on right wall
+                else if(transform.rotation.eulerAngles.z % 360 == 90)
+                    anim.SetBool("faceRight", player.transform.position.y > transform.position.y);
+                //Mushroom is upside down
+                else if (transform.rotation.eulerAngles.z % 360 == 180)
+                    anim.SetBool("faceRight", player.transform.position.x < transform.position.x);
+                //Mushroom is on left wall
+                else if (transform.rotation.eulerAngles.z % 360 == 270)
+                    anim.SetBool("faceRight", player.transform.position.x < transform.position.x);
 
-            if (distanceToPlayer < shootingDistance && allowFire)
-            {
-                StartCoroutine(shoot());
+                if (distanceToPlayer < shootingDistance && allowFire)
+                {
+                    StartCoroutine(shoot());
+                }
             }
-            else if (distanceToPlayer > alertRadius)
+            //If asleep but player is close enough, wake up
+            else if (distanceToPlayer < alertRadius)
             {
-                anim.SetBool("awake", false);
-                StopCoroutine(shoot());
+                anim.SetBool("awake", true);
+                StartCoroutine(waitForNextShot());
             }
-        }
-        //If asleep but player is close enough, wake up
-        else if(distanceToPlayer < alertRadius)
-        {
-            anim.SetBool("awake", true);
-            StartCoroutine(waitForNextShot());
         }
     }
 
@@ -80,8 +90,8 @@ public class Enemy_GroundStationaryShoot: MonoBehaviour
         if (anim.GetInteger("health") != 0 && !anim.GetBool("hurt"))
         {
             //shoot
-            bulletPrefab.GetComponent<ProjectileDirection>().direction = rotationZ;
             Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0, 0, 0));
+            bulletPrefab.GetComponent<ProjectileDirection>().direction = rotationZ;
             StartCoroutine(waitForNextShot());
         }
 /*        else
