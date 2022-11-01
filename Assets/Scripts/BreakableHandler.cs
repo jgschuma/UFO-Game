@@ -16,7 +16,7 @@ public class BreakableHandler : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<IsExplosive>().explosive)
+        if (other.gameObject.GetComponent<IsExplosive>() != null)
         {
             anim.SetInteger("health", 0);
         }

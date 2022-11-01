@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class OneWayHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<breaksOneWays>().breaksOW)
+        Debug.Log("Yowhaddup " + other.gameObject.name + "?");
+        if (other.gameObject.GetComponent<breaksOneWays>() != null)
         {
             GetComponent<Animator>().SetTrigger("destroy");
         }
