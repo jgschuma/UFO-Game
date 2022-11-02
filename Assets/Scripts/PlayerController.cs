@@ -102,6 +102,10 @@ public class PlayerController : MonoBehaviour
             dashCooldown = Math.Max(dashCooldown - Time.deltaTime, 0);
         if (dashDecay > 0)
             dashDecay = Math.Max(dashDecay - Time.deltaTime, 0);
+        if (xSpeed == 0 && ySpeed == 0)
+            FindObjectOfType<AudioManager>().StopInteractable("UFOMovement");
+        else
+            FindObjectOfType<AudioManager>().PlayInteractable("UFOMovement");
     }
 
     public double GetDirectionInRadians()
