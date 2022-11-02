@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1149775499662801619}
   - component: {fileID: 1149775499662801616}
   - component: {fileID: 1149775499662801612}
+  - component: {fileID: 4463455738907387942}
   m_Layer: 0
   m_Name: Enemy_Ground_Jump
   m_TagString: Untagged
@@ -156,6 +157,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 16384
   rb: {fileID: 1149775499662801616}
+--- !u!95 &4463455738907387942
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149775499662801617}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a273b03d91e5e67448029b0291b1f9b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1149775500042315238
 GameObject:
   m_ObjectHideFlags: 0
