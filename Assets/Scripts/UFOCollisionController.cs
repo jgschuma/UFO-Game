@@ -17,7 +17,7 @@ public class UFOCollisionController : MonoBehaviour
     {
         // If the player is not using the tractorBeam, disable collisions with item pickups
         // There might be a better solution for this, so I will be looking into it.
-        if(TractorBeam.active == false){
+        if(TractorBeam.activeInHierarchy == false){
             Physics2D.IgnoreLayerCollision(14,15, true);
         }
         else{
