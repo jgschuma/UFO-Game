@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
         //If the button is pressed, the UFO has no item, and the cooldown has worn off, DASH
         if (contInput.GetButtonDown("Fire2") && beamControl.hasItem == false && dashCooldown == 0 && (horizontalInput != 0 || verticalInput != 0))
         {
+            FindObjectOfType<AudioManager>().Play("Dash");
             xSpeed = dashSpeed * horizontalInput;
             ySpeed = dashSpeed * verticalInput;
             dashCooldown = dashCooldownTime;
@@ -102,6 +103,10 @@ public class PlayerController : MonoBehaviour
             dashCooldown = Math.Max(dashCooldown - Time.deltaTime, 0);
         if (dashDecay > 0)
             dashDecay = Math.Max(dashDecay - Time.deltaTime, 0);
+        if (xSpeed == 0 && ySpeed == 0)
+            FindObjectOfType<AudioManager>().StopInteractable("UFOMovement");
+        else
+            FindObjectOfType<AudioManager>().PlayInteractable("UFOMovement");
     }
 
     public double GetDirectionInRadians()

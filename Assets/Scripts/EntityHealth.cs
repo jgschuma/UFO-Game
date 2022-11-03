@@ -48,6 +48,16 @@ public class EntityHealth : MonoBehaviour
             anim.SetBool("hurt", true);
             invincibilityLeft = invincibilityPeriod;
             doDamage(other.gameObject.GetComponent<DoesDamage>().damage);
+
+            if (gameObject.name == "UFO" && health > 0){
+                FindObjectOfType<AudioManager>().Play("PlayerHurt");
+            } else if (gameObject.name == "UFO" && health == 0){
+                FindObjectOfType<AudioManager>().Play("PlayerDeath");
+            } else if (gameObject.name != "UFO" && health > 0){
+                FindObjectOfType<AudioManager>().Play("EnemyHurt");
+            } else if (gameObject.name != "UFO" && health == 0){
+                FindObjectOfType<AudioManager>().Play("EnemyDeath");
+            }
         }
     }
 

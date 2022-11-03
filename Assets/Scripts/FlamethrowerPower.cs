@@ -39,11 +39,14 @@ public class FlamethrowerPower : MonoBehaviour
         ChangeFirepoint();
         if (Input.GetButton("Fire2") && (OnCooldown == false)){
             StartCooldown();
+            FindObjectOfType<AudioManager>().PlayInteractable("Flamethrower");
 
             GameObject FlameInstance = Instantiate(FirePrefab, FirePoint.transform.position, Quaternion.identity);
             FlameInstance.GetComponent<ProjectileDirection>().direction = 180 - FirePointRotation;
             FlameInstance.GetComponent<ProjectileDirection>().speed = MoveSpeed + playCon.GetSpeed();
             FlameInstance.GetComponent<ProjectileDirection>().despawnTime = DespawnTime;
+        } else if (!Input.GetButton("Fire2")) {
+            FindObjectOfType<AudioManager>().StopInteractable("Flamethrower");
         }
     }
 

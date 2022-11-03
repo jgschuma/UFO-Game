@@ -21,6 +21,7 @@ public class BomberPower : MonoBehaviour
         {
             StartCooldown();
             GameObject BomberInstance = Instantiate(BombPrefab, BombSpawn.transform.position, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("BombRelease");
         }
     }
 

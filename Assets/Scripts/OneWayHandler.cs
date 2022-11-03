@@ -10,6 +10,7 @@ public class OneWayHandler : MonoBehaviour
         if (other.gameObject.GetComponent<breaksOneWays>() != null)
         {
             GetComponent<Animator>().SetTrigger("destroy");
+            FindObjectOfType<AudioManager>().PlayInteractable("Explosion");
         }
     }
 }
