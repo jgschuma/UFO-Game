@@ -752,7 +752,31 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: GunnerShooting
-    clip: {fileID: 8300000, guid: 4661eb769ae7ceb4e9bedde4dcf2449c, type: 3}
+    clip: {fileID: 8300000, guid: 00577a95b3e8b4f4ca3bd55d6ad5fcaf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Flamethrower
+    clip: {fileID: 8300000, guid: 6e2c8aaed875fb54ea45d37443d25359, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Explosion
+    clip: {fileID: 8300000, guid: 8662320ba161545458c7407be60fdd33, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: ff61c6652f736a244ac01672c4bcb2fb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BombRelease
+    clip: {fileID: 8300000, guid: b820529da577bcc43bebc971262a5787, type: 3}
     volume: 1
     pitch: 1
     loop: 0
