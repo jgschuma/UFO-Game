@@ -46,6 +46,7 @@ public class GunnerPower : MonoBehaviour
             //Offsets the bullets position slightly to achieve a gattling gun effect
             BulletInstance.transform.position += new Vector3((float)(bulletOffset * Math.Cos(BulletDirection * Math.PI / 180)), (float)(bulletOffset * -Math.Sin(BulletDirection * Math.PI / 180)), 0f);
             bulletOffset *= -1;
+            FindObjectOfType<AudioManager>().PlayOverlapping("GunnerShooting");
         }
     }
 

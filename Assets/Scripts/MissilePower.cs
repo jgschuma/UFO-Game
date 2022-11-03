@@ -55,6 +55,7 @@ public class MissilePower : MonoBehaviour
     }
 
     void OnDestroy(){
+        FindObjectOfType<AudioManager>().Play("Explosion");
         HasMissile = false;
         CameraWait();
     }

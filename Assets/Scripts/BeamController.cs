@@ -44,6 +44,7 @@ public class BeamController : MonoBehaviour
         if (GetComponent<GetControllerInput>().GetButton("Fire1") && hasItem == false && beamOnCooldown == false)
         {
             tractorBeam.SetActive(true);
+            FindObjectOfType<AudioManager>().PlayInteractable("TractorBeam");
         } // If key is pressed and an Item is held, drop the item
         else if (GetComponent<GetControllerInput>().GetButtonDown("Fire1") && hasItem == true && beamOnCooldown == false){
             if(currentPower != null){
@@ -56,8 +57,11 @@ public class BeamController : MonoBehaviour
             hasItem = false;
             StartCooldown();
          // Else keep the tractor beam off
-        }else
+        }else {
             tractorBeam.SetActive(false);
+            FindObjectOfType<AudioManager>().StopInteractable("TractorBeam");
+        }
+            
     }
 
     public IEnumerator BeamCooldown(){
