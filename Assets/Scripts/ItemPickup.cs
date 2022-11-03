@@ -27,6 +27,7 @@ public class ItemPickup : MonoBehaviour
         {
             // If so, pickup the object
             Pickup(other);
+            FindObjectOfType<AudioManager>().Play("ItemPickup");
         }
     }
 

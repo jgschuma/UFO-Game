@@ -38,6 +38,7 @@ public class BombProjectile : MonoBehaviour
         BombAnim.SetBool("IsPrime", true);
         yield return new WaitForSeconds(PrimeTimer);
         BombAnim.SetBool("IsBoom",true);
+        FindObjectOfType<AudioManager>().Play("Explosion");
         yield return new WaitForSeconds(BoomTimer);
         GameObject Explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
         Destroy(this.gameObject);

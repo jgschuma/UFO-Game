@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6128081074593672500}
   - component: {fileID: 5598899334719100044}
   - component: {fileID: 2762364699527814028}
+  - component: {fileID: -838806767401611279}
   m_Layer: 0
   m_Name: GunnerBullet
   m_TagString: PlayerAttack
@@ -184,7 +185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  breakOnHit: 1
 --- !u!114 &2762364699527814028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,3 +198,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasDestroyAnimation: 0
+  breakOnHit: 1
+--- !u!114 &-838806767401611279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5795454818415582696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc51d30c50e901c438044eefe7c11b0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

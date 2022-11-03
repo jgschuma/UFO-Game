@@ -34,6 +34,8 @@ public class Enemy_GroundJump : MonoBehaviour
     private float moveDirection = 1;
     private bool facingRight = true;
 
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,8 @@ public class Enemy_GroundJump : MonoBehaviour
         Physics2D.IgnoreLayerCollision(0,15, true);
         //Physics2D.IgnoreLayerCollision(0,0, true);
         player = GameObject.Find("UFO").transform;
+        anim = GetComponent<Animator>();
+        anim.SetBool("faceRight", facingRight);
     }
 
     // Update is called once per frame
@@ -50,13 +54,19 @@ public class Enemy_GroundJump : MonoBehaviour
         touchingWall = Physics2D.OverlapCircle(wallCheckPoint.position, checksCircleRadius, groundLayer);
         isGrounded = Physics2D.OverlapBox(feetPlantCheck.position, boxSize, 0, groundLayer);
         canSeePlayer = Physics2D.OverlapBox(alertCenter.position, alertZone, 0, playerLayer);
-
-        if (!canSeePlayer && isGrounded){
-            Patrolling();
-        }
-        if (canSeePlayer && isGrounded){
-            if (allowJump) {
-                StartCoroutine(JumpAttack());
+        
+        //Frog is on ground
+        if (isGrounded)
+        {
+            anim.SetBool("inAir", false);
+            if (!canSeePlayer)
+                Patrolling();
+            if (canSeePlayer)
+            {
+                if (allowJump)
+                {
+                    StartCoroutine(JumpAttack());
+                }
             }
         }
     }
@@ -79,6 +89,7 @@ public class Enemy_GroundJump : MonoBehaviour
         //jump!
         if (isGrounded){
             rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
+            anim.SetBool("inAir", true);
         }
         allowJump = true;
     }
@@ -86,7 +97,7 @@ public class Enemy_GroundJump : MonoBehaviour
     void flip(){
         moveDirection *= -1;
         facingRight = !facingRight;
-        transform.Rotate(0, 180, 0);
+        anim.SetBool("faceRight", !anim.GetBool("faceRight"));
     }
 
     private void OnDrawGizmos() {
