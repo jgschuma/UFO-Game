@@ -11,6 +11,7 @@ TagManager:
   - PlayerAttack
   - Enemy
   - EnvironHazard
+  - Warp
   layers:
   - Default
   - TransparentFX
@@ -31,7 +32,7 @@ TagManager:
   - Enemy
   - PlayerAttack
   - PlayerUtil
-  - 
+  - Warp
   - 
   - 
   - 

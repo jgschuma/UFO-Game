@@ -12,10 +12,10 @@ public class WarpPojectile : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().freezeRotation = true;
         Anim = GetComponentInChildren(typeof(Animator)) as Animator;
-        Physics2D.IgnoreLayerCollision(14,18, true);
-        Physics2D.IgnoreLayerCollision(15,18, true);
-        Physics2D.IgnoreLayerCollision(16,18, true);
-        Physics2D.IgnoreLayerCollision(17,18, true);
+        //Physics2D.IgnoreLayerCollision(14,18, true);
+        Physics2D.IgnoreLayerCollision(15,19, true);
+        //Physics2D.IgnoreLayerCollision(16,18, true);
+        //Physics2D.IgnoreLayerCollision(17,18, true);
     }
 
     void Update(){
