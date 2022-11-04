@@ -11,6 +11,7 @@ TagManager:
   - PlayerAttack
   - Enemy
   - EnvironHazard
+  - Warp
   layers:
   - Default
   - TransparentFX
@@ -30,8 +31,8 @@ TagManager:
   - ItemPickups
   - Enemy
   - PlayerAttack
-  - 
-  - 
+  - PlayerUtil
+  - Warp
   - 
   - 
   - 

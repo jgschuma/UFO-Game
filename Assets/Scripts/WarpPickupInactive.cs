@@ -1,15 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
-public class ItemPickup : MonoBehaviour
+public class WarpPickupInactive : MonoBehaviour
 {
     public Rigidbody2D ThisRigidBody;
     public GameObject TractorBeam;
     public GameObject ThisPickup;
     public GameObject ThisPower;
-    public string thisName;
+    public GameObject DropPickup;
+
 
     //public string thisPower;
     
@@ -27,19 +27,18 @@ public class ItemPickup : MonoBehaviour
         {
             // If so, pickup the object
             Pickup(other);
-            FindObjectOfType<AudioManager>().Play("ItemPickup");
         }
     }
 
     void Pickup(Collider2D player)
     {
-        //Debug.Log("Power up picked up");
+        Debug.Log("Power up picked up");
         // Tell the TractorBeam we have an item and to start it's cooldown
         player.GetComponent<BeamController>().hasItem = true;
         player.GetComponent<BeamController>().StartCooldown();
 
         // Set the current Item so that it knows what to spawn when we drop an item
-        player.GetComponent<BeamController>().currentItem = GameObject.Find(thisName);
+        player.GetComponent<BeamController>().currentItem = DropPickup;
         
         /* These lines activates the power on the UFO and set the power on the TractorBeam
          * so that it knows which power to disable on item drop
