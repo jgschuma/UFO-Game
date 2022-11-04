@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1149775499662801619}
   - component: {fileID: 1149775499662801616}
   - component: {fileID: 1149775499662801612}
+  - component: {fileID: 4463455738907387942}
   m_Layer: 0
   m_Name: Enemy_Ground_Jump
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1149775499662801617}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 136.8, y: -124.7, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1149775500042315233}
   - {fileID: 1149775500469348277}
@@ -77,12 +78,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300030, guid: 388e8eb6de557964999d88f8d42114db, type: 3}
-  m_Color: {r: 0.84977615, g: 0.20932718, b: 0.9056604, a: 1}
+  m_Sprite: {fileID: -1164413045478621276, guid: 52febfc12c12fc1439b93dbde945102c,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 16, y: 16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -103,7 +105,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 8.83
 --- !u!50 &1149775499662801616
 Rigidbody2D:
   serializedVersion: 4
@@ -155,6 +157,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 16384
   rb: {fileID: 1149775499662801616}
+--- !u!95 &4463455738907387942
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149775499662801617}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a273b03d91e5e67448029b0291b1f9b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1149775500042315238
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149775500042315238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.526, y: -0.636, z: 0}
+  m_LocalPosition: {x: 0.526, y: -9.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1149775499662801613}
@@ -209,7 +230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149775500157644809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.75, y: 1.11, z: 0}
+  m_LocalPosition: {x: 30, y: 26.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1149775499662801613}
@@ -239,7 +260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149775500444963563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.505, z: 0}
+  m_LocalPosition: {x: 0, y: -8.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1149775499662801613}
@@ -269,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149775500469348282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.508, y: 0, z: 0}
+  m_LocalPosition: {x: 10.87, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1149775499662801613}
