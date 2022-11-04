@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 1149775499662801618}
   - component: {fileID: 1149775499662801619}
   - component: {fileID: 1149775499662801616}
+  - component: {fileID: 1030610099774032616}
   - component: {fileID: 1149775499662801612}
   - component: {fileID: 4463455738907387942}
+  - component: {fileID: 3961328643903536101}
   m_Layer: 0
   m_Name: Enemy_Ground_Jump
   m_TagString: Untagged
@@ -127,6 +129,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1030610099774032616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149775499662801617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9d362d755aca34dac3b9ce371e5b0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointValue: 0
+  health: 3
+  invincibilityPeriod: 1
+  hurtPeriod: 1
+  hurtTag: PlayerAttack
+  invincible: 0
 --- !u!114 &1149775499662801612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +176,10 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 16384
+  deathFlyBackwards: 3
+  deathPopUp: 5
+  deathFallAccel: 0.5
+  deathMaxFallSpeed: 10
   rb: {fileID: 1149775499662801616}
 --- !u!95 &4463455738907387942
 Animator:
@@ -176,6 +200,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3961328643903536101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149775499662801617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c31e38ad6ce6e3a47b53ad5630d9e71e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poof: {fileID: 2496758750920491041, guid: 7ec4d599a7635dc4dbf384c39fde59d1, type: 3}
+  enabled: 0
 --- !u!1 &1149775500042315238
 GameObject:
   m_ObjectHideFlags: 0

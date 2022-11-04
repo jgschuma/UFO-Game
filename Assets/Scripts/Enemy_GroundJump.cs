@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Enemy_GroundJump : MonoBehaviour
 {
@@ -29,6 +30,13 @@ public class Enemy_GroundJump : MonoBehaviour
     public LayerMask playerLayer;
     private bool canSeePlayer;
 
+    [Header("For death behavior")]
+    public float deathFlyBackwards = 3f;
+    public float deathPopUp = 5f;
+    public float deathFallAccel = 0.5f;
+    public float deathMaxFallSpeed = 10f;
+    private float deathFlyBackDirection = 1f;
+
     [Header("Other")]
     public Rigidbody2D rb;
     private float moveDirection = 1;
@@ -50,22 +58,37 @@ public class Enemy_GroundJump : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        touchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, checksCircleRadius, groundLayer);
-        touchingWall = Physics2D.OverlapCircle(wallCheckPoint.position, checksCircleRadius, groundLayer);
-        isGrounded = Physics2D.OverlapBox(feetPlantCheck.position, boxSize, 0, groundLayer);
-        canSeePlayer = Physics2D.OverlapBox(alertCenter.position, alertZone, 0, playerLayer);
-        
-        //Frog is on ground
-        if (isGrounded)
+        if (anim.GetInteger("health") == 0)
         {
-            anim.SetBool("inAir", false);
-            if (!canSeePlayer)
-                Patrolling();
-            if (canSeePlayer)
+            StopCoroutine(JumpAttack());
+            if (anim.GetBool("faceRight"))
+                deathFlyBackDirection = -1;
+            //Death fall
+            deathPopUp = Math.Max(deathPopUp - deathFallAccel, -deathMaxFallSpeed);
+            transform.position += new Vector3(deathFlyBackwards * deathFlyBackDirection, deathPopUp);
+        }
+        else
+        {
+            touchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, checksCircleRadius, groundLayer);
+            touchingWall = Physics2D.OverlapCircle(wallCheckPoint.position, checksCircleRadius, groundLayer);
+            isGrounded = Physics2D.OverlapBox(feetPlantCheck.position, boxSize, 0, groundLayer);
+            canSeePlayer = Physics2D.OverlapBox(alertCenter.position, alertZone, 0, playerLayer);
+
+            //Frog is on ground
+            if (isGrounded)
             {
-                if (allowJump)
+                anim.SetBool("inAir", false);
+                if (!canSeePlayer)
                 {
-                    StartCoroutine(JumpAttack());
+                    anim.SetBool("targetingPlayer", false);
+                    Patrolling();
+                }
+                if (canSeePlayer)
+                {
+                    if (allowJump)
+                    {
+                        StartCoroutine(JumpAttack());
+                    }
                 }
             }
         }
@@ -81,6 +104,7 @@ public class Enemy_GroundJump : MonoBehaviour
     IEnumerator JumpAttack(){
         allowJump = false;
         float distanceFromPlayer = player.position.x - transform.position.x;
+        anim.SetBool("targetingPlayer", true);
         //set the enemy to face the correct position
         if ((distanceFromPlayer < 0 && facingRight) || (distanceFromPlayer > 0 && !facingRight)){
             flip();
