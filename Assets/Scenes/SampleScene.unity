@@ -188,6 +188,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Ground_Jump
       objectReference: {fileID: 0}
+    - target: {fileID: 1149775499662801617, guid: 5516c0ebf1130fa44a3895db94500975,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5516c0ebf1130fa44a3895db94500975, type: 3}
 --- !u!1001 &225573708
@@ -289,7 +294,7 @@ PrefabInstance:
     - target: {fileID: 8425684994020552825, guid: c1094738f4d02c841ade3f2f71639478,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8425684994020552826, guid: c1094738f4d02c841ade3f2f71639478,
         type: 3}
@@ -1650,7 +1655,7 @@ PrefabInstance:
     - target: {fileID: 1749428442413796715, guid: d8bc240d4f1aed740b316111fc20d238,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1749428442413796718, guid: d8bc240d4f1aed740b316111fc20d238,
         type: 3}
@@ -1842,7 +1847,7 @@ PrefabInstance:
     - target: {fileID: 2568046227669940291, guid: 9cf0eb99d9c1f7841be8c8083db66e7c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2568046227669940291, guid: 9cf0eb99d9c1f7841be8c8083db66e7c,
         type: 3}
@@ -2217,6 +2222,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OneWayWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 292004621682905652, guid: 80ea102e777108441b35e7baf35e0e26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 292004621682905655, guid: 80ea102e777108441b35e7baf35e0e26,
         type: 3}
