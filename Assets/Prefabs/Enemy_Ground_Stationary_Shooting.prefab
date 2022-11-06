@@ -157,6 +157,7 @@ MonoBehaviour:
   health: 3
   invincibilityPeriod: 1
   hurtPeriod: 1
+  invincFlashTime: 0.05
   hurtTag: PlayerAttack
   invincible: 0
 --- !u!58 &2568046227669940295

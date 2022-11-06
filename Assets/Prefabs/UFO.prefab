@@ -1583,6 +1583,7 @@ MonoBehaviour:
   health: 3
   invincibilityPeriod: 2.5
   hurtPeriod: 1
+  invincFlashTime: 0.05
   hurtTag: EnemyAttack
   invincible: 0
 --- !u!114 &1411353928
