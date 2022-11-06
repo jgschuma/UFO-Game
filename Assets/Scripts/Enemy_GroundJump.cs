@@ -66,7 +66,7 @@ public class Enemy_GroundJump : MonoBehaviour
             deathPopUp = Math.Max(deathPopUp - deathFallAccel, -deathMaxFallSpeed);
             transform.position += new Vector3(deathFlyBackwards * deathFlyBackDirection, deathPopUp);
         }
-        else
+        else if (!anim.GetBool("hurt"))
         {
             touchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, checksCircleRadius, groundLayer);
             touchingWall = Physics2D.OverlapCircle(wallCheckPoint.position, checksCircleRadius, groundLayer);
