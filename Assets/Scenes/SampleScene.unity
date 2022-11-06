@@ -2226,7 +2226,7 @@ PrefabInstance:
     - target: {fileID: 292004621682905652, guid: 80ea102e777108441b35e7baf35e0e26,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 292004621682905655, guid: 80ea102e777108441b35e7baf35e0e26,
         type: 3}
@@ -2281,6 +2281,11 @@ PrefabInstance:
     - target: {fileID: 292004621682905655, guid: 80ea102e777108441b35e7baf35e0e26,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377250436964726382, guid: 80ea102e777108441b35e7baf35e0e26,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

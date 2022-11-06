@@ -9,7 +9,7 @@ public class OneWayHandler : MonoBehaviour
         Debug.Log("Yowhaddup " + other.gameObject.name + "?");
         if (other.gameObject.GetComponent<breaksOneWays>() != null)
         {
-            GetComponent<Animator>().SetTrigger("destroy");
+            transform.parent.GetComponent<Animator>().SetTrigger("destroy");
             FindObjectOfType<AudioManager>().PlayInteractable("Explosion");
         }
     }
