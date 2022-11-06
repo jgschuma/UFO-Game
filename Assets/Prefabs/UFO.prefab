@@ -618,7 +618,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  breakOnHit: 0
 --- !u!1 &1454728750444013590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,7 +1670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb700966f85f3440a3f6946a0513cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recoil: 0.5
+  recoil: 0.75
 --- !u!114 &1958563861010185755
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -37,10 +37,12 @@ public class BounceBox : MonoBehaviour
                 //Debug.Log("Player: " + playCon.GetDirectionInDegrees());
                 newAngle = normalAngle - (playerAngle + Math.PI - normalAngle) % (Math.PI * 2);
                 //Debug.Log("New a: " + (newAngle * 180 / Math.PI));
-                    //FINISH THIS SEGMENT
-                //Debug.Log("New x: " + playCon.movement.x * Math.Sin(newAngle));
-                //Debug.Log("New y: " + playCon.movement.y * Math.Cos(newAngle));
-                    //END OF UNFINISHED SEGMENT
+                //Debug.Log("Old x: " + playCon.xSpeed);
+                //Debug.Log("Old y: " + playCon.ySpeed);
+                playCon.xSpeed = (float)(Math.Abs(playCon.xSpeed) * Math.Sin(newAngle)) * recoil;
+                playCon.ySpeed = (float)(Math.Abs(playCon.ySpeed) * Math.Cos(newAngle)) * recoil;
+                //Debug.Log("New x: " + playCon.xSpeed);
+                //Debug.Log("New y: " + playCon.ySpeed);
             }
             //It's probably the twister
             else if (projDir != null && projDir.enabled)
