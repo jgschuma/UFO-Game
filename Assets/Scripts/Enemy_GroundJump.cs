@@ -20,8 +20,6 @@ public class Enemy_GroundJump : MonoBehaviour
     public float jumpCooldown;
     private bool allowJump;
     public Transform player;
-    public Transform feetPlantCheck;
-    public Vector2 boxSize;
     private bool isGrounded;
 
     [Header("For Seeing Player")]
@@ -61,6 +59,7 @@ public class Enemy_GroundJump : MonoBehaviour
         if (anim.GetInteger("health") == 0)
         {
             StopCoroutine(JumpAttack());
+            //Doesn't make enemy fly in right direction 100% of the time, needs fixing
             if (anim.GetBool("faceRight"))
                 deathFlyBackDirection = -1;
             //Death fall
@@ -71,25 +70,47 @@ public class Enemy_GroundJump : MonoBehaviour
         {
             touchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, checksCircleRadius, groundLayer);
             touchingWall = Physics2D.OverlapCircle(wallCheckPoint.position, checksCircleRadius, groundLayer);
-            isGrounded = Physics2D.OverlapBox(feetPlantCheck.position, boxSize, 0, groundLayer);
-            canSeePlayer = Physics2D.OverlapBox(alertCenter.position, alertZone, 0, playerLayer);
+            if (!canSeePlayer)
+            {
+                canSeePlayer = Physics2D.OverlapBox(alertCenter.position, alertZone, 0, playerLayer);
+            }
 
             //Frog is on ground
             if (isGrounded)
             {
                 anim.SetBool("inAir", false);
+                //Frog can't see player --> it's patrolling
                 if (!canSeePlayer)
                 {
                     anim.SetBool("targetingPlayer", false);
                     Patrolling();
                 }
-                if (canSeePlayer)
+                //Frog can see player and can jump --> start JumpAttackCoroutine
+                else if (allowJump)
                 {
-                    if (allowJump)
-                    {
-                        StartCoroutine(JumpAttack());
-                    }
+                    StartCoroutine(JumpAttack());
                 }
+                //Frog can see player but can't jump --> it's prepping to jump, make sure it keeps facing the right way
+                else if((player.position.x-transform.position.x) * moveDirection < 0)
+                {
+                    flip();
+                }
+            }
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Terrain")
+        {
+            Vector2 contact = other.GetContact(0).normal;
+            Debug.Log("Frog contact: " + contact);
+            //Frog has just touched the ground
+            if (contact.y > 0)
+            {
+                isGrounded = true;
+                //Try to target player again
+                canSeePlayer = Physics2D.OverlapBox(alertCenter.position, alertZone, 0, playerLayer);
             }
         }
     }
@@ -103,17 +124,14 @@ public class Enemy_GroundJump : MonoBehaviour
 
     IEnumerator JumpAttack(){
         allowJump = false;
-        float distanceFromPlayer = player.position.x - transform.position.x;
         anim.SetBool("targetingPlayer", true);
-        //set the enemy to face the correct position
-        if ((distanceFromPlayer < 0 && facingRight) || (distanceFromPlayer > 0 && !facingRight)){
-            flip();
-        }
         yield return new WaitForSeconds(jumpCooldown);
         //jump!
+        float distanceFromPlayer = player.position.x - transform.position.x;
         if (isGrounded){
             rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
             anim.SetBool("inAir", true);
+            isGrounded = false;
         }
         allowJump = true;
     }
@@ -129,10 +147,6 @@ public class Enemy_GroundJump : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(groundCheckPoint.position, checksCircleRadius);
         Gizmos.DrawWireSphere(wallCheckPoint.position, checksCircleRadius);
-
-        //GREEN -- For checking if grounded in order to jump
-        Gizmos.color = Color.green;
-        Gizmos.DrawCube(feetPlantCheck.position, boxSize);
 
         //RED -- Alert Area
         Gizmos.color = Color.red;
