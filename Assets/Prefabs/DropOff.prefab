@@ -1153,7 +1153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8693026590597346988}
   - component: {fileID: 8693026590597346991}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LightEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1236,7 +1236,9 @@ GameObject:
   - component: {fileID: 8693026591058474254}
   - component: {fileID: 8693026591058474255}
   - component: {fileID: 8693026591058474252}
-  m_Layer: 0
+  - component: {fileID: 2004705927545007677}
+  - component: {fileID: 3946535388673751890}
+  m_Layer: 15
   m_Name: DropOffPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1328,3 +1330,41 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &2004705927545007677
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8693026591058474253}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -2}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 24, y: 18}
+    newSize: {x: 24, y: 18}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20, y: 10}
+  m_EdgeRadius: 0
+--- !u!114 &3946535388673751890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8693026591058474253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab44c5a9140e47c4c9287bf6d639ce5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1905,7 +1905,7 @@ GameObject:
   - component: {fileID: 7982308188860114856}
   - component: {fileID: 7982308188860114859}
   - component: {fileID: 7982308188860114858}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: ShieldEffect
   m_TagString: Player
   m_Icon: {fileID: 0}
