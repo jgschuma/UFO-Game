@@ -1892,7 +1892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShieldEffect: {fileID: 7982308188860114870}
-  UFO: {fileID: 7982308188281278617}
+  entHeal: {fileID: 8236721324831678960}
 --- !u!1 &7982308188860114870
 GameObject:
   m_ObjectHideFlags: 0

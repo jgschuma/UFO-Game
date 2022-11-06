@@ -46,21 +46,18 @@ public class EntityHealth : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         //If entity is invincible, ignore all collision and reduce iFrames
-        if (invincibilityLeft > 0 || invincible)
+/*        if (invincibilityLeft > 0 || invincible)
         {
             //Debug.Log("Invincible: No damage");
             //Nothing for now
-        }
+        }*/
         //If object is supposed to be hurt
-        //else if (hurtTag == other.gameObject.tag && invincibilityLeft == 0)
-        else if ((hurtTag == other.gameObject.tag || other.gameObject.tag == "EnvironHazard") && invincibilityLeft == 0)
+        if ((hurtTag == other.gameObject.tag || other.gameObject.tag == "EnvironHazard") && invincibilityLeft == 0 && !invincible)
         {
-            //Debug.Log("Hit!");
-            //Debug.Log("How is this hitting me");
             anim.SetBool("hurt", true);
             invincibilityLeft = invincibilityPeriod;
             doDamage(other.gameObject.GetComponent<DoesDamage>().damage);
-            lastRoutine = StartCoroutine(InvincibilityFlashOff());
+            lastRoutine = StartCoroutine(InvincibilityFlash());
 
             if (gameObject.name == "UFO" && health > 0){
                 FindObjectOfType<AudioManager>().Play("PlayerHurt");
@@ -86,17 +83,12 @@ public class EntityHealth : MonoBehaviour
     }
 
     //Makes the entity flash when they're invincible
-    IEnumerator InvincibilityFlashOn()
-    {
-        GetComponent<SpriteRenderer>().enabled = true;
-        yield return new WaitForSeconds(invincFlashTime);
-        lastRoutine = StartCoroutine(InvincibilityFlashOff());
-    }
-
-    IEnumerator InvincibilityFlashOff()
+    IEnumerator InvincibilityFlash()
     {
         GetComponent<SpriteRenderer>().enabled = false;
         yield return new WaitForSeconds(invincFlashTime);
-        lastRoutine = StartCoroutine(InvincibilityFlashOn());
+        GetComponent<SpriteRenderer>().enabled = true;
+        yield return new WaitForSeconds(invincFlashTime);
+        lastRoutine = StartCoroutine(InvincibilityFlash());
     }
 }
