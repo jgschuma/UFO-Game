@@ -202,25 +202,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1125138772039794464, guid: e0c4500e7aade8340b1520ace36511f3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -110.1001
-      objectReference: {fileID: 0}
-    - target: {fileID: 1958563861010185755, guid: e0c4500e7aade8340b1520ace36511f3,
-        type: 3}
-      propertyPath: TractorBeam
-      value: 
-      objectReference: {fileID: 800082900}
     - target: {fileID: 7982308188281278617, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: m_Name
       value: UFO
-      objectReference: {fileID: 0}
-    - target: {fileID: 7982308188281278617, guid: e0c4500e7aade8340b1520ace36511f3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7982308188281278618, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
@@ -275,16 +260,6 @@ PrefabInstance:
     - target: {fileID: 7982308188281278618, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7982308188600601192, guid: e0c4500e7aade8340b1520ace36511f3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7982308188860114870, guid: e0c4500e7aade8340b1520ace36511f3,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
