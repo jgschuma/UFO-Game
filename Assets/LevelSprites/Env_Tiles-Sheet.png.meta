@@ -556,7 +556,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: 68ed470541452e100800000000000000
@@ -578,10 +582,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -8, y: -8}
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
         - {x: 8, y: -8}
-        - {x: 8, y: -3}
-        - {x: -8, y: -3}
+        - {x: 8, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: 700b305017fc63550800000000000000
@@ -604,11 +608,9 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -8, y: 8}
-        - {x: -8, y: 5}
-        - {x: 5, y: -8}
+        - {x: -8, y: -8}
         - {x: 8, y: -8}
-        - {x: 8, y: -3}
-        - {x: -3, y: 8}
+        - {x: 8, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: f82d8c2b8f9282f10800000000000000
@@ -630,10 +632,9 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -3, y: -8}
-        - {x: -3, y: 8}
-        - {x: -8, y: 8}
-        - {x: -8, y: -8}
+      - - {x: -8, y: 8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: 462695b2eaa8ca520800000000000000
@@ -655,11 +656,8 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: 5, y: 8}
-        - {x: -8, y: -5}
-        - {x: -8, y: -8}
-        - {x: -3, y: -8}
-        - {x: 8, y: 3}
+      - - {x: -8, y: -8}
+        - {x: 8, y: -8}
         - {x: 8, y: 8}
       tessellationDetail: 0
       bones: []
@@ -683,9 +681,8 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -8, y: 8}
-        - {x: -8, y: 3}
-        - {x: 8, y: 3}
-        - {x: 8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 578e07564243a6330800000000000000
@@ -708,213 +705,12 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -8, y: 8}
-        - {x: -8, y: 3}
-        - {x: 3, y: -8}
-        - {x: 8, y: -8}
-        - {x: 8, y: -5}
-        - {x: -5, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: d1fe9857a6ed12780800000000000000
       internalID: -8709435655537955043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_Tiles-Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 3, y: 8}
-        - {x: 3, y: -8}
-        - {x: 8, y: -8}
-        - {x: 8, y: 8}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3447fda5d4b63ffb0800000000000000
-      internalID: -4615227213143378877
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_Tiles-Sheet_20
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 3, y: 8}
-        - {x: -8, y: -3}
-        - {x: -8, y: -8}
-        - {x: -5, y: -8}
-        - {x: 8, y: 5}
-        - {x: 8, y: 8}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ff57910ea8a2c380800000000000000
-      internalID: -8952407643954651144
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_Tiles-Sheet_21
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -8, y: -8}
-        - {x: -2, y: -8}
-        - {x: -2, y: -3}
-        - {x: -8, y: -3}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9af27b2e87b251400800000000000000
-      internalID: 294189148862361513
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_Tiles-Sheet_22
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 2, y: -3}
-        - {x: 2, y: -8}
-        - {x: 8, y: -8}
-        - {x: 8, y: -3}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1528f604f36e729b0800000000000000
-      internalID: -5104858493262790063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_Tiles-Sheet_23
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -8, y: -8}
-        - {x: -3, y: -8}
-        - {x: -8, y: -3}
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc1243df25b16ea00800000000000000
-      internalID: 785345228272050637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_Tiles-Sheet_24
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -8, y: 8}
-        - {x: -8, y: 3}
-        - {x: -3, y: 8}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8dbe2c7f6c4c709e0800000000000000
-      internalID: -1655137979196052520
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_Tiles-Sheet_25
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 3, y: 8}
-        - {x: 8, y: 3}
-        - {x: 8, y: 8}
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9b85a0b2b77aa410800000000000000
-      internalID: 1489134236150893469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Env_Tiles-Sheet_26
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 3, y: -8}
-        - {x: 8, y: -8}
-        - {x: 8, y: -3}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92fa0a30edbabfea0800000000000000
-      internalID: -5837883521923764439
       vertices: []
       indices: 
       edges: []
