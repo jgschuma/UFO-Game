@@ -222,6 +222,11 @@ PrefabInstance:
       propertyPath: ImpactOffset
       value: -8
       objectReference: {fileID: 0}
+    - target: {fileID: 4070652623648770759, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerAttack
+      objectReference: {fileID: 0}
     - target: {fileID: 5367367724347576939, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: m_IsActive
@@ -295,7 +300,7 @@ PrefabInstance:
     - target: {fileID: 8246850207734240604, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0c4500e7aade8340b1520ace36511f3, type: 3}
@@ -1701,7 +1706,7 @@ PrefabInstance:
     - target: {fileID: 1749428442413796715, guid: d8bc240d4f1aed740b316111fc20d238,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1749428442413796718, guid: d8bc240d4f1aed740b316111fc20d238,
         type: 3}
@@ -1928,6 +1933,48 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1475312107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475312103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925adeee0e755d54a90763eb19958483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosive: 1
+--- !u!114 &1475312108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475312103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61fea3ca1e6eae48ab0e00dd81f4f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!58 &1475312109
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475312103}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 8}
+  serializedVersion: 2
+  m_Radius: 4
 --- !u!1 &1535728858 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 923969519365598074, guid: e0c4500e7aade8340b1520ace36511f3,
