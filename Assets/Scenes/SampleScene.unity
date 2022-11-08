@@ -202,6 +202,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 923969519365598074, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 2372283642425761653, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: FirePoint
@@ -226,6 +231,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070652623648770759, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5367367724347576939, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
@@ -300,7 +310,7 @@ PrefabInstance:
     - target: {fileID: 8246850207734240604, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0c4500e7aade8340b1520ace36511f3, type: 3}
@@ -1966,7 +1976,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475312103}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
