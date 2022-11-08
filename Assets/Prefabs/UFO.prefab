@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 5539814911748002493}
   m_Layer: 0
   m_Name: LaserLine
-  m_TagString: Untagged
+  m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -969,9 +969,9 @@ GameObject:
   - component: {fileID: 5553817309598958052}
   - component: {fileID: 6858665907339493831}
   - component: {fileID: 7859503773675992476}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: LaserImpact
-  m_TagString: Untagged
+  m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1285,6 +1285,9 @@ MonoBehaviour:
   FirePoint: {fileID: 1979742813759940178}
   LaserLine: {fileID: 923969519365598074}
   LaserImpact: {fileID: 4070652623648770759}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 900918
   ImpactOffset: -8
 --- !u!1 &6459055308012190856
 GameObject:
