@@ -7,6 +7,7 @@ public class LaserLengthManager : MonoBehaviour
     public GameObject FirePoint;
     public GameObject LaserLine;
     public GameObject LaserImpact;
+    public LayerMask layerMask;
     public float ImpactOffset;
     private Vector3 ImpactPosition;
 
@@ -22,8 +23,11 @@ public class LaserLengthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D raycastHit2D = Physics2D.Raycast(FirePoint.transform.position, Vector3.up);
+        // Create the raycastHit2D that we'll store our raycast data in
+        RaycastHit2D raycastHit2D = Physics2D.Raycast(FirePoint.transform.position, Vector3.up, layerMask);
+        //Physics2D.queriesHitTriggers = false;
         if(raycastHit2D){
+            // Store the location the raycast hit and move the LaserImpact to the Impact location
             Vector3 HitLocation = raycastHit2D.point;
             LaserImpact.transform.position = HitLocation + new Vector3(0, ImpactOffset, 0);
 
@@ -35,7 +39,8 @@ public class LaserLengthManager : MonoBehaviour
             Vector3 middlePoint = (FirePoint.transform.position + HitLocation)/2f;
             LaserLine.transform.position = middlePoint;
 
-            // LaserImpact.transform.position = HitLocation;
+            // Here we can check to see if an enemy was hit and we can have them take damage
+                // Do the damage check
         }
     }   
 }
