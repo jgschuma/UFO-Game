@@ -11,7 +11,7 @@ public class EntityHealth : MonoBehaviour
     public float hurtPeriod = 1f;
     public float invincFlashTime = 0.05f;
     public string hurtTag;
-    public bool invincible;
+    public bool invincible = false;
 
     Coroutine lastRoutine = null;
     float invincibilityLeft = 0;
@@ -20,7 +20,6 @@ public class EntityHealth : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        invincible = false;
     }
 
     void Update()

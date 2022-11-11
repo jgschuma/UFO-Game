@@ -7,12 +7,6 @@ public class ShieldPower : MonoBehaviour
     public GameObject ShieldEffect;
     public EntityHealth entHeal;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //ShieldEffect = GameObject.Find("ShieldEffect");
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -21,13 +15,13 @@ public class ShieldPower : MonoBehaviour
         {
             ShieldEffect.SetActive(true);
             entHeal.invincible = true;
-            Debug.Log("Player is invincible");
+            //Debug.Log("Player is invincible");
         }
         else if (Input.GetButtonUp("Fire2"))
         {
             ShieldEffect.SetActive(false);
             entHeal.invincible = false;
-            Debug.Log("Player is no longer invincible");
+            //Debug.Log("Player is no longer invincible");
         }
     }
 }
