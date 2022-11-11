@@ -66,12 +66,10 @@ public class Enemy_AirShoot : MonoBehaviour
                 anim.SetBool("faceRight", (player.transform.position.x > transform.position.x));
 
                 // If the player is within alert radius, and inside shooting range
-                if (distanceToPlayer <= shootingDistance)
+                if (distanceToPlayer <= shootingDistance && allowFire)
                 {
                     //shoot at the player
                     StartCoroutine(shoot());
-                   // anim.SetBool("isTargetingPlayer", true);
-                    /*                anim.SetBool("isShootingPlayer", true);*/
                 }
             }
             else if (distanceToPlayer <= alertRadius)
@@ -79,23 +77,11 @@ public class Enemy_AirShoot : MonoBehaviour
                 anim.SetBool("isTargetingPlayer", true);
                 StartCoroutine(waitForNextShot());
             }
-
-/*            // If the player is within the alert radius, outside shooting distance, and within wander radius
-            if (distanceToPlayer <= alertRadius && distanceToPlayer > shootingDistance && distanceFromHome < wanderRadius)
-            {
-                //go towards player
-                anim.SetBool("isTargetingPlayer", true);
-                StartCoroutine(waitForNextShot());
-                //transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-            }*/
-
-            // If outside of wander radius or player is outside of alert radius
+            // If outside of alert radius
             else
             {
                 //go home
                 anim.SetBool("isTargetingPlayer", false);
-/*                anim.SetBool("isShootingPlayer", false);*/
-                //transform.position = Vector2.MoveTowards(this.transform.position, homebase, speed * Time.deltaTime);
             }
         }
     }
@@ -108,11 +94,11 @@ public class Enemy_AirShoot : MonoBehaviour
         if (anim.GetInteger("health") > 0 && !anim.GetBool("hurt"))
         {
             //shoot
-            direction = player.transform.position - firePoint.transform.position;
+            direction = player.transform.position - transform.position;
             float rotationZ = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
-            firePoint.transform.rotation = Quaternion.Slerp(firePoint.transform.rotation, Quaternion.Euler(0, 0, rotationZ), 100 * Time.deltaTime);
-            Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0, 0, 0));
+            //firePoint.transform.rotation = Quaternion.Slerp(firePoint.transform.rotation, Quaternion.Euler(0, 0, rotationZ), 100 * Time.deltaTime);
             bulletPrefab.GetComponent<ProjectileDirection>().direction = rotationZ;
+            Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0, 0, 0));
             StartCoroutine(waitForNextShot());
         }
         anim.SetBool("isShootingPlayer", false);
