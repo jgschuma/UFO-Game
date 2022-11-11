@@ -495,6 +495,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d53c04e3a464b144af40da3e9d3c77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WarpPrefab: {fileID: 1823819508383589166, guid: 3c33cc7263c859d45b171ebe3fe47732,
+    type: 3}
+  MainCam: {fileID: 7982308188969726374}
+  WarpLocation: {fileID: 0}
+  Player: {fileID: 7982308188281278617}
 --- !u!1 &923969519365598074
 GameObject:
   m_ObjectHideFlags: 0
