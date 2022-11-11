@@ -87,7 +87,7 @@ public class Enemy_GroundStationaryShoot: MonoBehaviour
         firePoint.transform.rotation = Quaternion.Slerp(firePoint.transform.rotation, Quaternion.Euler(0, 0, rotationZ), 100 * Time.deltaTime);
         yield return new WaitForSeconds(timeToFire);
         //Cancel coroutine if enemy is already dead
-        if (anim.GetInteger("health") != 0 && !anim.GetBool("hurt"))
+        if (anim.GetInteger("health") > 0 && !anim.GetBool("hurt"))
         {
             //shoot
             Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0, 0, 0));
