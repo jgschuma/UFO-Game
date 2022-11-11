@@ -8,6 +8,12 @@ public class AustinEventManager : MonoBehaviour
     public static StartGameDelegate onStartGame;
     public static StartGameDelegate onPlayerDeath;
 
+    public delegate void ShowScoreDelegate();
+    public static ShowScoreDelegate onNeedScorePage;
+
+    public delegate void NewHighScoreDelegate(int newScore, int pos);
+    public static NewHighScoreDelegate onNewHighScore;
+
     public delegate void ScorePointsDelegate(int amt);
     public static ScorePointsDelegate onScorePoints;
 
@@ -27,6 +33,12 @@ public class AustinEventManager : MonoBehaviour
     public static void ScorePoints(int score){
         if (onScorePoints != null){
             onScorePoints(score);
+        }
+    }
+
+    public static void NewHighScore(int newScore, int pos){
+        if (onNewHighScore != null){
+            onNewHighScore(newScore, pos);
         }
     }
 }

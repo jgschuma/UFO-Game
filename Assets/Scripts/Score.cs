@@ -10,20 +10,30 @@ public class Score : MonoBehaviour
 
     [Header("Current Scores")]
     private int score;
-    private int highScore;
+    private int highScore1;
+    private int highScore2;
+    private int highScore3;
+
+    private string highName1;
+    private string highName2;
+    private string highName3;
 
     [Header("Player Pref Keys")]
-    private string highScoreKey = "hiScore";
+    private string highScore1Key = "hiScore1";
+    private string highScore2Key = "hiScore2";
+    private string highScore3Key = "hiScore3";
+
+    private string highScore1NameKey = "hiScoreName1";
+    private string highScore2NameKey = "hiScoreName2";
+    private string highScore3NameKey = "hiScoreName3";
 
     //Start method
     void Start(){
-        PlayerPrefs.SetInt(highScoreKey, 0); //resets the high score in the beginning. Testing only.
         LoadHiScore();
         
     }
     void Update(){
         DisplayScore();
-        CheckNewHighScore();
     }
 
     //Sub to events
@@ -55,24 +65,34 @@ public class Score : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    //Loading the high score and displaying it
     void LoadHiScore(){
-        highScore = PlayerPrefs.GetInt(highScoreKey, 0);
-        DisplayHighScore();
+        highScore1 = PlayerPrefs.GetInt(highScore1Key);
+        highScore2 = PlayerPrefs.GetInt(highScore2Key);
+        highScore3 = PlayerPrefs.GetInt(highScore3Key);
     }
 
-    //Check to see if the score is greater than the high score, if so make it the new high score and write that to prefs
+    void SaveHiScore(){
+        PlayerPrefs.SetInt(highScore1Key, highScore1);
+        PlayerPrefs.SetInt(highScore2Key, highScore2);
+        PlayerPrefs.SetInt(highScore3Key, highScore3);
+
+    }
+
     void CheckNewHighScore(){
-        if (score > highScore){
-            PlayerPrefs.SetInt(highScoreKey, score);
-            //updating the high score in game in real time
-            highScore = score;
-            DisplayHighScore();
+        if (score > highScore3 && score < highScore2){
+            AustinEventManager.NewHighScore(score, 3);
+            highScore3 = score;
+        } else if (score > highScore2 && score < highScore1){
+            AustinEventManager.NewHighScore(score, 2);
+            highScore3 = highScore2;
+            highScore2 = score;
+        } else if (score > highScore1){
+            AustinEventManager.NewHighScore(score, 1);
+            highScore3 = highScore2;
+            highScore2 = highScore1;
+            highScore1 = score;
+            Debug.Log("BingoHighScore");
         }
-    }
-
-    //Display the high score
-    void DisplayHighScore(){
-        highScoreText.text = highScore.ToString();
+        SaveHiScore();
     }
 }
