@@ -40,7 +40,7 @@ AnimationClip:
       value: {fileID: 1742188849292831858, guid: 2383b57ec5e60ad49b3b984b05db7dec,
         type: 3}
     attribute: m_Sprite
-    path: LaserArch2
+    path: Laser
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -58,7 +58,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     - serializedVersion: 2
-      path: 443064316
+      path: 680365000
       attribute: 0
       script: {fileID: 0}
       typeID: 212
