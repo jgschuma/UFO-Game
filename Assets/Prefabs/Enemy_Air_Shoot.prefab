@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 2973452700143633860}
   - component: {fileID: 6529233232224523928}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ContactDamage
   m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
