@@ -6,6 +6,7 @@ public class ProjectileDestroyOnImpact : MonoBehaviour
 {
     public bool hasDestroyAnimation = false;
     public bool breakOnHit = false;
+    private bool destroyNextFrame = false;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,8 @@ public class ProjectileDestroyOnImpact : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (destroyNextFrame)
+            Destroy(gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -32,7 +34,7 @@ public class ProjectileDestroyOnImpact : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
+                destroyNextFrame = true;
             }
         }
     }

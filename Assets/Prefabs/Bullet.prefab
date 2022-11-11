@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ea491f2c4637c4c802bfbed8187fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 92.74185943603516
+  direction: -132.7012481689453
   despawnTime: 3
   despawn: 1
   hasDestroyAnimation: 1
@@ -187,3 +187,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasDestroyAnimation: 1
+  breakOnHit: 1

@@ -11,7 +11,7 @@ public class EntityHealth : MonoBehaviour
     public float hurtPeriod = 1f;
     public float invincFlashTime = 0.05f;
     public string hurtTag;
-    public bool invincible = false;
+    public bool invincible;
 
     Coroutine lastRoutine = null;
     float invincibilityLeft = 0;
@@ -20,6 +20,7 @@ public class EntityHealth : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        invincible = false;
     }
 
     void Update()
@@ -34,6 +35,8 @@ public class EntityHealth : MonoBehaviour
                 //Stop flickering
                 StopCoroutine(lastRoutine);
                 GetComponent<SpriteRenderer>().enabled = true;
+/*                if (health <= 0)
+                    enabled = false;*/
             }
             //Hurt period is over
             if (invincibilityPeriod - invincibilityLeft >= hurtPeriod)
@@ -46,18 +49,19 @@ public class EntityHealth : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         //If entity is invincible, ignore all collision and reduce iFrames
-/*        if (invincibilityLeft > 0 || invincible)
+        if (invincibilityLeft > 0 || invincible)
         {
             //Debug.Log("Invincible: No damage");
             //Nothing for now
-        }*/
+        }
         //If object is supposed to be hurt
-        if ((hurtTag == other.gameObject.tag || other.gameObject.tag == "EnvironHazard") && invincibilityLeft == 0 && !invincible)
+        else if ((hurtTag == other.gameObject.tag || other.gameObject.tag == "EnvironHazard") && invincibilityLeft == 0 && !invincible)
         {
             anim.SetBool("hurt", true);
             invincibilityLeft = invincibilityPeriod;
             doDamage(other.gameObject.GetComponent<DoesDamage>().damage);
-            lastRoutine = StartCoroutine(InvincibilityFlash());
+            if(health > 0)
+                lastRoutine = StartCoroutine(InvincibilityFlash());
 
             if (gameObject.name == "UFO" && health > 0){
                 FindObjectOfType<AudioManager>().Play("PlayerHurt");

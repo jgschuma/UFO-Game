@@ -1452,7 +1452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803ea08340ff35440b8090f72e6b14c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CooldownDuration: 1
+  CooldownDuration: 7
   ProjectileSpeed: 50
   ShootFirePoint: {fileID: 6950142064213894336}
   ShootFirePointRotator: {fileID: 6459055308012190856}
@@ -2469,9 +2469,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000009536743, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 15.291384
+  m_Radius: 15
 --- !u!95 &7982308188860114858
 Animator:
   serializedVersion: 3
