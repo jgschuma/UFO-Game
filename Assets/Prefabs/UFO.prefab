@@ -1378,7 +1378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803ea08340ff35440b8090f72e6b14c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CooldownDuration: 10
+  CooldownDuration: 1
   ProjectileSpeed: 50
   ShootFirePoint: {fileID: 6950142064213894336}
   ShootFirePointRotator: {fileID: 6459055308012190856}

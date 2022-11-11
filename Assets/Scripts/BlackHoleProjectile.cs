@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class BlackHoleProjectile : MonoBehaviour
 {
-
+    public float timeUntilDetonation = 1.5f;
+    public GameObject blackHole;
     // Start is called before the first frame update
     void Start()
     {
         this.gameObject.GetComponent<Rigidbody2D>().freezeRotation = true;
-        Physics2D.IgnoreLayerCollision(17,14, true);
+        StartCoroutine(Detonate());
     }
 
     // Update is called once per frame
-    void Update()
+/*    void Update()
     {
         
+    }*/
+
+    IEnumerator Detonate()
+    {
+        yield return new WaitForSeconds(timeUntilDetonation);
+        Instantiate(blackHole, transform.position, Quaternion.Euler(0, 0, 0));
+        Destroy(gameObject);
     }
 }

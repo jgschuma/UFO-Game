@@ -202,6 +202,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2443139734224535955, guid: e0c4500e7aade8340b1520ace36511f3,
+        type: 3}
+      propertyPath: CooldownDuration
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7982308188281278617, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: m_Name
