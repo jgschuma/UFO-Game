@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class WarpPojectile : MonoBehaviour
+public class WarpProjectile : MonoBehaviour
 {
     private Animator Anim;
     private Collider2D[] WarpZone;
+    public static event Action<bool> RiftOpen;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,7 @@ public class WarpPojectile : MonoBehaviour
             //Debug.Log("Warp Puck hit the enviromnet");
             // Create the rift above the puck
             Anim.SetBool("open", true);
+            RiftOpen?.Invoke(true);
         }
     }
     void OnTriggerExit2D(Collider2D other)
@@ -43,6 +46,7 @@ public class WarpPojectile : MonoBehaviour
             //Debug.Log("Warp Puck left the environment");
             // Create the rift above the puck
             Anim.SetBool("open", false);
+            RiftOpen?.Invoke(false);
         }
     }
 }

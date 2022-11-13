@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9131748169706767882}
   - component: {fileID: 9131748169706767881}
   - component: {fileID: -4891969985675880584}
+  - component: {fileID: 5588640852839715757}
   m_Layer: 15
   m_Name: WarpPickup
   m_TagString: ItemPickup
@@ -196,3 +197,15 @@ MonoBehaviour:
   ThisPickup: {fileID: 9131748169706767891}
   ThisPower: {fileID: 0}
   DropPickup: {fileID: 0}
+--- !u!114 &5588640852839715757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9131748169706767891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36375cf1836aa6458ad23dbfc5ad2ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

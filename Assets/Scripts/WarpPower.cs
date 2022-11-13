@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class WarpPower : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class WarpPower : MonoBehaviour
     private bool isFinished;
     public GameObject Player;
     private Animator WarpAnim;
-    // This does nothing as of yet
+
+    public static event Action PowerWarp;
     
     void Update(){
         if(Input.GetButton("Fire2") && WarpInProgress == false){
@@ -22,8 +24,10 @@ public class WarpPower : MonoBehaviour
         }
 
         if(WarpAnim != null && WarpAnim.GetBool("StartDone") && WarpInProgress == true){
+            PowerWarp?.Invoke();
             Player.transform.position = WarpLocation.position;
 
+         
             WarpInProgress = false;
             WarpAnim.SetBool("TeleportDone", true);
         }
