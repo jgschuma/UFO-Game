@@ -13,16 +13,11 @@ public class WarpStart : MonoBehaviour
     void Start()
     {
         WarpProjectile.RiftOpen += CanStartWarp;
-        EnableStartRift.WarpActive += FirstRiftOpen;
         WarpPower.PowerWarp += PowerWarpController;
         Anim = GetComponent<Animator>();
         StartWarpBox = GetComponent<WarpBox>();
     }
-
-    void FirstRiftOpen(){
-        //Anim.SetBool("open", true);
-    }
-
+    // This Function controls the start rift opening and closing with the WarpPickup
     void CanStartWarp(bool CanWarp){
         if(CanWarp == true){
             Anim.SetBool("open", true);
@@ -32,10 +27,12 @@ public class WarpStart : MonoBehaviour
         }
     }
 
+    // This function will be triggered  in the WarpPower script when the player uses the warp power to go back to start
     void PowerWarpController(){
         Anim.SetBool("PowerWarp", true);
     }
 
+    // This function is called by the Animator when the StartRiftPowerWarp animation is done
     void PowerWarpDone(){
         Anim.SetBool("PowerWarp", false);
     }
