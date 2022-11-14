@@ -5,7 +5,6 @@ using UnityEngine;
 public class BreakableHandler : MonoBehaviour
 {
     public int health = 3;
-    public float invincibilityPeriod = 0.5f;
 
     private Animator anim;
 
@@ -14,17 +13,17 @@ public class BreakableHandler : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.GetComponent<IsExplosive>() != null)
         {
-            anim.SetInteger("health", 0);
+            if (other.gameObject.name == "LaserImpact" && !anim.GetBool("hurt"))
+            {
+                anim.SetInteger("health", anim.GetInteger("health") - 1);
+                anim.SetBool("hurt", true);
+            }
+            else if (other.gameObject.name != "LaserImpact")
+                anim.SetInteger("health", 0);
         }
-    }
-
-    IEnumerator WaitInvincibilityPeriod()
-    {
-        yield return new WaitForSeconds(invincibilityPeriod);
-        anim.SetBool("hurt", false);
     }
 }
