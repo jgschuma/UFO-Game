@@ -29,8 +29,8 @@ public class Enemy_GroundJump : MonoBehaviour
     private bool canSeePlayer;
 
     [Header("For death behavior")]
-    public float deathFlyBackwards = 3f;
-    public float deathPopUp = 5f;
+    public float hurtKnockback = 3f;
+    public float hurtPopUp= 5f;
     public float deathFallAccel = 0.5f;
     public float deathMaxFallSpeed = 10f;
     private float deathFlyBackDirection = 1f;
@@ -63,8 +63,8 @@ public class Enemy_GroundJump : MonoBehaviour
             if (anim.GetBool("faceRight"))
                 deathFlyBackDirection = -1;
             //Death fall
-            deathPopUp = Math.Max(deathPopUp - deathFallAccel, -deathMaxFallSpeed);
-            transform.position += new Vector3(deathFlyBackwards * deathFlyBackDirection, deathPopUp);
+            hurtPopUp = Math.Max(hurtPopUp - deathFallAccel, -deathMaxFallSpeed);
+            transform.position += new Vector3(hurtKnockback * deathFlyBackDirection, hurtPopUp);
         }
         else if (!anim.GetBool("hurt"))
         {
@@ -101,9 +101,9 @@ public class Enemy_GroundJump : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        Vector2 contact = other.GetContact(0).normal;
         if (other.gameObject.tag == "Terrain")
         {
-            Vector2 contact = other.GetContact(0).normal;
             Debug.Log("Frog contact: " + contact);
             //Frog has just touched the ground
             if (contact.y > 0)
@@ -113,7 +113,21 @@ public class Enemy_GroundJump : MonoBehaviour
                 canSeePlayer = Physics2D.OverlapBox(alertCenter.position, alertZone, 0, playerLayer);
             }
         }
+/*        else if (other.gameObject.name == "ShieldPower")
+        {
+            Debug.Log("It works?");
+            rb.velocity = (new Vector2(hurtKnockback * -Math.Sign(contact.x), hurtPopUp));
+        }*/
     }
+
+/*    void OnTriggerEnter2D(Collision2D other)
+    {
+*//*        Vector2 contact = other.GetContact(0).normal;
+        if (other.gameObject.name == "ShieldPower")
+        {
+            rb.velocity = (new Vector2(hurtKnockback * Math.Sign(contact.x), hurtPopUp));
+        }*//*
+    }*/
 
     void Patrolling(){
         if(!touchingGround || touchingWall){
