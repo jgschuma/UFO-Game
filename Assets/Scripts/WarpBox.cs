@@ -7,12 +7,13 @@ public class WarpBox : MonoBehaviour
     public GameObject WarpPrefab;
     public Camera MainCam;
     public Transform WarpLocation;
+
     private bool PlayerCollision;
     private bool WarpInProgress = false;
     private bool isFinished;
     private GameObject Player;
     private Animator WarpAnim;
-    
+
     // Update is called once per frame
     void Update()
     {
