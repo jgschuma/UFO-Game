@@ -26,7 +26,8 @@ public class ItemPickup : MonoBehaviour
         pickupText = (GameObject)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ItemPopUp.prefab", typeof(GameObject));
         additionalText = UnityEditor.AssetDatabase.LoadAllAssetsAtPath("Assets/Sprites/Item_Text.png");
         //Slim additional text to ONLY have the Discovery and Acquired sprites (DISCOVERY = 0, ACQUIRED = 1)
-        additionalText = new UnityEngine.Object[] { additionalText[1], additionalText[2] };
+        //IT'S OUT OF ORDER???? AGAIN??????
+        additionalText = new UnityEngine.Object[] { additionalText[10], additionalText[11] };
     }
 
     // Whenever a pickup collides with an object, check to see if it is a player

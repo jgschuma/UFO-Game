@@ -11,8 +11,8 @@ public class GunnerPower : MonoBehaviour
     private bool OnCooldown;
     private int BulletDirection;
     public GameObject GunnerFirePoint;
-    public GameObject GunnerFirePointRotator;
     public GameObject GunnerBulletPrefab;
+    private Animator gunnerUnitAnim;
 
     public float bulletOffset = 1f;
     
@@ -20,6 +20,7 @@ public class GunnerPower : MonoBehaviour
     {
         // Allow DropPower to listen for the DeactivatePower event
         BeamController.DeactivatePower += DropPower;
+        gunnerUnitAnim = transform.Find("FirePoint").GetComponent<Animator>();
     }
 
     void Awake()
@@ -53,61 +54,60 @@ public class GunnerPower : MonoBehaviour
 
     public void DirectionDetection(){
         // Need 8 directions of movement for bullet
-            //Right
-            if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") == 0){
-                // Shoot Right
-                GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 0);
-                BulletDirection = 90;
-            }
+        //Right
+        if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") == 0){
+            // Shoot Right
+            BulletDirection = 90;
+        }
+            
+        //RightUp
+        else if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") > 0){
+            // Shoot RightUp
+            BulletDirection = 45;
+        }
 
-            //RightUp
-            else if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") > 0){
-                // Shoot RightUp
-                GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 45);
-                BulletDirection = 45;
-            }
+        //Up
+        else if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") > 0){
+            // Shoot UP
+            BulletDirection = 0;                
+        }
 
-            //Up
-            else if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") > 0){
-                // Shoot UP
-                GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 90);
-                BulletDirection = 0;                
-            }
+        //LeftUp 
+        else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") > 0){
+            //Shoot leftUp
+            BulletDirection = 315;
+        }  
 
-            //LeftUp 
-            else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") > 0){
-                //Shoot leftUp
-                GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 135);
-                BulletDirection = 315;
-            }  
+        //Left
+        else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") == 0){
+            //Shoot left
+            BulletDirection = 270;
+        }
 
-            //Left
-            else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") == 0){
-                //Shoot left
-                GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 180);
-                BulletDirection = 270;
-            }
+        //LeftDown
+        else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") < 0){
+            //Shoot leftDown
+            BulletDirection = 225;
+        }
 
-            //LeftDown
-            else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") < 0){
-                //Shoot leftDown
-                GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 225);
-                BulletDirection = 225;
-            }
+        //Down
+        else if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") < 0){
+            //Shoot Down
+            BulletDirection = 180;
+        }
 
-            //Down
-            else if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") < 0){
-                //Shoot Down
-                GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 270);
-                BulletDirection = 180;
-            }
+        //RightDown
+        else if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") < 0){
+            //Shoot RightDown
+            BulletDirection = 135;
+        }
 
-            //RightDown
-            else if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") < 0){
-                //Shoot RightDown
-                GunnerFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 315);
-                BulletDirection = 135;
-            }
+        //Update gunner unit direction
+        if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            GunnerFirePoint.transform.localPosition = new Vector3(8f * (float)Math.Sin(BulletDirection * Math.PI / 180), 8f * (float)Math.Cos(BulletDirection * Math.PI / 180), 0f);
+            gunnerUnitAnim.SetInteger("direction", BulletDirection);
+        }
     }
     
 
