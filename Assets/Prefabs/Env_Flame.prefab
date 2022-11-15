@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ea491f2c4637c4c802bfbed8187fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: -0
+  direction: -270
   despawnTime: 3
   despawn: 1
   hasDestroyAnimation: 0
@@ -146,7 +146,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.05
   m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
