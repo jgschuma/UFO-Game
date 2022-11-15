@@ -198,3 +198,7 @@ MonoBehaviour:
   DropPickup: {fileID: 0}
   pickupNameSprite: {fileID: -1158078116603615975, guid: 655b56604cd0eb947a93e20d01ff27f4,
     type: 3}
+  discoveryText: {fileID: 4879367822823798030, guid: 655b56604cd0eb947a93e20d01ff27f4,
+    type: 3}
+  acquiredText: {fileID: 2043329129422224572, guid: 655b56604cd0eb947a93e20d01ff27f4,
+    type: 3}

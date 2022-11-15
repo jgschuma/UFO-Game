@@ -128,6 +128,10 @@ MonoBehaviour:
   DropPickup: {fileID: 5396407720279754417}
   pickupNameSprite: {fileID: -1158078116603615975, guid: 655b56604cd0eb947a93e20d01ff27f4,
     type: 3}
+  discoveryText: {fileID: 4879367822823798030, guid: 655b56604cd0eb947a93e20d01ff27f4,
+    type: 3}
+  acquiredText: {fileID: 2043329129422224572, guid: 655b56604cd0eb947a93e20d01ff27f4,
+    type: 3}
 --- !u!61 &5396407720279754408
 BoxCollider2D:
   m_ObjectHideFlags: 0
