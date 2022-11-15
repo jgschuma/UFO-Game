@@ -15,8 +15,6 @@ public class ItemPickup : MonoBehaviour
     public Sprite pickupNameSprite;
     public UnityEngine.Object[] additionalText;
     private GameObject pickupText;
-
-    //public string thisPower;
     
     // Start is called before the first frame update
     void Start()
@@ -60,7 +58,7 @@ public class ItemPickup : MonoBehaviour
         //Display the item pickup text
         pickupText.GetComponent<SpriteRenderer>().sprite = pickupNameSprite;
         //Check if it's a new discovery
-        int itemID = int.Parse(pickupText.GetComponent<SpriteRenderer>().sprite.name.Substring(10))-1;
+        int itemID = int.Parse(pickupText.GetComponent<SpriteRenderer>().sprite.name.Substring(10))-2;
         //Debug.Log(itemID);
         if (!player.GetComponent<BeamController>().itemDiscovery[itemID])
         {
