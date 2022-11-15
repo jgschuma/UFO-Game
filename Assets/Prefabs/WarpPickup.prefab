@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9131748169706767886}
   - component: {fileID: 9131748169706767882}
   - component: {fileID: 9131748169706767881}
-  - component: {fileID: -4891969985675880584}
+  - component: {fileID: 443697398}
   m_Layer: 15
   m_Name: WarpPickup
   m_TagString: ItemPickup
@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9131748169706767891}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -52.4, y: -213.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -179,7 +179,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19, y: 19}
   m_EdgeRadius: 0
---- !u!114 &-4891969985675880584
+--- !u!114 &443697398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9131748169706767891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 220847d56246899429df7fc6e2208605, type: 3}
+  m_Script: {fileID: 11500000, guid: fbf86ed9757091749a27545df740e103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ThisRigidBody: {fileID: 9131748169706767887}
@@ -196,3 +196,5 @@ MonoBehaviour:
   ThisPickup: {fileID: 9131748169706767891}
   ThisPower: {fileID: 0}
   DropPickup: {fileID: 0}
+  pickupNameSprite: {fileID: -1158078116603615975, guid: 655b56604cd0eb947a93e20d01ff27f4,
+    type: 3}

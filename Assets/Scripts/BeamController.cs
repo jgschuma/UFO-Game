@@ -13,6 +13,8 @@ public class BeamController : MonoBehaviour
     public bool hasItem;
     public bool beamOnCooldown;
     public float beamCoolDuration;
+    //Gunner, Shield, Flamethrower, Bomber, Twister, Black Hole, Laser, Warp Rift, Missile
+    public bool[] itemDiscovery = new bool[9];
 
     public GameObject currentItem;
     public GameObject ItemSpawn;

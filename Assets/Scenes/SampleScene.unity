@@ -498,6 +498,12 @@ PrefabInstance:
       propertyPath: ThisPower
       value: 
       objectReference: {fileID: 1099609166}
+    - target: {fileID: 4078540576596802137, guid: fb229ca072bd53040853c82d0817a796,
+        type: 3}
+      propertyPath: pickupText
+      value: 
+      objectReference: {fileID: -7014821012619375003, guid: 655b56604cd0eb947a93e20d01ff27f4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb229ca072bd53040853c82d0817a796, type: 3}
 --- !u!1 &542305679
@@ -861,18 +867,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 478412905}
     m_Modifications:
-    - target: {fileID: -4891969985675880584, guid: 4d4411c9c231ef2499e49267b16e5c72,
-        type: 3}
+    - target: {fileID: 443697398, guid: 4d4411c9c231ef2499e49267b16e5c72, type: 3}
       propertyPath: TractorBeam
       value: 
       objectReference: {fileID: 800082900}
-    - target: {fileID: -4891969985675880584, guid: 4d4411c9c231ef2499e49267b16e5c72,
-        type: 3}
+    - target: {fileID: 443697398, guid: 4d4411c9c231ef2499e49267b16e5c72, type: 3}
       propertyPath: ThisPower
       value: 
       objectReference: {fileID: 1840763468}
-    - target: {fileID: -4891969985675880584, guid: 4d4411c9c231ef2499e49267b16e5c72,
-        type: 3}
+    - target: {fileID: 443697398, guid: 4d4411c9c231ef2499e49267b16e5c72, type: 3}
       propertyPath: DropPickup
       value: 
       objectReference: {fileID: 639429666}
@@ -1212,12 +1215,12 @@ PrefabInstance:
     - target: {fileID: 5396407720279754414, guid: ab4ac92c079a54044b299c9b0c24957d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 166.8
+      value: 3046
       objectReference: {fileID: 0}
     - target: {fileID: 5396407720279754414, guid: ab4ac92c079a54044b299c9b0c24957d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -42.7
+      value: 744
       objectReference: {fileID: 0}
     - target: {fileID: 5396407720279754414, guid: ab4ac92c079a54044b299c9b0c24957d,
         type: 3}
@@ -1274,6 +1277,12 @@ PrefabInstance:
       propertyPath: ThisPower
       value: 
       objectReference: {fileID: 1840763468}
+    - target: {fileID: 5396407720279754415, guid: ab4ac92c079a54044b299c9b0c24957d,
+        type: 3}
+      propertyPath: pickupNameSprite
+      value: 
+      objectReference: {fileID: -1158078116603615975, guid: 655b56604cd0eb947a93e20d01ff27f4,
+        type: 3}
     - target: {fileID: 5396407720279754417, guid: ab4ac92c079a54044b299c9b0c24957d,
         type: 3}
       propertyPath: m_Name
@@ -1368,6 +1377,12 @@ PrefabInstance:
       propertyPath: ThisPower
       value: 
       objectReference: {fileID: 834713368}
+    - target: {fileID: 3680776298955555981, guid: 112502265111a6943b9d2c997058bc80,
+        type: 3}
+      propertyPath: pickupNameSprite
+      value: 
+      objectReference: {fileID: 6519591648402246124, guid: 655b56604cd0eb947a93e20d01ff27f4,
+        type: 3}
     - target: {fileID: 3680776298955555987, guid: 112502265111a6943b9d2c997058bc80,
         type: 3}
       propertyPath: m_Name
@@ -1885,6 +1900,12 @@ PrefabInstance:
       propertyPath: ThisPower
       value: 
       objectReference: {fileID: 1281208724}
+    - target: {fileID: 7875692190136262382, guid: df2f560a036ff0e439776b32bdb8784c,
+        type: 3}
+      propertyPath: pickupText
+      value: 
+      objectReference: {fileID: 7750096651522407568, guid: 655b56604cd0eb947a93e20d01ff27f4,
+        type: 3}
     - target: {fileID: 8433202790322679088, guid: df2f560a036ff0e439776b32bdb8784c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2370,6 +2391,12 @@ PrefabInstance:
       propertyPath: ThisPower
       value: 
       objectReference: {fileID: 1912991930}
+    - target: {fileID: 948284723138878935, guid: 3870bc8676906004d9af67a912da10db,
+        type: 3}
+      propertyPath: pickupText
+      value: 
+      objectReference: {fileID: 3977031543375959556, guid: 655b56604cd0eb947a93e20d01ff27f4,
+        type: 3}
     - target: {fileID: 1543660441039318537, guid: 3870bc8676906004d9af67a912da10db,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2449,6 +2476,12 @@ PrefabInstance:
       propertyPath: ThisPower
       value: 
       objectReference: {fileID: 884426978}
+    - target: {fileID: 5276712403738241804, guid: 167e465eeb882174eb474a4bb4049202,
+        type: 3}
+      propertyPath: pickupText
+      value: 
+      objectReference: {fileID: 206618267986392336, guid: 655b56604cd0eb947a93e20d01ff27f4,
+        type: 3}
     - target: {fileID: 5872255111036721361, guid: 167e465eeb882174eb474a4bb4049202,
         type: 3}
       propertyPath: m_Name

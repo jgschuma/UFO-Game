@@ -5,11 +5,13 @@ using UnityEngine;
 public class DropOffHandler : MonoBehaviour
 {
     private Animator anim;
+    private GameObject acquireText;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = transform.parent.transform.Find("Console").GetComponent<Animator>();
+        acquireText = (GameObject)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ItemPopUp.prefab", typeof(GameObject));
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -38,6 +40,11 @@ public class DropOffHandler : MonoBehaviour
                 anim.SetBool("gotTwister", true);
             else if (other.gameObject.name == "WarpPickupActive")
                 anim.SetBool("gotWarp", true);
+            //Display acquisition 
+            acquireText.GetComponent<SpriteRenderer>().sprite = other.gameObject.GetComponent<ItemPickup>().pickupNameSprite;
+            acquireText.transform.Find("ItemSuffix").GetComponent<SpriteRenderer>().enabled = true;
+            acquireText.transform.Find("ItemSuffix").GetComponent<SpriteRenderer>().sprite = (Sprite)other.gameObject.GetComponent<ItemPickup>().additionalText[1];
+            Instantiate(acquireText, transform.position + new Vector3(0,16,0), Quaternion.Euler(0, 0, 0));
             //Update console display
             anim.SetInteger("itemCount", anim.GetInteger("itemCount") + 1);
             //Remove item pickup

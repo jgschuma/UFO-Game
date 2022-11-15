@@ -7,7 +7,7 @@ public class SpeedEchoes : MonoBehaviour
     public int numOfEchoes = 3;
     public float timeBetweenEchoes = 0.2f;
     public GameObject speedEcho;
-    public Object[] echoSprites;
+    private Object[] echoSprites;
 
     float timeLeftUntilEcho = 0;
     PlayerController playerCon;
