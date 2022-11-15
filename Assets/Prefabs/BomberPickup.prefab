@@ -175,4 +175,6 @@ MonoBehaviour:
   TractorBeam: {fileID: 0}
   ThisPickup: {fileID: 8433202790322679091}
   ThisPower: {fileID: 0}
-  thisName: BomberPickup
+  DropPickup: {fileID: 8433202790322679091}
+  pickupNameSprite: {fileID: 7750096651522407568, guid: 655b56604cd0eb947a93e20d01ff27f4,
+    type: 3}
