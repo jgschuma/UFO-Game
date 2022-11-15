@@ -202,11 +202,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1112015635683020942, guid: e0c4500e7aade8340b1520ace36511f3,
-        type: 3}
-      propertyPath: satelliteDish
-      value: 
-      objectReference: {fileID: 414773302}
     - target: {fileID: 7982308188281278617, guid: e0c4500e7aade8340b1520ace36511f3,
         type: 3}
       propertyPath: m_Name
@@ -351,12 +346,6 @@ PrefabInstance:
 --- !u!1 &375552091 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6459055308012190856, guid: e0c4500e7aade8340b1520ace36511f3,
-    type: 3}
-  m_PrefabInstance: {fileID: 225573708}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &414773302 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8543635047637849692, guid: e0c4500e7aade8340b1520ace36511f3,
     type: 3}
   m_PrefabInstance: {fileID: 225573708}
   m_PrefabAsset: {fileID: 0}

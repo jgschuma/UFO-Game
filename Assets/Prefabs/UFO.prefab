@@ -1676,6 +1676,7 @@ MonoBehaviour:
   MissileSpawnPoint: {fileID: 7982308188388105097}
   MainCamera: {fileID: 7982308188969726373}
   UFO: {fileID: 7982308188281278617}
+  satelliteDish: {fileID: 8543635047637849692}
   CameraHangTime: 0.7
   BufferTime: 0.5
   CooldownTime: 0.5
@@ -2104,6 +2105,7 @@ MonoBehaviour:
   hasItem: 0
   beamOnCooldown: 0
   beamCoolDuration: 0.5
+  itemDiscovery: 000000000000000000
   currentItem: {fileID: 0}
   ItemSpawn: {fileID: 7982308188388105097}
   currentPower: {fileID: 0}
@@ -2168,7 +2170,6 @@ MonoBehaviour:
   timeBetweenEchoes: 0.03
   speedEcho: {fileID: 1837786113593464274, guid: 61296754464dd6643a4edf837b61ad1a,
     type: 3}
-  echoSprites: []
 --- !u!114 &7982308188281278621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2971,6 +2972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6880617545364653832}
   - component: {fileID: 4509394646206023456}
+  - component: {fileID: 5376758279175236068}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
@@ -2986,8 +2988,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8907518886213084335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: 8, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8606904348418511526}
   m_RootOrder: 0
@@ -3030,8 +3032,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: 388e8eb6de557964999d88f8d42114db, type: 3}
+  m_SortingOrder: -1
+  m_Sprite: {fileID: -250436095822436326, guid: a03153d8f8fcb7f48bbf659c8aa0efef,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3042,6 +3045,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5376758279175236068
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8907518886213084335}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b8274a6176e08c04baaa0198b13a6d9a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9125611023260295678
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,6 +40,7 @@ public class SpeedEchoes : MonoBehaviour
                 //Debug.Log("Sprite ID: " + spriteID);
                 //Change sprite of echo to match current sprite
                 speedEcho.GetComponent<SpriteRenderer>().sprite = (Sprite)echoSprites[int.Parse(spriteID) + 1];
+                speedEcho.GetComponent<SpriteRenderer>().flipX = GetComponent<SpriteRenderer>().flipX;
                 Instantiate(speedEcho, transform.position, Quaternion.Euler(0, 0, 0));
             }
         }
