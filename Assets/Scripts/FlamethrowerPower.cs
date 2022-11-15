@@ -16,7 +16,7 @@ public class FlamethrowerPower : MonoBehaviour
     public float MaxRotateAngle;
     public float RotateSpeed;
     private float MaxRotateLeft;
-    private UnityEngine.Object[] nozzleSprites;
+    private Animator anim;
 
     // These variables are related to defining the projectile
     public GameObject FirePrefab;
@@ -33,10 +33,7 @@ public class FlamethrowerPower : MonoBehaviour
         MaxRotateLeft = 360 - MaxRotateAngle;
         OnCooldown = false;
 
-        //Get nozzle sprites
-        nozzleSprites = UnityEditor.AssetDatabase.LoadAllAssetsAtPath("Assets/Sprites/Extra_UFO_Bits-Sheet.png");
-        //Sort the sprites that are needed, STOP GETTING FUCKING JUMBLED
-        nozzleSprites = new UnityEngine.Object[] { nozzleSprites[6], nozzleSprites[7], nozzleSprites[8], nozzleSprites[9], nozzleSprites[10], nozzleSprites[11], nozzleSprites[0] };
+        anim = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
@@ -68,24 +65,22 @@ public class FlamethrowerPower : MonoBehaviour
 
         //Animate the flamethrower nozzle
         if (Math.Abs(FirePointRotation) < 7.5)
-            GetComponent<SpriteRenderer>().sprite = (Sprite)nozzleSprites[6];
+            anim.SetInteger("direction", 0);
         else if (Math.Abs(FirePointRotation) < 22.5)
-            GetComponent<SpriteRenderer>().sprite = (Sprite)nozzleSprites[5];
+            anim.SetInteger("direction", 15);
         else if (Math.Abs(FirePointRotation) < 37.5)
-            GetComponent<SpriteRenderer>().sprite = (Sprite)nozzleSprites[4];
+            anim.SetInteger("direction", 30);
         else if (Math.Abs(FirePointRotation) < 52.5)
-            GetComponent<SpriteRenderer>().sprite = (Sprite)nozzleSprites[3];
+            anim.SetInteger("direction", 45);
         else if (Math.Abs(FirePointRotation) < 67.5)
-            GetComponent<SpriteRenderer>().sprite = (Sprite)nozzleSprites[2];
+            anim.SetInteger("direction", 60);
         else if (Math.Abs(FirePointRotation) < 82.5)
-            GetComponent<SpriteRenderer>().sprite = (Sprite)nozzleSprites[1];
+            anim.SetInteger("direction", 75);
         else
-            GetComponent<SpriteRenderer>().sprite = (Sprite)nozzleSprites[0];
+            anim.SetInteger("direction", 90);
 
         if (FirePointRotation > -7.5)
-            GetComponent<SpriteRenderer>().flipX = true;
-        else
-            GetComponent<SpriteRenderer>().flipX = false;
+            anim.SetInteger("direction", anim.GetInteger("direction") * -1);
 
         //Rotate FirePoint to tip of nozzle
         FirePoint.transform.localPosition = new Vector3(-7f * (float)Math.Sin((FirePointRotation+180) * Math.PI / 180), 7f * (float)Math.Cos((FirePointRotation+180) * Math.PI / 180), 0f);

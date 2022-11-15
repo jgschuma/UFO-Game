@@ -950,6 +950,7 @@ GameObject:
   - component: {fileID: 2173993597579878209}
   - component: {fileID: 8129139117850908906}
   - component: {fileID: 8362415930132573548}
+  - component: {fileID: 625544138027301042}
   m_Layer: 0
   m_Name: FlamethrowerPower
   m_TagString: Untagged
@@ -1046,6 +1047,25 @@ MonoBehaviour:
     type: 3}
   MoveSpeed: 120
   DespawnTime: 0.5
+--- !u!95 &625544138027301042
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606215712733638885}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c8e33e7372ab3f644876b1ba57df42f7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4070652623648770759
 GameObject:
   m_ObjectHideFlags: 0
