@@ -43,7 +43,7 @@ public class DropOffHandler : MonoBehaviour
             //Display acquisition 
             acquireText.GetComponent<SpriteRenderer>().sprite = other.gameObject.GetComponent<ItemPickup>().pickupNameSprite;
             acquireText.transform.Find("ItemSuffix").GetComponent<SpriteRenderer>().enabled = true;
-            acquireText.transform.Find("ItemSuffix").GetComponent<SpriteRenderer>().sprite = (Sprite)other.gameObject.GetComponent<ItemPickup>().additionalText[1];
+            acquireText.transform.Find("ItemSuffix").GetComponent<SpriteRenderer>().sprite = (Sprite)other.gameObject.GetComponent<ItemPickup>().acquiredText;
             Instantiate(acquireText, transform.position + new Vector3(0,16,0), Quaternion.Euler(0, 0, 0));
             //Update console display
             anim.SetInteger("itemCount", anim.GetInteger("itemCount") + 1);
