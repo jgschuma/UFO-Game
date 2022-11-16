@@ -30,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149775499662801617}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 136.8, y: -124.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_Sprite: {fileID: -1164413045478621276, guid: 52febfc12c12fc1439b93dbde945102c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 16, y: 16}
@@ -171,12 +171,12 @@ MonoBehaviour:
   jumpCooldown: 1
   player: {fileID: 7982308188281278618, guid: e0c4500e7aade8340b1520ace36511f3, type: 3}
   alertCenter: {fileID: 1149775500157644808}
-  alertZone: {x: 102.9, y: 72.75}
+  alertZone: {x: 150, y: 64}
   playerLayer:
     serializedVersion: 2
     m_Bits: 16384
-  deathFlyBackwards: 3
-  deathPopUp: 5
+  hurtKnockback: 3
+  hurtPopUp: 5
   deathFallAccel: 0.5
   deathMaxFallSpeed: 10
   rb: {fileID: 1149775499662801616}
@@ -267,7 +267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149775500157644809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: 26.9, z: 0}
+  m_LocalPosition: {x: 0, y: 24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1149775499662801613}

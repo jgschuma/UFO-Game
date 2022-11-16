@@ -51,6 +51,8 @@ public class Enemy_GroundJump : MonoBehaviour
         player = GameObject.Find("UFO").transform;
         anim = GetComponent<Animator>();
         anim.SetBool("faceRight", GetComponent<SpriteRenderer>().flipX);
+        if (!anim.GetBool("faceRight"))
+            moveDirection = -1;
     }
 
     // Update is called once per frame
