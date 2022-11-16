@@ -9,7 +9,7 @@ public class GeyserSpewFlame : MonoBehaviour
     public float flameDelay = 2f;
 
     private GameObject player;
-    private float deactivateDistance = 220f;
+    private float deactivateDistance = 250f;
     private float distanceToPlayer;
     private Coroutine lastCoroutine;
     
