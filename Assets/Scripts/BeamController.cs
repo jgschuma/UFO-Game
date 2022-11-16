@@ -13,6 +13,8 @@ public class BeamController : MonoBehaviour
     public bool hasItem;
     public bool beamOnCooldown;
     public float beamCoolDuration;
+    //Gunner, Shield, Flamethrower, Bomber, Twister, Black Hole, Laser, Warp Rift, Missile
+    public bool[] itemDiscovery = new bool[9];
 
     public GameObject currentItem;
     public GameObject ItemSpawn;
@@ -53,7 +55,7 @@ public class BeamController : MonoBehaviour
             }
             currentItem.SetActive(true);
             currentItem.transform.position = ItemSpawn.transform.position;
-            Debug.Log("Item has been dropped");
+            //Debug.Log("Item has been dropped");
             hasItem = false;
             StartCooldown();
          // Else keep the tractor beam off

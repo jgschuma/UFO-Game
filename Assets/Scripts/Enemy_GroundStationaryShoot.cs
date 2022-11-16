@@ -71,7 +71,7 @@ public class Enemy_GroundStationaryShoot: MonoBehaviour
                 }
             }
             //If asleep but player is close enough, wake up
-            else if (distanceToPlayer < alertRadius)
+            else if (distanceToPlayer <= alertRadius)
             {
                 anim.SetBool("awake", true);
                 StartCoroutine(waitForNextShot());
@@ -82,16 +82,16 @@ public class Enemy_GroundStationaryShoot: MonoBehaviour
     IEnumerator shoot() {
         anim.SetBool("shootingPlayer", true);
         allowFire = false;
-        direction = player.transform.position - firePoint.transform.position;
-        float rotationZ = Mathf.Atan2 (direction.x, direction.y) * Mathf.Rad2Deg;
-        firePoint.transform.rotation = Quaternion.Slerp(firePoint.transform.rotation, Quaternion.Euler(0, 0, rotationZ), 100 * Time.deltaTime);
+        //firePoint.transform.rotation = Quaternion.Slerp(firePoint.transform.rotation, Quaternion.Euler(0, 0, rotationZ), 100 * Time.deltaTime);
         yield return new WaitForSeconds(timeToFire);
         //Cancel coroutine if enemy is already dead
-        if (anim.GetInteger("health") != 0 && !anim.GetBool("hurt"))
+        if (anim.GetInteger("health") > 0 && !anim.GetBool("hurt"))
         {
             //shoot
-            Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0, 0, 0));
+            direction = player.transform.position - firePoint.transform.position;
+            float rotationZ = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
             bulletPrefab.GetComponent<ProjectileDirection>().direction = rotationZ;
+            Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0, 0, 0));
             StartCoroutine(waitForNextShot());
         }
 /*        else

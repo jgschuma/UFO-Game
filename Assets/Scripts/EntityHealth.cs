@@ -9,9 +9,11 @@ public class EntityHealth : MonoBehaviour
     public int health = 3;
     public float invincibilityPeriod = 2.5f;
     public float hurtPeriod = 1f;
+    public float invincFlashTime = 0.05f;
     public string hurtTag;
     public bool invincible = false;
 
+    Coroutine lastRoutine = null;
     float invincibilityLeft = 0;
     Animator anim;
 
@@ -26,8 +28,20 @@ public class EntityHealth : MonoBehaviour
         if (invincibilityLeft > 0)
         {
             invincibilityLeft = Math.Max(0, invincibilityLeft - Time.deltaTime);
+            //Invincibility period just ended
+            if (invincibilityLeft <= 0)
+            {
+                //Stop flickering
+                StopCoroutine(lastRoutine);
+                GetComponent<SpriteRenderer>().enabled = true;
+/*                if (health <= 0)
+                    enabled = false;*/
+            }
+            //Hurt period is over
             if (invincibilityPeriod - invincibilityLeft >= hurtPeriod)
+            {
                 anim.SetBool("hurt", false);
+            }
         }
     }
 
@@ -40,14 +54,13 @@ public class EntityHealth : MonoBehaviour
             //Nothing for now
         }
         //If object is supposed to be hurt
-        //else if (hurtTag == other.gameObject.tag && invincibilityLeft == 0)
-        else if ((hurtTag == other.gameObject.tag || other.gameObject.tag == "EnvironHazard") && invincibilityLeft == 0)
+        else if ((hurtTag == other.gameObject.tag || other.gameObject.tag == "EnvironHazard") && invincibilityLeft == 0 && !invincible)
         {
-            Debug.Log("Hit!");
-            //Debug.Log("How is this hitting me");
             anim.SetBool("hurt", true);
             invincibilityLeft = invincibilityPeriod;
             doDamage(other.gameObject.GetComponent<DoesDamage>().damage);
+            if(health > 0)
+                lastRoutine = StartCoroutine(InvincibilityFlash());
 
             if (gameObject.name == "UFO" && health > 0){
                 FindObjectOfType<AudioManager>().Play("PlayerHurt");
@@ -71,5 +84,15 @@ public class EntityHealth : MonoBehaviour
             //Kill the entity
             AustinEventManager.ScorePoints(pointValue);
         }
+    }
+
+    //Makes the entity flash when they're invincible
+    IEnumerator InvincibilityFlash()
+    {
+        GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(invincFlashTime);
+        GetComponent<SpriteRenderer>().enabled = true;
+        yield return new WaitForSeconds(invincFlashTime);
+        lastRoutine = StartCoroutine(InvincibilityFlash());
     }
 }

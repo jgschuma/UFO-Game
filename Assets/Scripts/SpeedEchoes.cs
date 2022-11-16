@@ -7,7 +7,7 @@ public class SpeedEchoes : MonoBehaviour
     public int numOfEchoes = 3;
     public float timeBetweenEchoes = 0.2f;
     public GameObject speedEcho;
-    public Object[] echoSprites;
+    private Object[] echoSprites;
 
     float timeLeftUntilEcho = 0;
     PlayerController playerCon;
@@ -40,6 +40,7 @@ public class SpeedEchoes : MonoBehaviour
                 //Debug.Log("Sprite ID: " + spriteID);
                 //Change sprite of echo to match current sprite
                 speedEcho.GetComponent<SpriteRenderer>().sprite = (Sprite)echoSprites[int.Parse(spriteID) + 1];
+                speedEcho.GetComponent<SpriteRenderer>().flipX = GetComponent<SpriteRenderer>().flipX;
                 Instantiate(speedEcho, transform.position, Quaternion.Euler(0, 0, 0));
             }
         }

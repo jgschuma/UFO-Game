@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5872255111036721372}
   - component: {fileID: 5872255111036721374}
   - component: {fileID: 5276712403738241804}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: ShieldPickup
   m_TagString: ItemPickup
   m_Icon: {fileID: 0}
@@ -175,4 +175,10 @@ MonoBehaviour:
   TractorBeam: {fileID: 0}
   ThisPickup: {fileID: 5872255111036721361}
   ThisPower: {fileID: 0}
-  thisName: ShieldPickup
+  DropPickup: {fileID: 5872255111036721361}
+  pickupNameSprite: {fileID: 206618267986392336, guid: 655b56604cd0eb947a93e20d01ff27f4,
+    type: 3}
+  discoveryText: {fileID: 4879367822823798030, guid: 655b56604cd0eb947a93e20d01ff27f4,
+    type: 3}
+  acquiredText: {fileID: 2043329129422224572, guid: 655b56604cd0eb947a93e20d01ff27f4,
+    type: 3}

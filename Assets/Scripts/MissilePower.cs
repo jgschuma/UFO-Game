@@ -10,6 +10,7 @@ public class MissilePower : MonoBehaviour
     public GameObject MainCamera;
     public GameObject UFO;
     private GameObject LiveMissile;
+    public Animator satelliteDish;
     private bool HasMissile;
     public float CameraHangTime;
 
@@ -39,19 +40,21 @@ public class MissilePower : MonoBehaviour
             HasMissile = true;
             // Prevent the user from blowing up the missile immediately
             StartCoroutine(BlowUpBuffer());
-
-            // Disable UFO controls
-            UFO.GetComponent<GetControllerInput>().ResetDirections();
-            UFO.GetComponent<BeamController>().enabled = false;
-            UFO.GetComponent<GetControllerInput>().enabled = false;
+            DisableUFOControls();
         }
-        if (HasMissile == true){
+        else if (HasMissile == true){
             MainCamera.transform.position = LiveMissile.transform.position + new Vector3(0, 0, -10);
+            //If UFO is hurt while controlling missile, restore control to UFO and disable controls to missile
+            if (UFO.GetComponent<Animator>().GetBool("hurt"))
+            {
+                RestoreUFOControls();
+                LiveMissile.GetComponent<GetControllerInput>().enabled = false;
+            }
+            else if (UFO.GetComponent<GetControllerInput>().GetButtonDown("Fire2") && IsBuffer == false)
+            {
+                LiveMissile.GetComponent<GuidedMissileController>().RemoteDetonate();
+            }
         }
-        if (UFO.GetComponent<GetControllerInput>().GetButtonDown("Fire2") && HasMissile == true && IsBuffer == false){
-            LiveMissile.GetComponent<GuidedMissileController>().RemoteDetonate();
-        }
-
     }
 
     void OnDestroy(){
@@ -65,10 +68,7 @@ public class MissilePower : MonoBehaviour
     public IEnumerator CameraHang(){
         OnCooldown = true;
         yield return new WaitForSeconds(CameraHangTime);
-
-        MainCamera.transform.position = UFO.transform.position + new Vector3(0, 0, -10);
-        UFO.GetComponent<BeamController>().enabled = true;
-        UFO.GetComponent<GetControllerInput>().enabled = true;
+        RestoreUFOControls();
         StartCoroutine(Cooldown());
     }
 
@@ -96,5 +96,20 @@ public class MissilePower : MonoBehaviour
     private void DropPower()
     {
         OnCooldown = false;
+    }
+
+    void DisableUFOControls()
+    {
+        UFO.GetComponent<GetControllerInput>().ResetDirections();
+        UFO.GetComponent<BeamController>().enabled = false;
+        UFO.GetComponent<GetControllerInput>().enabled = false;
+        satelliteDish.SetBool("missileActive", true);
+    }
+    void RestoreUFOControls()
+    {
+        MainCamera.transform.position = UFO.transform.position + new Vector3(0, 0, -10);
+        UFO.GetComponent<BeamController>().enabled = true;
+        UFO.GetComponent<GetControllerInput>().enabled = true;
+        satelliteDish.SetBool("missileActive", false);
     }
 }

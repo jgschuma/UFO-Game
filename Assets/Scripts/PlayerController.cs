@@ -111,6 +111,8 @@ public class PlayerController : MonoBehaviour
 
     public double GetDirectionInRadians()
     {
+        if (movement.x == 0 && movement.y == 0)
+            return 0;
         double radians = Math.Atan(movement.x / movement.y);
         if (movement.y < 0)
             radians += Math.PI;

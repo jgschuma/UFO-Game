@@ -143,7 +143,13 @@ MonoBehaviour:
   TractorBeam: {fileID: 0}
   ThisPickup: {fileID: 3680776298955555987}
   ThisPower: {fileID: 0}
-  thisName: MissilePickup
+  DropPickup: {fileID: 3680776298955555987}
+  pickupNameSprite: {fileID: 6519591648402246124, guid: 655b56604cd0eb947a93e20d01ff27f4,
+    type: 3}
+  discoveryText: {fileID: 4879367822823798030, guid: 655b56604cd0eb947a93e20d01ff27f4,
+    type: 3}
+  acquiredText: {fileID: 2043329129422224572, guid: 655b56604cd0eb947a93e20d01ff27f4,
+    type: 3}
 --- !u!61 &3680776298955555978
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -5,26 +5,23 @@ using UnityEngine;
 public class ShieldPower : MonoBehaviour
 {
     public GameObject ShieldEffect;
-    public GameObject UFO;
-    //public EntityHealth entHeal;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //ShieldEffect = GameObject.Find("ShieldEffect");
-    }
+    public EntityHealth entHeal;
 
     // Update is called once per frame
     void Update()
     {
         // If the fire button is held down, the shield will appear
-        if(Input.GetButton("Fire2")){
+        if(Input.GetButtonDown("Fire2"))
+        {
             ShieldEffect.SetActive(true);
-            UFO.GetComponent<EntityHealth>().invincible = true;
+            entHeal.invincible = true;
+            //Debug.Log("Player is invincible");
         }
-        else{
+        else if (Input.GetButtonUp("Fire2"))
+        {
             ShieldEffect.SetActive(false);
-            UFO.GetComponent<EntityHealth>().invincible = false;
+            entHeal.invincible = false;
+            //Debug.Log("Player is no longer invincible");
         }
     }
 }

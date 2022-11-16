@@ -26,6 +26,39 @@ TextureImporter:
   - first:
       213: -7602228940012229397
     second: NME_GroundJump-Sheet_7
+  - first:
+      213: -1738674415951930927
+    second: NME_GroundJump-Sheet_4
+  - first:
+      213: 5867389066682758856
+    second: NME_GroundJump-Sheet_5
+  - first:
+      213: 4515224127574369121
+    second: NME_GroundJump-Sheet_6
+  - first:
+      213: -5540783524763716714
+    second: NME_GroundJump-Sheet_7
+  - first:
+      213: 8672159054508307445
+    second: NME_GroundJump-Sheet_8
+  - first:
+      213: 4608947624660455227
+    second: NME_GroundJump-Sheet_0
+  - first:
+      213: 1463693210339535505
+    second: NME_GroundJump-Sheet_1
+  - first:
+      213: 1558328361669567442
+    second: NME_GroundJump-Sheet_2
+  - first:
+      213: -1511045841110398237
+    second: NME_GroundJump-Sheet_3
+  - first:
+      213: -2429146324883388777
+    second: NME_GroundJump-Sheet_8
+  - first:
+      213: -8287813398005543432
+    second: NME_GroundJump-Sheet_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,11 +156,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NME_GroundJump-Sheet_0
+      name: NME_GroundJump-Sheet_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
+        x: 64
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -137,8 +170,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4af7a64218c27dfe0800000000000000
-      internalID: -1164413045478621276
+      spriteID: 1d91021a4dcfed7e0800000000000000
+      internalID: -1738674415951930927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NME_GroundJump-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6f2a6f4472d6150800000000000000
+      internalID: 5867389066682758856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NME_GroundJump-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163e75ddb6c49ae30800000000000000
+      internalID: 4515224127574369121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NME_GroundJump-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6933f159dbe2b13b0800000000000000
+      internalID: -5540783524763716714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NME_GroundJump-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f4444027546ff30800000000000000
+      internalID: 4608947624660455227
       vertices: []
       indices: 
       edges: []
@@ -148,7 +265,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -158,8 +275,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37d5073ab96760b90800000000000000
-      internalID: -7275997737136398989
+      spriteID: 19a60764835105410800000000000000
+      internalID: 1463693210339535505
       vertices: []
       indices: 
       edges: []
@@ -168,8 +285,8 @@ TextureImporter:
       name: NME_GroundJump-Sheet_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 32
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -179,8 +296,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc52903da2f775530800000000000000
-      internalID: 3843680628889953740
+      spriteID: 2d32bb8736b40a510800000000000000
+      internalID: 1558328361669567442
       vertices: []
       indices: 
       edges: []
@@ -189,28 +306,7 @@ TextureImporter:
       name: NME_GroundJump-Sheet_3
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97273e3120aab4220800000000000000
-      internalID: 2471255746443178617
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NME_GroundJump-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 48
         y: 16
         width: 16
         height: 16
@@ -221,38 +317,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be06087940b471280800000000000000
-      internalID: -9072700441220849429
+      spriteID: 3ea884930dfa70be0800000000000000
+      internalID: -1511045841110398237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NME_GroundJump-Sheet_5
+      name: NME_GroundJump-Sheet_8
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99c85aa8116e0f110800000000000000
-      internalID: 1292786056070270105
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NME_GroundJump-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 48
         y: 0
         width: 16
         height: 16
@@ -263,17 +338,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb49ba82dd09da020800000000000000
-      internalID: 2354697459729142971
+      spriteID: 79641e5a940f94ed0800000000000000
+      internalID: -2429146324883388777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NME_GroundJump-Sheet_7
+      name: NME_GroundJump-Sheet_9
       rect:
         serializedVersion: 2
-        x: 16
+        x: 64
         y: 0
         width: 16
         height: 16
@@ -284,8 +359,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bec6061be057f7690800000000000000
-      internalID: -7602228940012229397
+      spriteID: 8fd082f00a5cbfc80800000000000000
+      internalID: -8287813398005543432
       vertices: []
       indices: 
       edges: []
