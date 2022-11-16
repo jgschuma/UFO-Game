@@ -6,8 +6,8 @@ public class Enemy_GroundStationaryShoot: MonoBehaviour
 {
     [Tooltip("The player to follow.")]
     public GameObject player;
-    [Tooltip("Distance from which the enemy will be alerted to the player")]
-    public float alertRadius;
+/*    [Tooltip("Distance from which the enemy will be alerted to the player")]
+    public float alertRadius;*/
     [Tooltip("Minimum distance from the player the enemy will keep")]
     public float shootingDistance;
     [Tooltip("Time to take a shot")]
@@ -64,13 +64,17 @@ public class Enemy_GroundStationaryShoot: MonoBehaviour
                 else if (transform.rotation.eulerAngles.z % 360 == 270)
                     anim.SetBool("faceRight", player.transform.position.x < transform.position.x);
 
-                if (distanceToPlayer < shootingDistance && allowFire)
+                //Shoot at the player if in range
+                if (distanceToPlayer <= shootingDistance && allowFire)
                 {
                     StartCoroutine(shoot());
                 }
+                //Go to sleep if out of range
+                else if (distanceToPlayer > shootingDistance)
+                    anim.SetBool("awake", false);
             }
             //If asleep but player is close enough, wake up
-            else if (distanceToPlayer <= alertRadius)
+            else if (distanceToPlayer <= shootingDistance)
             {
                 anim.SetBool("awake", true);
                 StartCoroutine(waitForNextShot());

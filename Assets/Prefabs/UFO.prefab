@@ -3131,5 +3131,6 @@ MonoBehaviour:
   UFO: {fileID: 7982308188281278617}
   twisterSpeed: 400
   winddownDecel: 8
+  twisterDuration: 2.5
   contInput: {fileID: 7982308188281278608}
   anim: {fileID: 7982308188281278616}

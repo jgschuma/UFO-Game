@@ -8,6 +8,7 @@ public class TwisterPower : MonoBehaviour
     public GameObject UFO;
     public float twisterSpeed = 400f;
     public float winddownDecel = 8f;
+    public float twisterDuration = 4f;
 
     public GetControllerInput contInput;
     public Animator anim;
@@ -39,6 +40,8 @@ public class TwisterPower : MonoBehaviour
         else if (anim.GetCurrentAnimatorStateInfo(0).IsName("TwisterActive"))
         {
             UFO.GetComponent<ProjectileDirection>().speed = twisterSpeed;
+            if (contInput.GetButtonDown("Fire2"))
+                anim.SetBool("twisterActive", false);
         }
         //Twister is winding down
         else if (anim.GetCurrentAnimatorStateInfo(0).IsName("TwisterWinddown"))
