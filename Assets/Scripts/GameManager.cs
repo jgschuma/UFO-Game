@@ -88,6 +88,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetString(highScore1NameKey, inField.text);
         Debug.Log("Saving POSs");
         SaveHighScoreNames();
+
     }
 
     public void LoadHighScoreNames(){
@@ -101,7 +102,11 @@ public class GameManager : MonoBehaviour
         Debug.Log("Saved pos1 as " + HighName1.text);
         Debug.Log("Proof: " + PlayerPrefs.GetString(highScore1NameKey));
         PlayerPrefs.SetString(highScore2NameKey, HighName2.text);
+        Debug.Log("Saved pos2 as " + HighName2.text);
+        Debug.Log("Proof: " + PlayerPrefs.GetString(highScore2NameKey));
         PlayerPrefs.SetString(highScore3NameKey, HighName3.text);
+        Debug.Log("Saved pos3 as " + HighName3.text);
+        Debug.Log("Proof: " + PlayerPrefs.GetString(highScore3NameKey));
     }
 
     IEnumerator Reset() {
@@ -115,8 +120,12 @@ public class GameManager : MonoBehaviour
             HighName1 = GameObject.Find("MainCanvas/Scores/Canvas/HighName1").GetComponent<Text>();
             HighName2 = GameObject.Find("MainCanvas/Scores/Canvas/HighName2").GetComponent<Text>();
             HighName3 = GameObject.Find("MainCanvas/Scores/Canvas/HighName3").GetComponent<Text>();
+            HighName1.GetComponent<InputField>().text = PlayerPrefs.GetString(highScore1NameKey);
+            HighName2.GetComponent<InputField>().text = PlayerPrefs.GetString(highScore2NameKey);
+            HighName3.GetComponent<InputField>().text = PlayerPrefs.GetString(highScore3NameKey);
 
             if (needNewName){
+            needNewName = false;
             mainMenu.SetActive(false);
             optionsMenu.SetActive(false);
             scoreMenu.SetActive(true);
@@ -124,9 +133,12 @@ public class GameManager : MonoBehaviour
             if (newNamePos == 1){
                 Debug.Log("High Score in pos 1");
                 inField = HighName1.GetComponent<InputField>();
+                HighName3.GetComponent<InputField>().text = HighName2.GetComponent<InputField>().text;
+                HighName2.GetComponent<InputField>().text = HighName1.GetComponent<InputField>().text;
             } else if (newNamePos == 2){
                 Debug.Log("High Score in pos 2");
                 inField = HighName2.GetComponent<InputField>();
+                HighName3.GetComponent<InputField>().text = HighName2.GetComponent<InputField>().text;
             } else if (newNamePos == 3){
                 Debug.Log("High Score in pos 3");
                 inField = HighName3.GetComponent<InputField>();

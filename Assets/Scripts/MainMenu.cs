@@ -49,9 +49,6 @@ public class MainMenu : MonoBehaviour
     }
 
     public void PlayGame(){
-        mainMenu.SetActive(true);
-        optionsMenu.SetActive(true);
-        scoreMenu.SetActive(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         AustinEventManager.StartGame();
     }
@@ -87,5 +84,9 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt(highScore1Key, 0);
         PlayerPrefs.SetInt(highScore2Key, 0);
         PlayerPrefs.SetInt(highScore3Key, 0);
+        PlayerPrefs.SetString(highScore1NameKey, "AAA");
+        PlayerPrefs.SetString(highScore2NameKey, "AAA");
+        PlayerPrefs.SetString(highScore3NameKey, "AAA");
+
     }
 }

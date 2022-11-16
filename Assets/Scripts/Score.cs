@@ -79,6 +79,9 @@ public class Score : MonoBehaviour
     }
 
     void CheckNewHighScore(){
+        if (score == 0){
+            //Do nothing
+        }
         if (score > highScore3 && score < highScore2){
             AustinEventManager.NewHighScore(score, 3);
             highScore3 = score;
