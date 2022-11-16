@@ -43,6 +43,7 @@ public class Enemy_AirShoot : MonoBehaviour
         allowFire = false;
         anim = GetComponent<Animator>();
         player = GameObject.Find("UFO");
+        anim.SetBool("faceRight", GetComponent<SpriteRenderer>().flipX);
     }
 
     private void FixedUpdate() {
@@ -109,5 +110,12 @@ public class Enemy_AirShoot : MonoBehaviour
         yield return new WaitForSeconds(timeToArmShot);
         if (anim.GetBool("isTargetingPlayer"))
             allowFire = true;
+    }
+
+    private void OnDrawGizmos()
+    {
+        //RED -- Alert Area
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, shootingDistance);
     }
 }

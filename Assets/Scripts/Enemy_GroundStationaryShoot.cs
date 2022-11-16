@@ -25,14 +25,13 @@ public class Enemy_GroundStationaryShoot: MonoBehaviour
 
     private Vector3 direction;
     private bool allowFire;
-    private bool facingRight;
     // Start is called before the first frame update
     void Start()
     {
         allowFire = false;
-        facingRight = true;
         player = GameObject.Find("UFO");
         anim = GetComponent<Animator>();
+        anim.SetBool("faceRight", GetComponent<SpriteRenderer>().flipX);
     }
 
     private void FixedUpdate() {
@@ -104,5 +103,12 @@ public class Enemy_GroundStationaryShoot: MonoBehaviour
         yield return new WaitForSeconds(timeToArmShot);
         if(anim.GetBool("awake"))
             allowFire = true;
+    }
+
+    private void OnDrawGizmos()
+    {
+        //RED -- Alert Area
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, shootingDistance);
     }
 }

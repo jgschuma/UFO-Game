@@ -38,7 +38,7 @@ public class Enemy_GroundJump : MonoBehaviour
     [Header("Other")]
     public Rigidbody2D rb;
     private float moveDirection = 1;
-    private bool facingRight = true;
+    //private bool facingRight = true;
 
     private Animator anim;
 
@@ -50,7 +50,7 @@ public class Enemy_GroundJump : MonoBehaviour
         //Physics2D.IgnoreLayerCollision(0,0, true);
         player = GameObject.Find("UFO").transform;
         anim = GetComponent<Animator>();
-        anim.SetBool("faceRight", facingRight);
+        anim.SetBool("faceRight", GetComponent<SpriteRenderer>().flipX);
     }
 
     // Update is called once per frame
@@ -152,7 +152,7 @@ public class Enemy_GroundJump : MonoBehaviour
 
     void flip(){
         moveDirection *= -1;
-        facingRight = !facingRight;
+        //facingRight = !facingRight;
         anim.SetBool("faceRight", !anim.GetBool("faceRight"));
     }
 

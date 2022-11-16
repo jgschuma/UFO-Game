@@ -14,6 +14,18 @@ TextureImporter:
   - first:
       213: -5577533142555487272
     second: Env_Scenery-Sheet_3
+  - first:
+      213: -8500945465297045892
+    second: Env_Scenery-Sheet_4
+  - first:
+      213: 4802047005595915533
+    second: Env_Scenery-Sheet_5
+  - first:
+      213: -854021324223402523
+    second: Env_Scenery-Sheet_6
+  - first:
+      213: 718721238716784677
+    second: Env_Scenery-Sheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -59,7 +71,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -115,7 +127,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -135,7 +147,7 @@ TextureImporter:
       name: Env_Scenery-Sheet_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 0
         width: 16
         height: 16
@@ -156,7 +168,7 @@ TextureImporter:
       name: Env_Scenery-Sheet_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 16
         y: 0
         width: 32
         height: 16
@@ -169,6 +181,111 @@ TextureImporter:
       bones: []
       spriteID: 5fb4001994fcd2620800000000000000
       internalID: 2751082862265519093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Env_Scenery-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3130b682f9892b0800000000000000
+      internalID: -5577533142555487272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Env_Scenery-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c767006a323960a80800000000000000
+      internalID: -8500945465297045892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Env_Scenery-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05d54b2f4c44a240800000000000000
+      internalID: 4802047005595915533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Env_Scenery-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed2e036128e524f0800000000000000
+      internalID: -854021324223402523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Env_Scenery-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5202e3e982969f900800000000000000
+      internalID: 718721238716784677
       vertices: []
       indices: 
       edges: []
