@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public bool needNewName = false;
     public int newNamePos = 0;
-    private GameObject toChange;
     private InputField inField;
 
     private GameObject mainMenu;
@@ -86,19 +85,21 @@ public class GameManager : MonoBehaviour
 
     public void FinishNewName(){
         inField.interactable = false;
+        PlayerPrefs.SetString(highScore1NameKey, inField.text);
         Debug.Log("Saving POSs");
         SaveHighScoreNames();
     }
 
     public void LoadHighScoreNames(){
-        HighName1.text = PlayerPrefs.GetString(highScore1NameKey);
-        Debug.Log("Loaded pos1 as " + HighName1.text);
-        HighName2.text = PlayerPrefs.GetString(highScore2NameKey);
-        HighName3.text = PlayerPrefs.GetString(highScore3NameKey);
+        HighName1.GetComponent<InputField>().text = PlayerPrefs.GetString(highScore1NameKey);
+        Debug.Log("Loaded pos1 as " + HighName1.text + "\n" + PlayerPrefs.GetString(highScore1NameKey));
+        HighName2.GetComponent<InputField>().text = PlayerPrefs.GetString(highScore2NameKey);
+        HighName3.GetComponent<InputField>().text = PlayerPrefs.GetString(highScore3NameKey);
     }
     public void SaveHighScoreNames(){
-        PlayerPrefs.SetString(highScore1NameKey, inField.text);
+        PlayerPrefs.SetString(highScore1NameKey, HighName1.text);
         Debug.Log("Saved pos1 as " + HighName1.text);
+        Debug.Log("Proof: " + PlayerPrefs.GetString(highScore1NameKey));
         PlayerPrefs.SetString(highScore2NameKey, HighName2.text);
         PlayerPrefs.SetString(highScore3NameKey, HighName3.text);
     }
@@ -111,13 +112,25 @@ public class GameManager : MonoBehaviour
             mainMenu = GameObject.Find("MainCanvas/MainMenu");
             optionsMenu = GameObject.Find("MainCanvas/OptionsMenu");
             scoreMenu = GameObject.Find("MainCanvas/Scores");
+            HighName1 = GameObject.Find("MainCanvas/Scores/Canvas/HighName1").GetComponent<Text>();
+            HighName2 = GameObject.Find("MainCanvas/Scores/Canvas/HighName2").GetComponent<Text>();
+            HighName3 = GameObject.Find("MainCanvas/Scores/Canvas/HighName3").GetComponent<Text>();
 
             if (needNewName){
             mainMenu.SetActive(false);
             optionsMenu.SetActive(false);
             scoreMenu.SetActive(true);
-            toChange = GameObject.Find("MainCanvas/Scores/Canvas/HighName" + newNamePos);
-            inField = toChange.GetComponent<InputField>();
+            Debug.Log(newNamePos);
+            if (newNamePos == 1){
+                Debug.Log("High Score in pos 1");
+                inField = HighName1.GetComponent<InputField>();
+            } else if (newNamePos == 2){
+                Debug.Log("High Score in pos 2");
+                inField = HighName2.GetComponent<InputField>();
+            } else if (newNamePos == 3){
+                Debug.Log("High Score in pos 3");
+                inField = HighName3.GetComponent<InputField>();
+            }
             GetNewName();
             } else {
                 mainMenu.SetActive(true);
