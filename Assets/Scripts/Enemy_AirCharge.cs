@@ -17,7 +17,6 @@ public class Enemy_AirCharge : MonoBehaviour
     public float patrolRange = 60f;
     public bool isTrackingPlayer;
     public Rigidbody2D enemyRigidBody;
-    public bool facingRight;
 
     Animator anim;
     private bool atHome = true;
@@ -34,9 +33,8 @@ public class Enemy_AirCharge : MonoBehaviour
     {
         enemyRigidBody.freezeRotation = true;
         homebase = transform.position;
-        facingRight = true;
         anim = GetComponent<Animator>();
-        anim.SetBool("faceRight", facingRight);
+        anim.SetBool("faceRight", GetComponent<SpriteRenderer>().flipX);
     }
 
     private void FixedUpdate() {
@@ -91,5 +89,21 @@ public class Enemy_AirCharge : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, homebase, Math.Min(speed * Time.deltaTime, distanceFromHome));
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        //BLUE -- The area the Angler is allowed to wander
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, wanderRadius);
+        //GREEN -- The path the Angler will patrol
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(new Vector3(transform.position.x - patrolRange - 8, transform.position.y + 8, 0), new Vector3(transform.position.x + patrolRange + 8, transform.position.y + 8, 0));
+        Gizmos.DrawLine(new Vector3(transform.position.x - patrolRange - 8, transform.position.y - 8, 0), new Vector3(transform.position.x + patrolRange + 8, transform.position.y - 8, 0));
+        Gizmos.DrawLine(new Vector3(transform.position.x - patrolRange - 8, transform.position.y + 8, 0), new Vector3(transform.position.x - patrolRange - 8, transform.position.y - 8, 0));
+        Gizmos.DrawLine(new Vector3(transform.position.x + patrolRange + 8, transform.position.y + 8, 0), new Vector3(transform.position.x + patrolRange + 8, transform.position.y - 8, 0));
+        //RED -- The alert radius of the Angler
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, alertRadius);
     }
 }
