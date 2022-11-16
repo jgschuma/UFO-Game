@@ -7,12 +7,12 @@ public class Enemy_AirShoot : MonoBehaviour
 {
     [Tooltip("The player to follow.")]
     public GameObject player;
-    [Tooltip("Speed of the player.")]
-    public float speed;
-    [Tooltip("Distance the enemy can wander away from their home base.")]
+/*    [Tooltip("Speed of the player.")]
+    public float speed;*/
+/*    [Tooltip("Distance the enemy can wander away from their home base.")]
     public float wanderRadius;
     [Tooltip("Distance from which the enemy will be alerted to the player")]
-    public float alertRadius;
+    public float alertRadius;*/
     [Tooltip("Minimum distance from the player the enemy will keep")]
     public float shootingDistance;
     [Tooltip("Time to take a shot")]
@@ -73,7 +73,7 @@ public class Enemy_AirShoot : MonoBehaviour
                     StartCoroutine(shoot());
                 }
             }
-            else if (distanceToPlayer <= alertRadius)
+            else if (distanceToPlayer <= shootingDistance)
             {
                 anim.SetBool("isTargetingPlayer", true);
                 StartCoroutine(waitForNextShot());
