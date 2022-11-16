@@ -47,6 +47,16 @@ public class EntityHealth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        OnTrigger(other);
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        OnTrigger(other);
+    }
+
+    void OnTrigger(Collider2D other)
+    {
         //If entity is invincible, ignore all collision and reduce iFrames
         if (invincibilityLeft > 0 || invincible)
         {
@@ -59,17 +69,24 @@ public class EntityHealth : MonoBehaviour
             anim.SetBool("hurt", true);
             invincibilityLeft = invincibilityPeriod;
             doDamage(other.gameObject.GetComponent<DoesDamage>().damage);
-            if(health > 0)
+            if (health > 0)
                 lastRoutine = StartCoroutine(InvincibilityFlash());
 
-            if (gameObject.name == "UFO" && health > 0){
+            if (gameObject.name == "UFO" && health > 0)
+            {
                 FindObjectOfType<AudioManager>().Play("PlayerHurt");
-            } else if (gameObject.name == "UFO" && health == 0){
+            }
+            else if (gameObject.name == "UFO" && health == 0)
+            {
                 FindObjectOfType<AudioManager>().Play("PlayerDeath");
                 AustinEventManager.PlayerDeath();
-            } else if (gameObject.name != "UFO" && health > 0){
+            }
+            else if (gameObject.name != "UFO" && health > 0)
+            {
                 FindObjectOfType<AudioManager>().Play("EnemyHurt");
-            } else if (gameObject.name != "UFO" && health == 0){
+            }
+            else if (gameObject.name != "UFO" && health == 0)
+            {
                 FindObjectOfType<AudioManager>().Play("EnemyDeath");
             }
         }

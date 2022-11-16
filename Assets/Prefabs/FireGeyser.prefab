@@ -99,6 +99,7 @@ MonoBehaviour:
   flamePrefab: {fileID: 130898872521907051, guid: b1e5a1be35dbbdb41b9eff552952071c,
     type: 3}
   flameDelay: 0.1
+  player: {fileID: 7982308188281278617, guid: e0c4500e7aade8340b1520ace36511f3, type: 3}
 --- !u!95 &5246342822647122594
 Animator:
   serializedVersion: 3
