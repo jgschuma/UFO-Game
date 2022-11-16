@@ -66,6 +66,7 @@ public class EntityHealth : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("PlayerHurt");
             } else if (gameObject.name == "UFO" && health == 0){
                 FindObjectOfType<AudioManager>().Play("PlayerDeath");
+                AustinEventManager.PlayerDeath();
             } else if (gameObject.name != "UFO" && health > 0){
                 FindObjectOfType<AudioManager>().Play("EnemyHurt");
             } else if (gameObject.name != "UFO" && health == 0){
