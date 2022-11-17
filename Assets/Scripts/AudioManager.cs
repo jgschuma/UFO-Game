@@ -6,9 +6,19 @@ public class AudioManager : MonoBehaviour
 {
 
     public Sound[] sounds;
+
+    private static AudioManager Instance;
     // Start is called before the first frame update
     void Awake()
     {
+
+        if (Instance == null){
+            Instance = this;
+        } else {
+            Destroy(gameObject);
+            return;
+        }
+
         foreach (Sound s in sounds){
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -17,6 +27,8 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
