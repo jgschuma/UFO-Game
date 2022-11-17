@@ -6,7 +6,14 @@ public class AustinEventManager : MonoBehaviour
 {
     public delegate void StartGameDelegate();
     public static StartGameDelegate onStartGame;
-    public static StartGameDelegate onPlayerDeath;
+    public static StartGameDelegate onGameOver;
+
+    public delegate void FinishCalcAllScoresDelegate();
+    public static FinishCalcAllScoresDelegate onFinishScoreCalc;
+
+    public delegate void calcFinishDelegate(string whatFinished);
+
+    public static calcFinishDelegate onCalcDone;
 
     public delegate void ShowScoreDelegate();
     public static ShowScoreDelegate onNeedScorePage;
@@ -24,9 +31,16 @@ public class AustinEventManager : MonoBehaviour
         }
     }
 
-    public static void PlayerDeath(){
-        if (onPlayerDeath != null){
-            onPlayerDeath();
+    public static void GameOver(){
+        if (onGameOver != null){
+            onGameOver();
+        }
+    }
+
+    // When all calculations are done
+    public static void FinishCalcAllScores(){
+        if (onFinishScoreCalc != null){
+            onFinishScoreCalc();
         }
     }
 
@@ -39,6 +53,13 @@ public class AustinEventManager : MonoBehaviour
     public static void NewHighScore(int newScore, int pos){
         if (onNewHighScore != null){
             onNewHighScore(newScore, pos);
+        }
+    }
+
+    // When one calculation is done
+    public static void CalcFinished(string whatFinished){
+        if (onCalcDone != null){
+            onCalcDone(whatFinished);
         }
     }
 }

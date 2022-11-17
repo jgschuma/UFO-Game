@@ -13,9 +13,21 @@ public class EntityHealth : MonoBehaviour
     public string hurtTag;
     public bool invincible = false;
 
+    [Header("UFO ONLY")]
+    public int perHPScore;
+
     Coroutine lastRoutine = null;
     float invincibilityLeft = 0;
     Animator anim;
+
+    private void OnEnable(){
+        // This is being used here more as onGameEnd
+        AustinEventManager.onGameOver += AddHealthPoints;
+    }
+
+    private void OnDisable(){
+        AustinEventManager.onGameOver -= AddHealthPoints;
+    }
 
     void Start()
     {
@@ -79,7 +91,7 @@ public class EntityHealth : MonoBehaviour
             else if (gameObject.name == "UFO" && health == 0)
             {
                 FindObjectOfType<AudioManager>().Play("PlayerDeath");
-                AustinEventManager.PlayerDeath();
+                AustinEventManager.GameOver();
             }
             else if (gameObject.name != "UFO" && health > 0)
             {
@@ -111,5 +123,13 @@ public class EntityHealth : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = true;
         yield return new WaitForSeconds(invincFlashTime);
         lastRoutine = StartCoroutine(InvincibilityFlash());
+    }
+
+    void AddHealthPoints(){
+        if (gameObject.name == "UFO"){
+            AustinEventManager.ScorePoints(perHPScore * health);
+            AustinEventManager.CalcFinished("healthCalc");
+            AustinEventManager.CalcFinished("speedBonusCalc");
+        }
     }
 }

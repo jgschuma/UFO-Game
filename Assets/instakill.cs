@@ -19,6 +19,6 @@ public class instakill : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col){
         Debug.Log("Death");
-        AustinEventManager.PlayerDeath();
+        AustinEventManager.GameOver();
     }
 }

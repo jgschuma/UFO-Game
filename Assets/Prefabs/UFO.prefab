@@ -2174,6 +2174,7 @@ MonoBehaviour:
   invincFlashTime: 0.05
   hurtTag: EnemyAttack
   invincible: 0
+  perHPScore: 50
 --- !u!114 &1411353928
 MonoBehaviour:
   m_ObjectHideFlags: 0
