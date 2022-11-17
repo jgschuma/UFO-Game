@@ -98,8 +98,19 @@ public class EntityHealth : MonoBehaviour
         GetComponent<Animator>().SetInteger("health", Math.Max(health, 0));
         if (health <= 0)
         {
-            //Kill the entity
-            AustinEventManager.ScorePoints(pointValue);
+            if (gameObject.tag == "Enemy")
+            {
+                AustinEventManager.ScorePoints(pointValue);
+            }
+            else if (gameObject.tag == "Player")
+            {
+                /*The following code kills the player, comment it out for debugging purposes*/
+/*                gameObject.transform.Find("Main Camera").parent = null;
+                gameObject.transform.Find("UI").transform.Find("Health Meter").GetComponent<Animator>().SetInteger("health", 0);
+                gameObject.transform.Find("UI").parent = null;
+                Instantiate(GetComponent<AnimateUFO>().deathExplosion, transform.position, Quaternion.Euler(0, 0, 0));
+                Destroy(gameObject);*/
+            }
         }
     }
 

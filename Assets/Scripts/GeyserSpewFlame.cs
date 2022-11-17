@@ -23,13 +23,16 @@ public class GeyserSpewFlame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-        if (distanceToPlayer <= deactivateDistance && lastCoroutine == null)
-            lastCoroutine = StartCoroutine(SpewFlame());
-        else if(distanceToPlayer > deactivateDistance && lastCoroutine != null)
+        if(player != null)
         {
-            StopCoroutine(lastCoroutine);
-            lastCoroutine = null;
+            distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+            if (distanceToPlayer <= deactivateDistance && lastCoroutine == null)
+                lastCoroutine = StartCoroutine(SpewFlame());
+            else if (distanceToPlayer > deactivateDistance && lastCoroutine != null)
+            {
+                StopCoroutine(lastCoroutine);
+                lastCoroutine = null;
+            }
         }
     }
 
