@@ -132,7 +132,7 @@ public class Enemy_GroundJump : MonoBehaviour
     }*/
 
     void Patrolling(){
-        if(!touchingGround || touchingWall){
+        if(!Physics2D.OverlapCircle(new Vector2 (groundCheckPoint.transform.position.x, groundCheckPoint.transform.position.y), checksCircleRadius, groundLayer) || touchingWall){
             flip();
         }
         rb.velocity = new Vector2(moveSpeed*moveDirection, rb.velocity.y);
