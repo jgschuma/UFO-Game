@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AnimateUFO : MonoBehaviour
 {
+    public GameObject deathExplosion;
     private Animator anim;
     private PlayerController cont;
 
