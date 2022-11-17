@@ -7,7 +7,7 @@ public class SpeedEchoes : MonoBehaviour
     public int numOfEchoes = 3;
     public float timeBetweenEchoes = 0.2f;
     public GameObject speedEcho;
-    private Object[] echoSprites;
+    public Sprite[] echoSprites;
 
     float timeLeftUntilEcho = 0;
     PlayerController playerCon;
@@ -17,11 +17,11 @@ public class SpeedEchoes : MonoBehaviour
     {
         speedEcho.GetComponent<ProjectileDirection>().despawnTime = numOfEchoes * timeBetweenEchoes;
         playerCon = GetComponent<PlayerController>();
-        echoSprites = UnityEditor.AssetDatabase.LoadAllAssetsAtPath("Assets/Sprites/Playable_UFO_Echoes-Sheet.png");
+/*        echoSprites = UnityEditor.AssetDatabase.LoadAllAssetsAtPath("Assets/Sprites/Playable_UFO_Echoes-Sheet.png");
         //The full sheet and Sprite 0 are swapped for some reason, swap them back
         Object sprite0 = echoSprites[0];
         echoSprites[0] = echoSprites[1];
-        echoSprites[1] = sprite0;
+        echoSprites[1] = sprite0;*/
     }
 
     // Update is called once per frame
@@ -39,7 +39,7 @@ public class SpeedEchoes : MonoBehaviour
                 spriteID = spriteID.Substring(spriteID.IndexOf('O') + 8);
                 //Debug.Log("Sprite ID: " + spriteID);
                 //Change sprite of echo to match current sprite
-                speedEcho.GetComponent<SpriteRenderer>().sprite = (Sprite)echoSprites[int.Parse(spriteID) + 1];
+                speedEcho.GetComponent<SpriteRenderer>().sprite = (Sprite)echoSprites[int.Parse(spriteID)];
                 speedEcho.GetComponent<SpriteRenderer>().flipX = GetComponent<SpriteRenderer>().flipX;
                 Instantiate(speedEcho, transform.position, Quaternion.Euler(0, 0, 0));
             }
