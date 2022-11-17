@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 112898638300850327}
   - component: {fileID: 112898638300850324}
   - component: {fileID: 112898638300850330}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: BreakableBlock
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -169,7 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  invincibilityPeriod: 0.5
 --- !u!1 &2963840575823858188
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5151735832000506225}
   - component: {fileID: 1721845727831334859}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Rubble2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2900562238869026409}
   - component: {fileID: 7151791784436022885}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Rubble4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7884597088531406947}
   - component: {fileID: 395431540551030830}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Rubble3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6359657796843955527}
   - component: {fileID: 7781960026717643232}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Rubble1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
