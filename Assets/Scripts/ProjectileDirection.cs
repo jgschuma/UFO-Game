@@ -44,6 +44,7 @@ public class ProjectileDirection : MonoBehaviour
         SetDirectionInRadians(Math.Atan(_x / _y));
         if (_y < 0)
             direction += 180;
+        //Debug.Log("SET X AND Y(" + _x + ", " + _y + "): \tSPEED: " + speed + "\tDIRECTION: " + direction);
     }
 
     public void SetSpeedAndDirection(float _s, double _d)
