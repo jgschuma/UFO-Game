@@ -111,10 +111,15 @@ public class PlayerController : MonoBehaviour
 
     public double GetDirectionInRadians()
     {
-        if (movement.x == 0 && movement.y == 0)
+/*        if (movement.x == 0 && movement.y == 0)
             return 0;
         double radians = Math.Atan(movement.x / movement.y);
         if (movement.y < 0)
+            radians += Math.PI*/
+        if (xSpeed == 0 && ySpeed == 0)
+            return 0;
+        double radians = Math.Atan(xSpeed / ySpeed);
+        if (ySpeed < 0)
             radians += Math.PI;
         return radians;
     }
