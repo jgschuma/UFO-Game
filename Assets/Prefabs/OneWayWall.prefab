@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6965573892923434106}
   - component: {fileID: 5003728770984543567}
   - component: {fileID: 7686037382691373578}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: OneWayWall
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 292004621781881439}
   - component: {fileID: 292004621781881438}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Block2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 292004623730694895}
   - component: {fileID: 292004623730694894}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Block1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 292004623734738563}
   - component: {fileID: 292004623734738562}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Block3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7841917709794249035}
   - component: {fileID: 903851335325501786}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TargetRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7512089279395224474}
   - component: {fileID: 8789343613408446875}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TargetLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 6782306655879898214}
   - component: {fileID: 7814436664295580982}
   - component: {fileID: 2833133216155266114}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TargetHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,6 +594,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 292004621682905655}
     m_Modifications:
+    - target: {fileID: 7940658189169807804, guid: 73018e17087ba8f4eb97881a43ab2cae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7940658189706762368, guid: 73018e17087ba8f4eb97881a43ab2cae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -659,6 +664,31 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7940658189706762381, guid: 73018e17087ba8f4eb97881a43ab2cae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940658189724033339, guid: 73018e17087ba8f4eb97881a43ab2cae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940658190053203240, guid: 73018e17087ba8f4eb97881a43ab2cae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940658190103314881, guid: 73018e17087ba8f4eb97881a43ab2cae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940658190155100501, guid: 73018e17087ba8f4eb97881a43ab2cae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73018e17087ba8f4eb97881a43ab2cae, type: 3}
 --- !u!4 &7366656520493714987 stripped
@@ -674,6 +704,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 292004621682905655}
     m_Modifications:
+    - target: {fileID: 7940658189169807804, guid: 73018e17087ba8f4eb97881a43ab2cae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7940658189706762368, guid: 73018e17087ba8f4eb97881a43ab2cae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -737,6 +772,31 @@ PrefabInstance:
     - target: {fileID: 7940658189706762381, guid: 73018e17087ba8f4eb97881a43ab2cae,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940658189706762381, guid: 73018e17087ba8f4eb97881a43ab2cae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940658189724033339, guid: 73018e17087ba8f4eb97881a43ab2cae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940658190053203240, guid: 73018e17087ba8f4eb97881a43ab2cae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940658190103314881, guid: 73018e17087ba8f4eb97881a43ab2cae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940658190155100501, guid: 73018e17087ba8f4eb97881a43ab2cae,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
