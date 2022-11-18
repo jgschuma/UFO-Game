@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parTimeInSeconds: 600
-  timeMultiplierForPoints: 1
+  timeMultiplierForPoints: 10
   timerText: {fileID: 6051096305895616295}
 --- !u!1 &235432701577099734
 GameObject:

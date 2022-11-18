@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8295163624681210158}
   - component: {fileID: 1070641515175714865}
   - component: {fileID: 4891250688660901434}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bullet
   m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ea491f2c4637c4c802bfbed8187fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: -132.7012481689453
+  direction: -0.9768228530883789
   despawnTime: 3
   despawn: 1
   hasDestroyAnimation: 1
