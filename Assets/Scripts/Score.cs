@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public Text scoreText;
-    public Text highScoreText;
 
     [Header("Current Scores")]
     private int score;
@@ -14,24 +13,15 @@ public class Score : MonoBehaviour
     private int highScore2;
     private int highScore3;
 
-    private string highName1;
-    private string highName2;
-    private string highName3;
-
     [Header("Player Pref Keys")]
     private string highScore1Key = "hiScore1";
     private string highScore2Key = "hiScore2";
     private string highScore3Key = "hiScore3";
 
-    private string highScore1NameKey = "hiScoreName1";
-    private string highScore2NameKey = "hiScoreName2";
-    private string highScore3NameKey = "hiScoreName3";
 
     [Header("Wrapping")]
     private bool healthCalcDone = false;
     private bool speedBonusCalcDone = false;
-    private bool alreadyRunning = false;
-
 
     //Start method
     void Start(){
