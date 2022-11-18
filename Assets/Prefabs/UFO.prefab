@@ -448,10 +448,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc50ee22fea92c542a1e622094b91b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parTimeInSeconds: 600
+  timeMultiplierForPoints: 1
   timerText: {fileID: 6051096305895616295}
-  milliseconds: 0
-  seconds: 0
-  minutes: 0
 --- !u!1 &235432701577099734
 GameObject:
   m_ObjectHideFlags: 0

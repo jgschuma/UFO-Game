@@ -129,7 +129,6 @@ public class EntityHealth : MonoBehaviour
         if (gameObject.name == "UFO"){
             AustinEventManager.ScorePoints(perHPScore * health);
             AustinEventManager.CalcFinished("healthCalc");
-            AustinEventManager.CalcFinished("speedBonusCalc");
         }
     }
 }
