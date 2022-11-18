@@ -45,18 +45,18 @@ public class Timer : MonoBehaviour
         timerText.text = minutes.ToString("D2") + ":" + seconds.ToString("D2") + "." + ((int)milliseconds/10).ToString("D2");
     }
 
-    float CalculateTotalTime(){
-        float totalTime = 0;
+    public float CalculateCurrentTime(){
+        float currentTime = 0;
 
-        totalTime += (minutes * 60);
-        totalTime += seconds;
-        totalTime += (float)(milliseconds * 0.001);
+        currentTime += (minutes * 60);
+        currentTime += seconds;
+        currentTime += (float)(milliseconds * 0.001);
 
-        return totalTime;
+        return currentTime;
     }
 
     void AddTimeBonus(bool endedDueToDeath){
-        float totalTime = CalculateTotalTime();
+        float totalTime = CalculateCurrentTime();
 
         float timeDifference = parTimeInSeconds - totalTime;
 
