@@ -55,12 +55,12 @@ public class Timer : MonoBehaviour
         return totalTime;
     }
 
-    void AddTimeBonus(){
+    void AddTimeBonus(bool endedDueToDeath){
         float totalTime = CalculateTotalTime();
 
         float timeDifference = parTimeInSeconds - totalTime;
 
-        if (timeDifference > 0){
+        if (timeDifference > 0 && !endedDueToDeath){
             AustinEventManager.ScorePoints((int)Mathf.Floor(timeDifference * timeMultiplierForPoints));
         } else {
             //0 points lmao

@@ -6,13 +6,14 @@ public class AustinEventManager : MonoBehaviour
 {
     public delegate void StartGameDelegate();
     public static StartGameDelegate onStartGame;
-    public static StartGameDelegate onGameOver;
+
+    public delegate void EndGameDelegate(bool endedDueToDeath);
+    public static EndGameDelegate onGameOver;
 
     public delegate void FinishCalcAllScoresDelegate();
     public static FinishCalcAllScoresDelegate onFinishScoreCalc;
 
     public delegate void calcFinishDelegate(string whatFinished);
-
     public static calcFinishDelegate onCalcDone;
 
     public delegate void ShowScoreDelegate();
@@ -31,9 +32,9 @@ public class AustinEventManager : MonoBehaviour
         }
     }
 
-    public static void GameOver(){
+    public static void GameOver(bool endedDueToDeath){
         if (onGameOver != null){
-            onGameOver();
+            onGameOver(endedDueToDeath);
         }
     }
 

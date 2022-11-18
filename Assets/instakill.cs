@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class instakill : MonoBehaviour
 {
+    public bool endedDueToDeath = false;
     public Collider2D col;
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,6 @@ public class instakill : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col){
         Debug.Log("Death");
-        AustinEventManager.GameOver();
+        AustinEventManager.GameOver(endedDueToDeath);
     }
 }

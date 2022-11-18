@@ -91,7 +91,7 @@ public class EntityHealth : MonoBehaviour
             else if (gameObject.name == "UFO" && health == 0)
             {
                 FindObjectOfType<AudioManager>().Play("PlayerDeath");
-                AustinEventManager.GameOver();
+                AustinEventManager.GameOver(true);
             }
             else if (gameObject.name != "UFO" && health > 0)
             {
@@ -125,7 +125,7 @@ public class EntityHealth : MonoBehaviour
         lastRoutine = StartCoroutine(InvincibilityFlash());
     }
 
-    void AddHealthPoints(){
+    void AddHealthPoints(bool endedDueToDeath){
         if (gameObject.name == "UFO"){
             AustinEventManager.ScorePoints(perHPScore * health);
             AustinEventManager.CalcFinished("healthCalc");
