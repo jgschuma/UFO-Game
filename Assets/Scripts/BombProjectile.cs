@@ -22,8 +22,11 @@ public class BombProjectile : MonoBehaviour
         // If it's an enemy freeze it's position so it won't keep falling
         if (other.CompareTag("Enemy") && isPrime ==false){
             Debug.Log("Bomb Hit Enemy: " + other.gameObject.name);
-            ThisRigidBody.constraints = RigidbodyConstraints2D.FreezePosition;
-            StartCoroutine(PrimeBomb());
+            isPrime = true;
+            BombAnim.SetBool("IsPrime", true);
+            StartCoroutine(Explode());
+            /*            ThisRigidBody.constraints = RigidbodyConstraints2D.FreezePosition;
+                        StartCoroutine(PrimeBomb());*/
         }
         // Start blowing up the bomb when it impacts with anything but the player
         else if(!other.CompareTag("Player") && isPrime == false){
@@ -37,14 +40,15 @@ public class BombProjectile : MonoBehaviour
         isPrime = true;
         BombAnim.SetBool("IsPrime", true);
         yield return new WaitForSeconds(PrimeTimer);
-        BombAnim.SetBool("IsBoom",true);
+        StartCoroutine(Explode());
+    }
+
+    private IEnumerator Explode()
+    {
+        BombAnim.SetBool("IsBoom", true);
         FindObjectOfType<AudioManager>().Play("Explosion");
         yield return new WaitForSeconds(BoomTimer);
         GameObject Explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
-
-
-
-
 }
