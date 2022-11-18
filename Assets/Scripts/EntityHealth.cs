@@ -95,7 +95,6 @@ public class EntityHealth : MonoBehaviour
             else if (gameObject.name == "UFO" && health == 0)
             {
                 FindObjectOfType<AudioManager>().Play("PlayerDeath");
-                AustinEventManager.GameOver(true);
             }
             else if (gameObject.name != "UFO" && health > 0)
             {
@@ -123,13 +122,14 @@ public class EntityHealth : MonoBehaviour
                 }
                 else if (gameObject.tag == "Player")
                 {
+                    AustinEventManager.GameOver(true);
                     /*The following code kills the player, comment it out for debugging purposes*/
                     gameObject.transform.Find("Main Camera").parent = null;
                     gameObject.transform.Find("UI").transform.Find("Health Meter").GetComponent<Animator>().SetInteger("health", 0);
                     gameObject.transform.Find("UI").parent = null;
                     Instantiate(GetComponent<AnimateUFO>().deathExplosion, transform.position, Quaternion.Euler(0, 0, 0));
                     Destroy(gameObject);
-                    AustinEventManager.GameOver(true);
+                    
                 }
             }
             if (health > 0)
