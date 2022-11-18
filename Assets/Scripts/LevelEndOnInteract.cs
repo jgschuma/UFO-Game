@@ -28,6 +28,8 @@ public class LevelEndOnInteract : MonoBehaviour
             other.gameObject.transform.Find("UI").parent = null;
             Destroy(other.gameObject);
             anim.SetTrigger("levelEnded");
+            //end the game, with a reason other than death
+            AustinEventManager.GameOver(false);
         }
     }
 }

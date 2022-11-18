@@ -27,27 +27,49 @@ public class Score : MonoBehaviour
     private string highScore2NameKey = "hiScoreName2";
     private string highScore3NameKey = "hiScoreName3";
 
+    [Header("Wrapping")]
+    private bool healthCalcDone = false;
+    private bool speedBonusCalcDone = false;
+    private bool alreadyRunning = false;
+
+
     //Start method
     void Start(){
         LoadHiScore();
         
     }
-    void Update(){
+    void FixedUpdate(){
         DisplayScore();
+        if (healthCalcDone && speedBonusCalcDone){
+            healthCalcDone = false;
+            speedBonusCalcDone = false;
+            CheckNewHighScore();
+        }
     }
 
     //Sub to events
     private void OnEnable() {
         AustinEventManager.onStartGame += ResetScore;
-        AustinEventManager.onPlayerDeath += CheckNewHighScore;
         AustinEventManager.onScorePoints += AddScore;
+        AustinEventManager.onCalcDone += CalcVariables;
     }
 
     //Unsub from events
     private void OnDisable() {
         AustinEventManager.onStartGame -= ResetScore;
-        AustinEventManager.onPlayerDeath -= CheckNewHighScore;
         AustinEventManager.onScorePoints -= AddScore;
+        AustinEventManager.onCalcDone -= CalcVariables;
+    }
+
+    void CalcVariables(string whatFinished){
+        if (whatFinished == "healthCalc"){
+            healthCalcDone = true;
+        } else if (whatFinished == "speedBonusCalc"){
+            speedBonusCalcDone = true;
+        } else{
+            Debug.Log("Typo in whatFinished");
+        }
+
     }
 
     //Resets the players score, and displays it
@@ -79,8 +101,9 @@ public class Score : MonoBehaviour
     }
 
     void CheckNewHighScore(){
+        Debug.Log("Checking High Score");
         if (score == 0){
-            //Do nothing
+            Debug.Log("Score: 0");
         }
         if (score > highScore3 && score < highScore2){
             AustinEventManager.NewHighScore(score, 3);
@@ -97,5 +120,6 @@ public class Score : MonoBehaviour
             Debug.Log("BingoHighScore");
         }
         SaveHiScore();
+        AustinEventManager.FinishCalcAllScores();
     }
 }
