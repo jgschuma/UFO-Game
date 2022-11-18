@@ -125,7 +125,7 @@ MonoBehaviour:
   despawnTime: 3
   despawn: 0
   hasDestroyAnimation: 0
-  speed: 100
+  speed: 140
 --- !u!114 &149348842739246837
 MonoBehaviour:
   m_ObjectHideFlags: 0
