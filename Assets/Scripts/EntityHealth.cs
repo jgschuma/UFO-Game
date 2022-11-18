@@ -37,11 +37,16 @@ public class EntityHealth : MonoBehaviour
 /*                if (health <= 0)
                     enabled = false;*/
             }
-            //Hurt period is over
+/*            //Hurt period is over
             if (invincibilityPeriod - invincibilityLeft >= hurtPeriod)
             {
                 anim.SetBool("hurt", false);
-            }
+            }*/
+        }
+        //Hurt period is over
+        if (invincibilityPeriod - invincibilityLeft >= hurtPeriod)
+        {
+            anim.SetBool("hurt", false);
         }
     }
 
@@ -67,10 +72,9 @@ public class EntityHealth : MonoBehaviour
         else if ((hurtTag == other.gameObject.tag || other.gameObject.tag == "EnvironHazard") && invincibilityLeft == 0 && !invincible)
         {
             anim.SetBool("hurt", true);
-            invincibilityLeft = invincibilityPeriod;
+            /*            anim.SetBool("hurt", true);
+                        invincibilityLeft = invincibilityPeriod;*/
             doDamage(other.gameObject.GetComponent<DoesDamage>().damage);
-            if (health > 0)
-                lastRoutine = StartCoroutine(InvincibilityFlash());
 
             if (gameObject.name == "UFO" && health > 0)
             {
@@ -94,23 +98,29 @@ public class EntityHealth : MonoBehaviour
 
     public void doDamage(int _damageAmount)
     {
-        health -= _damageAmount;
-        GetComponent<Animator>().SetInteger("health", Math.Max(health, 0));
-        if (health <= 0)
+        if (_damageAmount > 0)
         {
-            if (gameObject.tag == "Enemy")
+            invincibilityLeft = invincibilityPeriod;
+            health -= _damageAmount;
+            GetComponent<Animator>().SetInteger("health", Math.Max(health, 0));
+            if (health <= 0)
             {
-                AustinEventManager.ScorePoints(pointValue);
+                if (gameObject.tag == "Enemy")
+                {
+                    AustinEventManager.ScorePoints(pointValue);
+                }
+                else if (gameObject.tag == "Player")
+                {
+                    /*The following code kills the player, comment it out for debugging purposes*/
+                    /*                gameObject.transform.Find("Main Camera").parent = null;
+                                    gameObject.transform.Find("UI").transform.Find("Health Meter").GetComponent<Animator>().SetInteger("health", 0);
+                                    gameObject.transform.Find("UI").parent = null;
+                                    Instantiate(GetComponent<AnimateUFO>().deathExplosion, transform.position, Quaternion.Euler(0, 0, 0));
+                                    Destroy(gameObject);*/
+                }
             }
-            else if (gameObject.tag == "Player")
-            {
-                /*The following code kills the player, comment it out for debugging purposes*/
-/*                gameObject.transform.Find("Main Camera").parent = null;
-                gameObject.transform.Find("UI").transform.Find("Health Meter").GetComponent<Animator>().SetInteger("health", 0);
-                gameObject.transform.Find("UI").parent = null;
-                Instantiate(GetComponent<AnimateUFO>().deathExplosion, transform.position, Quaternion.Euler(0, 0, 0));
-                Destroy(gameObject);*/
-            }
+            if (health > 0)
+                lastRoutine = StartCoroutine(InvincibilityFlash());
         }
     }
 
