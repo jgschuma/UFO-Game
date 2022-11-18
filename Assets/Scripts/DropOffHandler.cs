@@ -33,6 +33,7 @@ public class DropOffHandler : MonoBehaviour
 
     void Update(){
         if (numItemsAquired == 9){
+            numItemsAquired = 0;
             AustinEventManager.ScorePoints(AllClearBonus);
         }
     }

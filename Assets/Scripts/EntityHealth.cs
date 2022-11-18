@@ -129,6 +129,7 @@ public class EntityHealth : MonoBehaviour
                     gameObject.transform.Find("UI").parent = null;
                     Instantiate(GetComponent<AnimateUFO>().deathExplosion, transform.position, Quaternion.Euler(0, 0, 0));
                     Destroy(gameObject);
+                    AustinEventManager.GameOver(true);
                 }
             }
             if (health > 0)
