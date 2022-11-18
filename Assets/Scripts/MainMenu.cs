@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
 
-    public AudioSource menuMusicSource;
-
     public Slider volumeSlider;
 
     private GameObject mainMenu;
@@ -41,7 +39,6 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.SetFloat("musicVolume", 1);
         }
         Load();
-        menuMusicSource.Play();
     }
 
     void Update(){

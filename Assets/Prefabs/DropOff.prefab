@@ -1369,6 +1369,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab44c5a9140e47c4c9287bf6d639ce5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AllClearBonus: 1000
+  minPVPercentageMult: 0.5
+  basePV_BlackHole: 100
+  basePV_Bomber: 100
+  basePV_Flamethrower: 100
+  basePV_Gunner: 100
+  basePV_Laser: 100
+  basePV_Missile: 100
+  basePV_Shield: 100
+  basePV_Twister: 100
+  basePV_Warp: 100
 --- !u!1001 &6897408406780047766
 PrefabInstance:
   m_ObjectHideFlags: 0
