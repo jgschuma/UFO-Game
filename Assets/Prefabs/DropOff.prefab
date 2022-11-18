@@ -1371,15 +1371,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllClearBonus: 1000
   minPVPercentageMult: 0.5
-  basePV_BlackHole: 100
-  basePV_Bomber: 100
-  basePV_Flamethrower: 100
-  basePV_Gunner: 100
-  basePV_Laser: 100
-  basePV_Missile: 100
-  basePV_Shield: 100
-  basePV_Twister: 100
-  basePV_Warp: 100
+  basePV_BlackHole: 4000
+  basePV_Bomber: 3000
+  basePV_Flamethrower: 5000
+  basePV_Gunner: 3000
+  basePV_Laser: 4000
+  basePV_Missile: 3000
+  basePV_Shield: 5000
+  basePV_Twister: 4000
+  basePV_Warp: 5000
 --- !u!1001 &6897408406780047766
 PrefabInstance:
   m_ObjectHideFlags: 0
