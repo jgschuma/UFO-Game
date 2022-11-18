@@ -124,11 +124,11 @@ public class EntityHealth : MonoBehaviour
                 else if (gameObject.tag == "Player")
                 {
                     /*The following code kills the player, comment it out for debugging purposes*/
-                    /*                gameObject.transform.Find("Main Camera").parent = null;
-                                    gameObject.transform.Find("UI").transform.Find("Health Meter").GetComponent<Animator>().SetInteger("health", 0);
-                                    gameObject.transform.Find("UI").parent = null;
-                                    Instantiate(GetComponent<AnimateUFO>().deathExplosion, transform.position, Quaternion.Euler(0, 0, 0));
-                                    Destroy(gameObject);*/
+                    gameObject.transform.Find("Main Camera").parent = null;
+                    gameObject.transform.Find("UI").transform.Find("Health Meter").GetComponent<Animator>().SetInteger("health", 0);
+                    gameObject.transform.Find("UI").parent = null;
+                    Instantiate(GetComponent<AnimateUFO>().deathExplosion, transform.position, Quaternion.Euler(0, 0, 0));
+                    Destroy(gameObject);
                 }
             }
             if (health > 0)
