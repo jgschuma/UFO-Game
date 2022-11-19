@@ -226,11 +226,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 22
-        width: 16
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 26
+        width: 13
+        height: 4
+      alignment: 9
+      pivot: {x: 0.61538464, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -246,12 +246,12 @@ TextureImporter:
       name: Extra_UFO_Bits-Sheet_5
       rect:
         serializedVersion: 2
-        x: 40
-        y: 22
-        width: 16
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 37
+        y: 25
+        width: 13
+        height: 5
+      alignment: 9
+      pivot: {x: 0.61538464, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -267,12 +267,12 @@ TextureImporter:
       name: Extra_UFO_Bits-Sheet_6
       rect:
         serializedVersion: 2
-        x: 56
-        y: 22
-        width: 16
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 24
+        y: 19
+        width: 13
+        height: 6
+      alignment: 9
+      pivot: {x: 0.61538464, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,12 +288,12 @@ TextureImporter:
       name: Extra_UFO_Bits-Sheet_7
       rect:
         serializedVersion: 2
-        x: 72
-        y: 22
-        width: 16
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 38
+        y: 18
+        width: 12
+        height: 7
+      alignment: 9
+      pivot: {x: 0.5833333, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,12 +309,12 @@ TextureImporter:
       name: Extra_UFO_Bits-Sheet_8
       rect:
         serializedVersion: 2
-        x: 24
-        y: 14
-        width: 16
+        x: 26
+        y: 10
+        width: 11
         height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.54545456, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -331,11 +331,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 14
-        width: 16
+        y: 10
+        width: 10
         height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -351,12 +351,12 @@ TextureImporter:
       name: Extra_UFO_Bits-Sheet_10
       rect:
         serializedVersion: 2
-        x: 56
-        y: 14
-        width: 16
+        x: 27
+        y: 2
+        width: 10
         height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
