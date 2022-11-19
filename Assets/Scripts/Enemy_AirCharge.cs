@@ -45,6 +45,7 @@ public class Enemy_AirCharge : MonoBehaviour
         //Enemy is dead, float downward
         if(anim.GetInteger("health") == 0)
         {
+            gameObject.transform.Find("ContactDamage").gameObject.SetActive(false);
             transform.position -= new Vector3(0, 0.3f, 0);
         }
         //Enemy is not dead
