@@ -202,3 +202,4 @@ MonoBehaviour:
     type: 3}
   acquiredText: {fileID: 2043329129422224572, guid: 655b56604cd0eb947a93e20d01ff27f4,
     type: 3}
+  pickupText: {fileID: 9131748169706767891}
