@@ -1460,7 +1460,7 @@ MonoBehaviour:
   LaserImpact: {fileID: 4070652623648770759}
   layerMask:
     serializedVersion: 2
-    m_Bits: 900918
+    m_Bits: 376630
   ImpactOffset: -8
 --- !u!212 &7111197196864003327
 SpriteRenderer:
@@ -1563,6 +1563,7 @@ MonoBehaviour:
   ShootFirePointRotator: {fileID: 6459055308012190856}
   ProjectilePrefab: {fileID: 793278002603101985, guid: f1dd6e56b6b46c44fa9956ea68bd5382,
     type: 3}
+  shootingModAnim: {fileID: 0}
   ProjectileOffset: 0
 --- !u!1 &6950142064213894336
 GameObject:
@@ -1574,6 +1575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1882994197528530746}
   - component: {fileID: 9162884247017353133}
+  - component: {fileID: 1773739794435959341}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
@@ -1589,8 +1591,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6950142064213894336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: 8, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4413513577249082729}
   m_RootOrder: 0
@@ -1633,8 +1635,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: 388e8eb6de557964999d88f8d42114db, type: 3}
+  m_SortingOrder: -1
+  m_Sprite: {fileID: -4881479605670794107, guid: a03153d8f8fcb7f48bbf659c8aa0efef,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1645,6 +1648,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1773739794435959341
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6950142064213894336}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: f82be7deb25e0164988ffbebd54e0ae2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7384310263458577747
 GameObject:
   m_ObjectHideFlags: 0

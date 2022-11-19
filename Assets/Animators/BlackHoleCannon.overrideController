@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BlackHoleCannon
+  m_Controller: {fileID: 9100000, guid: b8274a6176e08c04baaa0198b13a6d9a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 9cf8038db391cd649954d1df621686ac, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8348b32b226f1564cbafed4cde7a7c9e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f9918029557b2a8499fa2be0a466afde, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bcefe999da699cb4b9d6bf1beb826d82, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 136bd56c042f21f47b6c8dfc40be8d40, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9136b9668f731f54c9556541e39037ca, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: be18a01ccdf62db42b26dbaf7c75d99d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2d9423abd89db35458e24be5c5fba9fe, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fa334778b4d8e814192c45b18ad54a57, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: debf6a83a73daef4c98611e52512fa5e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a8a9a127a82b87a43875595c03ce1b40, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 739cbbcb2b1b0f04a940beeb02c5f7e1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0f8ac556ca49e2c4eb22b7eb855abb8c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: edb80a3f46bbd36469aa691a4af3c257, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e4de6c99e51c1eb4f80822b59e8cd2b4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5047b107f17e43b498fc0e73ad7267dd, type: 2}
