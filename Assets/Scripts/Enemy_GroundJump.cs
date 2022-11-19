@@ -60,6 +60,7 @@ public class Enemy_GroundJump : MonoBehaviour
     {
         if (anim.GetInteger("health") == 0)
         {
+            gameObject.transform.Find("ContactDamage").gameObject.SetActive(false);
             StopCoroutine(JumpAttack());
             //Doesn't make enemy fly in right direction 100% of the time, needs fixing
             if (anim.GetBool("faceRight"))

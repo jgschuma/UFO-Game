@@ -53,6 +53,7 @@ public class Enemy_AirShoot : MonoBehaviour
 
         if (anim.GetInteger("health") == 0)
         {
+            transform.Find("ContactDamage").gameObject.SetActive(false);
             if (anim.GetBool("faceRight"))
                 deathFlyBackDirection = -1;
             //Death fall
