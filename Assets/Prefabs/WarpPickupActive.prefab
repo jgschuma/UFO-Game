@@ -132,6 +132,8 @@ MonoBehaviour:
     type: 3}
   acquiredText: {fileID: 2043329129422224572, guid: 655b56604cd0eb947a93e20d01ff27f4,
     type: 3}
+  pickupText: {fileID: 7178091655648059580, guid: e1dad931f77ecb14da1b08d23dab73af,
+    type: 3}
 --- !u!61 &5396407720279754408
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class ItemPickup : MonoBehaviour
     public Sprite pickupNameSprite;
     public Sprite discoveryText;
     public Sprite acquiredText;
-    private GameObject pickupText;
+    public GameObject pickupText;
     
     // Start is called before the first frame update
     void Start()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DropOffHandler : MonoBehaviour
 {
     private Animator anim;
-    private GameObject acquireText;
+    public GameObject acquireText;
     private Timer timer;
     private int numItemsAquired = 0;
 
@@ -27,7 +27,7 @@ public class DropOffHandler : MonoBehaviour
     void Start()
     {
         anim = transform.parent.transform.Find("Console").GetComponent<Animator>();
-        acquireText = (GameObject)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ItemPopUp.prefab", typeof(GameObject));
+        //acquireText = (GameObject)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ItemPopUp.prefab", typeof(GameObject));
         timer = FindObjectOfType<Timer>();
     }
 
