@@ -38,7 +38,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7178091655609845861}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -155,7 +155,7 @@ SpriteRenderer:
   m_SortingLayerID: 61748485
   m_SortingLayer: 3
   m_SortingOrder: 99
-  m_Sprite: {fileID: -7014821012619375003, guid: 655b56604cd0eb947a93e20d01ff27f4,
+  m_Sprite: {fileID: 7750096651522407568, guid: 655b56604cd0eb947a93e20d01ff27f4,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
