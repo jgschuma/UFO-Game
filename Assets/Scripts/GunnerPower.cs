@@ -27,6 +27,7 @@ public class GunnerPower : MonoBehaviour
     {
         // Set the Bullet direction to be the same as the default fire direction.
         BulletDirection = 90;
+        //gunnerUnitAnim.SetInteger("Direction", BulletDirection);
     }
 
     // Update is called once per frame

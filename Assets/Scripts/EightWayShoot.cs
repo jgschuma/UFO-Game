@@ -17,6 +17,7 @@ public class EightWayShoot : MonoBehaviour
     public GameObject ShootFirePointRotator;
     [Tooltip("The prefab to instantiate")]
     public GameObject ProjectilePrefab;
+    public Animator shootingModAnim;
 
     public float ProjectileOffset = 1f;
     
@@ -24,12 +25,14 @@ public class EightWayShoot : MonoBehaviour
     {
         // Allows DropPower to listen to the DeactivatePower Event
         BeamController.DeactivatePower += DropPower;
+        shootingModAnim = transform.Find("FirePoint").GetComponent<Animator>();
     }
 
     void Awake()
     {
         // Set ProjectileDirection to the right to match firepoint direction default
         ProjectileDirection = 90;
+        //shootingModAnim.SetInteger("direction", ProjectileDirection);
     }
 
     // Update is called once per frame
@@ -61,61 +64,61 @@ public class EightWayShoot : MonoBehaviour
 
     public void DirectionDetection(){
         // Need 8 directions of movement for Projectile
-            //Right
-            if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") == 0){
-                // Shoot Right
-                ShootFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 0);
-                ProjectileDirection = 90;
-            }
+        //Right
+        if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") == 0){
+            // Shoot Right
+            ProjectileDirection = 90;
+        }
 
-            //RightUp
-            else if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") > 0){
-                // Shoot RightUp
-                ShootFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 45);
-                ProjectileDirection = 45;
-            }
+        //RightUp
+        else if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") > 0){
+            // Shoot RightUp
+            ProjectileDirection = 45;
+        }
 
-            //Up
-            else if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") > 0){
-                // Shoot UP
-                ShootFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 90);
-                ProjectileDirection = 0;                
-            }
+        //Up
+        else if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") > 0){
+            // Shoot UP
+            ProjectileDirection = 0;                
+        }
 
-            //LeftUp 
-            else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") > 0){
-                //Shoot leftUp
-                ShootFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 135);
-                ProjectileDirection = 315;
-            }  
+        //LeftUp 
+        else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") > 0){
+            //Shoot leftUp
+            ProjectileDirection = 315;
+        }  
 
-            //Left
-            else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") == 0){
-                //Shoot left
-                ShootFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 180);
-                ProjectileDirection = 270;
-            }
+        //Left
+        else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") == 0){
+            //Shoot left
+            ProjectileDirection = 270;
+        }
 
-            //LeftDown
-            else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") < 0){
-                //Shoot leftDown
-                ShootFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 225);
-                ProjectileDirection = 225;
-            }
+        //LeftDown
+        else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") < 0){
+            //Shoot leftDown
+            ProjectileDirection = 225;
+        }
 
-            //Down
-            else if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") < 0){
-                //Shoot Down
-                ShootFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 270);
-                ProjectileDirection = 180;
-            }
+        //Down
+        else if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") < 0){
+            //Shoot Down
+            ProjectileDirection = 180;
+        }
 
-            //RightDown
-            else if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") < 0){
-                //Shoot RightDown
-                ShootFirePointRotator.transform.localEulerAngles = new Vector3(0, 0, 315);
-                ProjectileDirection = 135;
-            }
+        //RightDown
+        else if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") < 0){
+            //Shoot RightDown
+            ProjectileDirection = 135;
+        }
+
+        //Update fire point direction
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            Debug.Log("Direction: " + ProjectileDirection);
+            ShootFirePoint.transform.localPosition = new Vector3(8f * (float)Math.Sin(ProjectileDirection * Math.PI / 180), 8f * (float)Math.Cos(ProjectileDirection * Math.PI / 180), 0f);
+            shootingModAnim.SetInteger("direction", ProjectileDirection);
+        }
     }
     
 
