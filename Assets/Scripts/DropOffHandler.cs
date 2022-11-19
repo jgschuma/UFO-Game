@@ -82,6 +82,8 @@ public class DropOffHandler : MonoBehaviour
                 anim.SetBool("gotWarp", true);
                 ScorePickup(basePV_Warp);
                 numItemsAquired++;
+                //Disable warp rift start
+                Destroy(GameObject.Find("WarpRiftStart"));
             }
             //Display acquisition 
             acquireText.GetComponent<SpriteRenderer>().sprite = other.gameObject.GetComponent<ItemPickup>().pickupNameSprite;

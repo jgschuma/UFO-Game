@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 2568046227669940295}
   - component: {fileID: 6091550063439461057}
   - component: {fileID: 2358159354465966083}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Enemy_Ground_Stationary_Shooting
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.24, y: -0.01}

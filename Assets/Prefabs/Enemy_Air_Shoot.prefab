@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 1749428442413796718}
   - component: {fileID: 7613008995383479993}
   - component: {fileID: 1918660495809350736}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Enemy_Air_Shoot
   m_TagString: Enemy
   m_Icon: {fileID: 0}

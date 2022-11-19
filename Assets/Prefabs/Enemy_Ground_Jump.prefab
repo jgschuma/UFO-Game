@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1149775499662801612}
   - component: {fileID: 4463455738907387942}
   - component: {fileID: 3961328643903536101}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Enemy_Ground_Jump
   m_TagString: Enemy
   m_Icon: {fileID: 0}
