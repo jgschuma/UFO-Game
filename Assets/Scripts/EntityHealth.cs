@@ -5,7 +5,6 @@ using System;
 
 public class EntityHealth : MonoBehaviour
 {
-    public int pointValue;
     public int health = 3;
     public float invincibilityPeriod = 2.5f;
     public float hurtPeriod = 1f;
@@ -13,6 +12,8 @@ public class EntityHealth : MonoBehaviour
     public string hurtTag;
     public bool invincible = false;
 
+    [Header("ENEMY ONLY")]
+    public int pointValue;
     [Header("UFO ONLY")]
     public int perHPScore;
 
@@ -124,12 +125,12 @@ public class EntityHealth : MonoBehaviour
                 {
                     AustinEventManager.GameOver(true);
                     /*The following code kills the player, comment it out for debugging purposes*/
+                    transform.Find("UI").GetComponent<Timer>().timerOn = false;
                     gameObject.transform.Find("Main Camera").parent = null;
                     gameObject.transform.Find("UI").transform.Find("Health Meter").GetComponent<Animator>().SetInteger("health", 0);
                     gameObject.transform.Find("UI").parent = null;
                     Instantiate(GetComponent<AnimateUFO>().deathExplosion, transform.position, Quaternion.Euler(0, 0, 0));
                     Destroy(gameObject);
-                    
                 }
             }
             if (health > 0)
