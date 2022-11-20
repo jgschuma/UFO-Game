@@ -44,24 +44,24 @@ public class BombProjectile : MonoBehaviour
         //if (other.CompareTag("Enemy") && isPrime ==false){
         if (other.gameObject.tag == "Enemy" && !BombAnim.GetBool("IsBoom"))
         {
-            Debug.Log("Bomb Hit Enemy: " + other.gameObject.name);
-            isPrime = true;
+            //Debug.Log("Bomb Hit Enemy: " + other.gameObject.name);
+            //isPrime = true;
             BombAnim.SetBool("IsBoom", true);
             if (lastCoroutine != null)
                 StopCoroutine(lastCoroutine);
             lastCoroutine = StartCoroutine(Explode());
         }
         // Start blowing up the bomb when it impacts with anything but the player
-        else if (other.gameObject.tag != "Player" && isPrime == false)
+        else if (other.gameObject.tag != "Player" && !BombAnim.GetBool("IsPrime"))
         {
-            Debug.Log("Bomb hit " + other.gameObject.name + ", Tag: " + other.gameObject.tag);
+            //Debug.Log("Bomb hit " + other.gameObject.name + ", Tag: " + other.gameObject.tag);
             lastCoroutine = StartCoroutine(PrimeBomb());
         }
     }
 
     public IEnumerator PrimeBomb()
     {
-        isPrime = true;
+        //isPrime = true;
         BombAnim.SetBool("IsPrime", true);
         yield return new WaitForSeconds(PrimeTimer);
         lastCoroutine = StartCoroutine(Explode());

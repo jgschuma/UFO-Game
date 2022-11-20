@@ -23,8 +23,9 @@ public class GeyserSpewFlame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player != null)
-        {
+/*        player = GameObject.Find("UFO");
+        if (player != null)
+        {*/
             distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
             if (distanceToPlayer <= deactivateDistance && lastCoroutine == null)
                 lastCoroutine = StartCoroutine(SpewFlame());
@@ -33,7 +34,7 @@ public class GeyserSpewFlame : MonoBehaviour
                 StopCoroutine(lastCoroutine);
                 lastCoroutine = null;
             }
-        }
+/*        }*/
     }
 
     IEnumerator SpewFlame()
