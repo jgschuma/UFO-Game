@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
     public float parTimeInSeconds;
     public float timeMultiplierForPoints;
     public Text timerText;
+    public bool timerOn = true;
     private float milliseconds;
     private int seconds;
     private int minutes;
@@ -29,16 +30,21 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        milliseconds += Time.deltaTime * 1000;
-        if (milliseconds >=1000){
-            seconds += 1;
-            milliseconds -= 1000;
+        if (timerOn)
+        {
+            milliseconds += Time.deltaTime * 1000;
+            if (milliseconds >= 1000)
+            {
+                seconds += 1;
+                milliseconds -= 1000;
+            }
+            if (Mathf.FloorToInt(seconds) >= 60)
+            {
+                minutes++;
+                seconds -= 60;
+            }
+            UpdateTimer();
         }
-        if (Mathf.FloorToInt(seconds) >= 60){
-            minutes++;
-            seconds -= 60;
-        }
-        UpdateTimer();
     }
 
     void UpdateTimer(){
