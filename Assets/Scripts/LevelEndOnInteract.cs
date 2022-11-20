@@ -23,7 +23,7 @@ public class LevelEndOnInteract : MonoBehaviour
             other.gameObject.transform.Find("UI").GetComponent<Timer>().timerOn = false;
             other.gameObject.transform.Find("Main Camera").parent = null;
             other.gameObject.transform.Find("UI").parent = null;
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             anim.SetTrigger("levelEnded");
             //end the game, with a reason other than death
         }

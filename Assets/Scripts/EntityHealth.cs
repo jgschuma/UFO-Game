@@ -130,7 +130,7 @@ public class EntityHealth : MonoBehaviour
                     gameObject.transform.Find("UI").transform.Find("Health Meter").GetComponent<Animator>().SetInteger("health", 0);
                     gameObject.transform.Find("UI").parent = null;
                     Instantiate(GetComponent<AnimateUFO>().deathExplosion, transform.position, Quaternion.Euler(0, 0, 0));
-                    Destroy(gameObject);
+                    gameObject.SetActive(false);
                 }
             }
             if (health > 0)
