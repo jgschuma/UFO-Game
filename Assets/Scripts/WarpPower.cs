@@ -31,7 +31,6 @@ public class WarpPower : MonoBehaviour
             */
             PowerWarp?.Invoke();
             Player.transform.position = WarpLocation.position;
-
          
             WarpInProgress = false;
             WarpAnim.SetBool("TeleportDone", true);
