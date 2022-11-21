@@ -21,13 +21,14 @@ public class GunnerPower : MonoBehaviour
         // Allow DropPower to listen for the DeactivatePower event
         BeamController.DeactivatePower += DropPower;
         gunnerUnitAnim = transform.Find("FirePoint").GetComponent<Animator>();
+        GunnerFirePoint.transform.localPosition = new Vector3(8f * (float)Math.Sin(BulletDirection * Math.PI / 180), 8f * (float)Math.Cos(BulletDirection * Math.PI / 180), 0f);
+        gunnerUnitAnim.SetInteger("direction", BulletDirection);
     }
 
     void Awake()
     {
         // Set the Bullet direction to be the same as the default fire direction.
         BulletDirection = 90;
-        //gunnerUnitAnim.SetInteger("Direction", BulletDirection);
     }
 
     // Update is called once per frame
