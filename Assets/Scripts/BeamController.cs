@@ -48,7 +48,7 @@ public class BeamController : MonoBehaviour
             tractorBeam.SetActive(true);
             FindObjectOfType<AudioManager>().PlayInteractable("TractorBeam");
         } // If key is pressed and an Item is held, drop the item
-        else if (GetComponent<GetControllerInput>().GetButtonDown("Fire1") && hasItem == true && beamOnCooldown == false){
+        else if (GetComponent<GetControllerInput>().GetButtonDown("Fire1") && hasItem == true && beamOnCooldown == false && WarpCheck()){
             if(currentPower != null){
                 DeactivatePower?.Invoke();
                 currentPower.SetActive(false);
@@ -64,6 +64,14 @@ public class BeamController : MonoBehaviour
             FindObjectOfType<AudioManager>().StopInteractable("TractorBeam");
         }
             
+    }
+
+    private bool WarpCheck()
+    {
+        GameObject warpPower = transform.Find("Items").transform.Find("WarpPower").gameObject;
+        if (!warpPower.activeSelf || !warpPower.GetComponent<WarpPower>().WarpInProgress)
+            return true;
+        return false;
     }
 
     public IEnumerator BeamCooldown(){
