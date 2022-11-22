@@ -22,17 +22,28 @@ public class WarpProjectile : MonoBehaviour
 
     }
 
-    // When the Projectile is on the ground open the rift
+    
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Terrain") || other.CompareTag("ItemPickup")){
-            Debug.Log("Warp Puck hit " + other.gameObject.tag);
+        OnTrigger(other);
+    }
+    void OnTriggerStay2D(Collider2D other)
+    {
+        OnTrigger(other);
+    }
+    // When the Projectile is on the ground open the rift
+    void OnTrigger(Collider2D other)
+    {
+        if (other.CompareTag("Terrain") || other.CompareTag("ItemPickup"))
+        {
+            Debug.Log("Warp Puck is touching " + other.gameObject.tag);
             // Create the rift above the puck
             Anim.SetBool("open", true);
             // Also open the start rift
             RiftOpen?.Invoke(true);
         }
     }
+
     // When the projectile leaves the ground, close the rift
     void OnTriggerExit2D(Collider2D other)
     {
