@@ -27,7 +27,6 @@ public class DropOffHandler : MonoBehaviour
     void Start()
     {
         anim = transform.parent.transform.Find("Console").GetComponent<Animator>();
-        //acquireText = (GameObject)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ItemPopUp.prefab", typeof(GameObject));
         timer = FindObjectOfType<Timer>();
     }
 

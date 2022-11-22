@@ -7,7 +7,6 @@ public class ItemPickup : MonoBehaviour
 {
     public Rigidbody2D ThisRigidBody;
     public GameObject TractorBeam;
-    public GameObject ThisPickup;
     public GameObject ThisPower;
     public GameObject DropPickup;
 
@@ -22,11 +21,6 @@ public class ItemPickup : MonoBehaviour
     {
         // We freeze the pickup rotation so that it stays upright at all times
         ThisRigidBody.freezeRotation = true;
-        pickupText = (GameObject)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ItemPopUp.prefab", typeof(GameObject));
-        /*        additionalText = UnityEditor.AssetDatabase.LoadAllAssetsAtPath("Assets/Sprites/Item_Text.png");
-                //Slim additional text to ONLY have the Discovery and Acquired sprites (DISCOVERY = 0, ACQUIRED = 1)
-                //IT'S OUT OF ORDER???? AGAIN??????
-                additionalText = new UnityEngine.Object[] { additionalText[10], additionalText[11] };*/
     }
 
     // Whenever a pickup collides with an object, check to see if it is a player
@@ -72,6 +66,7 @@ public class ItemPickup : MonoBehaviour
         Instantiate(pickupText, player.transform.position, Quaternion.Euler(0, 0, 0));
 
         // Deactivate the pickup
-        ThisPickup.SetActive(false);
+        //ThisPickup.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
