@@ -106,7 +106,7 @@ public class Enemy_GroundJump : MonoBehaviour
         Vector2 contact = other.GetContact(0).normal;
         if (other.gameObject.tag == "Terrain")
         {
-            Debug.Log("Frog contact: " + contact);
+            //Debug.Log("Frog contact: " + contact);
             //Frog has just touched the ground
             if (contact.y > 0)
             {

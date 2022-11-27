@@ -38,8 +38,13 @@ public class BounceBox : MonoBehaviour
                 if (NinetyDegreeTest(normalAngle, playerAngle))
                 {
                     newAngle = normalAngle - (playerAngle + Math.PI - normalAngle) % (Math.PI * 2);
-                    playCon.xSpeed = (float)(Math.Abs(playCon.xSpeed) * Math.Sin(newAngle)) * recoil;
-                    playCon.ySpeed = (float)(Math.Abs(playCon.ySpeed) * Math.Cos(newAngle)) * recoil;
+                    //Debug.Log("New a: " + newAngle * 180 / Math.PI);
+                    //Debug.Log("CURR XSPEED: " + playCon.xSpeed);
+                    //Debug.Log("CURR YSPEED: " + playCon.ySpeed);
+                    playCon.xSpeed = (float)(Math.Abs(playCon.GetSpeed()) * Math.Sin(newAngle)) * recoil;
+                    playCon.ySpeed = (float)(Math.Abs(playCon.GetSpeed()) * Math.Cos(newAngle)) * recoil;
+                    //Debug.Log("NEW XSPEED: " + playCon.xSpeed);
+                    //Debug.Log("NEW YSPEED: " + playCon.ySpeed);
             }
         }
             //It's probably the twister

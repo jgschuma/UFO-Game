@@ -1945,6 +1945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a365d80ef195c45bc97f766fda7aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endedDueToDeath: 0
   col: {fileID: 945524452}
 --- !u!58 &945524452
 CircleCollider2D:
@@ -2488,7 +2489,7 @@ PrefabInstance:
     - target: {fileID: 2305937266004010304, guid: 885ebdbb83b906a4ebd009696404f10a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 104.182755
+      value: 83.1
       objectReference: {fileID: 0}
     - target: {fileID: 2305937266004010304, guid: 885ebdbb83b906a4ebd009696404f10a,
         type: 3}
@@ -2977,6 +2978,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4078540576596802086, guid: fb229ca072bd53040853c82d0817a796,
     type: 3}
   m_PrefabInstance: {fileID: 503799510}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1625889727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7982308188281278617, guid: e0c4500e7aade8340b1520ace36511f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 225573708}
   m_PrefabAsset: {fileID: 0}
 --- !u!20 &1662923308 stripped
 Camera:
@@ -3976,6 +3983,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2429277554844311588, guid: afa494499e9a2514ba064e8ba0d98af6,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1625889727}
     - target: {fileID: 7763812316574911474, guid: afa494499e9a2514ba064e8ba0d98af6,
         type: 3}
       propertyPath: m_Name
@@ -3984,7 +3996,7 @@ PrefabInstance:
     - target: {fileID: 7763812316574911475, guid: afa494499e9a2514ba064e8ba0d98af6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 204.3
+      value: 165.1
       objectReference: {fileID: 0}
     - target: {fileID: 7763812316574911475, guid: afa494499e9a2514ba064e8ba0d98af6,
         type: 3}

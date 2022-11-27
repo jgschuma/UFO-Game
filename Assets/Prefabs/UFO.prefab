@@ -448,10 +448,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc50ee22fea92c542a1e622094b91b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parTimeInSeconds: 600
+  timeMultiplierForPoints: 10
   timerText: {fileID: 6051096305895616295}
-  milliseconds: 0
-  seconds: 0
-  minutes: 0
 --- !u!1 &235432701577099734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,7 +1558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803ea08340ff35440b8090f72e6b14c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CooldownDuration: 7
+  CooldownDuration: 4
   ProjectileSpeed: 50
   ShootFirePoint: {fileID: 6950142064213894336}
   ShootFirePointRotator: {fileID: 6459055308012190856}
@@ -2176,6 +2175,7 @@ MonoBehaviour:
   invincFlashTime: 0.05
   hurtTag: EnemyAttack
   invincible: 0
+  perHPScore: 50
 --- !u!114 &1411353928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2245,7 +2245,7 @@ MonoBehaviour:
   decelRate: 2
   dashSpeed: 400
   dashCooldownTime: 1
-  dashDecayTime: 0.5
+  dashDecayTime: 0.3
   xSpeed: 0
   ySpeed: 0
   currMaxSpeed: 0

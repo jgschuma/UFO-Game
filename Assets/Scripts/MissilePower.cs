@@ -42,7 +42,7 @@ public class MissilePower : MonoBehaviour
             StartCoroutine(BlowUpBuffer());
             DisableUFOControls();
         }
-        else if (HasMissile == true){
+        else if (HasMissile == true && !OnCooldown){
             MainCamera.transform.position = LiveMissile.transform.position + new Vector3(0, 0, -10);
             //If UFO is hurt while controlling missile, restore control to UFO and disable controls to missile
             if (UFO.GetComponent<Animator>().GetBool("hurt"))
@@ -60,7 +60,12 @@ public class MissilePower : MonoBehaviour
     void OnDestroy(){
         FindObjectOfType<AudioManager>().Play("Explosion");
         HasMissile = false;
-        CameraWait();
+        //If not on CoolDown yet, the missile detonated while the player was still in control
+        if (!OnCooldown)
+            CameraWait();
+        //If CoolDown was already on, control was lost and missile was moving independently, disable cooldown
+        else
+            OnCooldown = false;
     }
 
     // The camera will hang for a bit after the missile blows up so the user can see the effect
@@ -111,5 +116,6 @@ public class MissilePower : MonoBehaviour
         UFO.GetComponent<BeamController>().enabled = true;
         UFO.GetComponent<GetControllerInput>().enabled = true;
         satelliteDish.SetBool("missileActive", false);
+        OnCooldown = true;
     }
 }

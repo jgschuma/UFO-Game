@@ -6,12 +6,36 @@ public class DropOffHandler : MonoBehaviour
 {
     private Animator anim;
     private GameObject acquireText;
+    private Timer timer;
+    private int numItemsAquired = 0;
+
+    public int AllClearBonus;
+    public float minPVPercentageMult;
+
+    [Header("Base Item Point Values")]
+    public int basePV_BlackHole;
+    public int basePV_Bomber;
+    public int basePV_Flamethrower;
+    public int basePV_Gunner;
+    public int basePV_Laser;
+    public int basePV_Missile;
+    public int basePV_Shield;
+    public int basePV_Twister;
+    public int basePV_Warp;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = transform.parent.transform.Find("Console").GetComponent<Animator>();
         acquireText = (GameObject)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ItemPopUp.prefab", typeof(GameObject));
+        timer = FindObjectOfType<Timer>();
+    }
+
+    void Update(){
+        if (numItemsAquired == 9){
+            numItemsAquired = 0;
+            AustinEventManager.ScorePoints(AllClearBonus);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -22,24 +46,43 @@ public class DropOffHandler : MonoBehaviour
         {
             Debug.Log("It's " + other.gameObject.name);
             //Update static screens
-            if (other.gameObject.name == "BlackHolePickup")
+            if (other.gameObject.name == "BlackHolePickup"){
                 anim.SetBool("gotBlackHole", true);
-            else if (other.gameObject.name == "BomberPickup")
+                ScorePickup(basePV_BlackHole);
+                numItemsAquired++;
+            } else if (other.gameObject.name == "BomberPickup"){
                 anim.SetBool("gotBomber", true);
-            else if (other.gameObject.name == "FlamethrowerPickup")
+                ScorePickup(basePV_Bomber);
+                numItemsAquired++;
+            } else if (other.gameObject.name == "FlamethrowerPickup"){
                 anim.SetBool("gotFlame", true);
-            else if (other.gameObject.name == "GunnerPickup")
+                ScorePickup(basePV_Flamethrower);
+                numItemsAquired++;
+            } else if (other.gameObject.name == "GunnerPickup"){
                 anim.SetBool("gotGunner", true);
-            else if (other.gameObject.name == "LaserPickup")
+                ScorePickup(basePV_Gunner);
+                numItemsAquired++;
+            } else if (other.gameObject.name == "LaserPickup"){
                 anim.SetBool("gotLaser", true);
-            else if (other.gameObject.name == "MissilePickup")
+                ScorePickup(basePV_Laser);
+                numItemsAquired++;
+            } else if (other.gameObject.name == "MissilePickup"){
                 anim.SetBool("gotMissile", true);
-            else if (other.gameObject.name == "ShieldPickup")
+                ScorePickup(basePV_Missile);
+                numItemsAquired++;
+            } else if (other.gameObject.name == "ShieldPickup"){
                 anim.SetBool("gotShield", true);
-            else if (other.gameObject.name == "TwisterPickup")
+                ScorePickup(basePV_Shield);
+                numItemsAquired++;
+            } else if (other.gameObject.name == "TwisterPickup"){
                 anim.SetBool("gotTwister", true);
-            else if (other.gameObject.name == "WarpPickupActive")
+                ScorePickup(basePV_Twister);
+                numItemsAquired++;
+            } else if (other.gameObject.name == "WarpPickupActive"){
                 anim.SetBool("gotWarp", true);
+                ScorePickup(basePV_Warp);
+                numItemsAquired++;
+            }
             //Display acquisition 
             acquireText.GetComponent<SpriteRenderer>().sprite = other.gameObject.GetComponent<ItemPickup>().pickupNameSprite;
             acquireText.transform.Find("ItemSuffix").GetComponent<SpriteRenderer>().enabled = true;
@@ -50,5 +93,28 @@ public class DropOffHandler : MonoBehaviour
             //Remove item pickup
             Destroy(other.gameObject);
         }
+    }
+
+    void ScorePickup(int basePV){
+        // Get the current time
+        float currentTime = timer.CalculateCurrentTime();
+        Debug.Log("time on deposit: " + currentTime + "s");
+
+        // Get a percentage of time with 100% being the start, and 0% being the par time defined in the timer
+        float timePercentage = (timer.parTimeInSeconds - currentTime) / timer.parTimeInSeconds;
+        Debug.Log("timePercentage: " + timePercentage);
+
+        // If the time percentage is too low, items are worth nothing. This check stops that
+        // and makes the items worth at least a little bit
+        if (timePercentage < minPVPercentageMult){
+            timePercentage = minPVPercentageMult;
+        }
+        Debug.Log("timePercentage after Check: " + timePercentage);
+
+        // Calculate the score by multipling the basePV by the timePercentage
+        int pvToScore = (int)Mathf.Floor(basePV * timePercentage);
+        Debug.Log("PV to Score: " + pvToScore);
+
+        AustinEventManager.ScorePoints(pvToScore);
     }
 }

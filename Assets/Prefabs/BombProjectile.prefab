@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5444981899966968982}
   - component: {fileID: 5444981899966968983}
   - component: {fileID: 5444981899966968976}
-  m_Layer: 17
+  m_Layer: 0
   m_Name: BombProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ MonoBehaviour:
   ThisRigidBody: {fileID: 5444981899966968981}
   DespawnTimer: 5
   PrimeTimer: 0.5
-  BoomTimer: 0.25
+  BoomTimer: 0
   isPrime: 0
   BombAnim: {fileID: 5444981899966968980}
   ExplosionPrefab: {fileID: 4417868481925550059, guid: 2cd62b07fa21d6f499b8ef269345adbd,

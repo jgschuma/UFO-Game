@@ -141,13 +141,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9d362d755aca34dac3b9ce371e5b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointValue: 0
+  pointValue: 40
   health: 3
   invincibilityPeriod: 1
   hurtPeriod: 1
   invincFlashTime: 0.05
   hurtTag: PlayerAttack
   invincible: 0
+  perHPScore: 0
 --- !u!114 &1149775499662801612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,7 +315,7 @@ GameObject:
   - component: {fileID: 4673586621638360320}
   - component: {fileID: 8219930349810541619}
   - component: {fileID: 1317237167448534443}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: ContactDamage
   m_TagString: EnemyAttack
   m_Icon: {fileID: 0}

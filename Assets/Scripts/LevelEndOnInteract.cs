@@ -24,10 +24,14 @@ public class LevelEndOnInteract : MonoBehaviour
         //It's the player, end the level
         if(other.gameObject.name == player.name && other.gameObject.tag == player.tag)
         {
+            FindObjectOfType<AudioManager>().StopInteractable("UFOMovement");
+            AustinEventManager.GameOver(false);
             other.gameObject.transform.Find("Main Camera").parent = null;
             other.gameObject.transform.Find("UI").parent = null;
             Destroy(other.gameObject);
             anim.SetTrigger("levelEnded");
+            //end the game, with a reason other than death
+            
         }
     }
 }

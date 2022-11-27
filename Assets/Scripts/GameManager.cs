@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     private GameObject mainMenu;
     private GameObject optionsMenu;
     private GameObject scoreMenu;
+
+    
     
 
     private Text HighName1;
@@ -25,14 +27,14 @@ public class GameManager : MonoBehaviour
 
     //Sub to events
     private void OnEnable() {
-        AustinEventManager.onPlayerDeath += GameOver;
         AustinEventManager.onNewHighScore += SetNewName;
+        AustinEventManager.onFinishScoreCalc += ResetTime;
     }
 
     //Unsub from events
     private void OnDisable() {
-        AustinEventManager.onPlayerDeath -= GameOver;
         AustinEventManager.onNewHighScore -= SetNewName;
+        AustinEventManager.onFinishScoreCalc -= ResetTime;
     }
 
     void Awake(){
@@ -65,9 +67,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
     }
 
-    void GameOver(){
+
+    void ResetTime(){
         StartCoroutine(Reset());
     }
 
