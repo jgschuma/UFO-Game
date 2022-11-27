@@ -9,7 +9,7 @@ public class GeyserSpewFlame : MonoBehaviour
     public float flameDelay = 2f;
 
     private GameObject player;
-    private float deactivateDistance = 250f;
+    private float deactivateDistance = 300f;
     private float distanceToPlayer;
     private Coroutine lastCoroutine;
     
@@ -20,12 +20,8 @@ public class GeyserSpewFlame : MonoBehaviour
         player = GameObject.Find("UFO");
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-/*        player = GameObject.Find("UFO");
-        if (player != null)
-        {*/
             distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
             if (distanceToPlayer <= deactivateDistance && lastCoroutine == null)
                 lastCoroutine = StartCoroutine(SpewFlame());
@@ -34,7 +30,6 @@ public class GeyserSpewFlame : MonoBehaviour
                 StopCoroutine(lastCoroutine);
                 lastCoroutine = null;
             }
-/*        }*/
     }
 
     IEnumerator SpewFlame()

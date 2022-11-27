@@ -15,7 +15,7 @@ public class WarpPower : MonoBehaviour
 
     public static event Action PowerWarp;
     
-    void Update(){
+    void FixedUpdate(){
         // While holding the WarpPower pressing Fire2 allows the player to Warp to start
         if(Input.GetButton("Fire2") && WarpInProgress == false){
             WarpInProgress = true;

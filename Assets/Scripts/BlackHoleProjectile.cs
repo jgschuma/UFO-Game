@@ -13,12 +13,6 @@ public class BlackHoleProjectile : MonoBehaviour
         StartCoroutine(Detonate());
     }
 
-    // Update is called once per frame
-/*    void Update()
-    {
-        
-    }*/
-
     IEnumerator Detonate()
     {
         yield return new WaitForSeconds(timeUntilDetonation);
