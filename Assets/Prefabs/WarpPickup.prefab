@@ -193,7 +193,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThisRigidBody: {fileID: 9131748169706767887}
   TractorBeam: {fileID: 0}
-  ThisPickup: {fileID: 9131748169706767891}
   ThisPower: {fileID: 0}
   DropPickup: {fileID: 0}
   pickupNameSprite: {fileID: -1158078116603615975, guid: 655b56604cd0eb947a93e20d01ff27f4,
@@ -201,4 +200,6 @@ MonoBehaviour:
   discoveryText: {fileID: 4879367822823798030, guid: 655b56604cd0eb947a93e20d01ff27f4,
     type: 3}
   acquiredText: {fileID: 2043329129422224572, guid: 655b56604cd0eb947a93e20d01ff27f4,
+    type: 3}
+  pickupText: {fileID: 7178091655648059580, guid: e1dad931f77ecb14da1b08d23dab73af,
     type: 3}

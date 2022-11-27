@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 5444981899966968979}
   - component: {fileID: 5444981899966968980}
   - component: {fileID: 5444981899966968981}
-  - component: {fileID: 5444981899966968982}
+  - component: {fileID: -1983852484096129734}
   - component: {fileID: 5444981899966968983}
   - component: {fileID: 5444981899966968976}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: BombProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!58 &5444981899966968982
+--- !u!58 &-1983852484096129734
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,7 +142,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 6
 --- !u!58 &5444981899966968983
 CircleCollider2D:
   m_ObjectHideFlags: 0

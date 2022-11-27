@@ -5,7 +5,7 @@ using UnityEngine;
 public class DropOffHandler : MonoBehaviour
 {
     private Animator anim;
-    private GameObject acquireText;
+    public GameObject acquireText;
     private Timer timer;
     private int numItemsAquired = 0;
 
@@ -27,11 +27,10 @@ public class DropOffHandler : MonoBehaviour
     void Start()
     {
         anim = transform.parent.transform.Find("Console").GetComponent<Animator>();
-        acquireText = (GameObject)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/ItemPopUp.prefab", typeof(GameObject));
         timer = FindObjectOfType<Timer>();
     }
 
-    void Update(){
+    void FixedUpdate(){
         if (numItemsAquired == 9){
             numItemsAquired = 0;
             AustinEventManager.ScorePoints(AllClearBonus);
@@ -82,6 +81,8 @@ public class DropOffHandler : MonoBehaviour
                 anim.SetBool("gotWarp", true);
                 ScorePickup(basePV_Warp);
                 numItemsAquired++;
+                //Disable warp rift start
+                Destroy(GameObject.Find("WarpRiftStart"));
             }
             //Display acquisition 
             acquireText.GetComponent<SpriteRenderer>().sprite = other.gameObject.GetComponent<ItemPickup>().pickupNameSprite;

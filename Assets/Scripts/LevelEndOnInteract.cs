@@ -13,12 +13,6 @@ public class LevelEndOnInteract : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-/*    // Update is called once per frame
-    void Update()
-    {
-
-    }*/
-
     void OnTriggerStay2D(Collider2D other)
     {
         //It's the player, end the level
@@ -26,12 +20,12 @@ public class LevelEndOnInteract : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().StopInteractable("UFOMovement");
             AustinEventManager.GameOver(false);
+            other.gameObject.transform.Find("UI").GetComponent<Timer>().timerOn = false;
             other.gameObject.transform.Find("Main Camera").parent = null;
             other.gameObject.transform.Find("UI").parent = null;
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             anim.SetTrigger("levelEnded");
             //end the game, with a reason other than death
-            
         }
     }
 }

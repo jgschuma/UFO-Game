@@ -8,8 +8,8 @@ public class WarpPower : MonoBehaviour
     public GameObject WarpPrefab;
     public Camera MainCam;
     public Transform WarpLocation;
-    private bool WarpInProgress = false;
-    private bool isFinished;
+    public bool WarpInProgress = false;
+    //private bool isFinished;
     public GameObject Player;
     private Animator WarpAnim;
 
@@ -31,7 +31,6 @@ public class WarpPower : MonoBehaviour
             */
             PowerWarp?.Invoke();
             Player.transform.position = WarpLocation.position;
-
          
             WarpInProgress = false;
             WarpAnim.SetBool("TeleportDone", true);

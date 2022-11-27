@@ -38,6 +38,7 @@ public class Enemy_GroundJump : MonoBehaviour
     [Header("Other")]
     public Rigidbody2D rb;
     private float moveDirection = 1;
+    private float originalGravity;
     //private bool facingRight = true;
 
     private Animator anim;
@@ -52,7 +53,12 @@ public class Enemy_GroundJump : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.SetBool("faceRight", GetComponent<SpriteRenderer>().flipX);
         if (!anim.GetBool("faceRight"))
+        {
             moveDirection = -1;
+            groundCheckPoint.localPosition = new Vector3(groundCheckPoint.localPosition.x*-1, groundCheckPoint.localPosition.y, groundCheckPoint.localPosition.z);
+            wallCheckPoint.localPosition = new Vector3(wallCheckPoint.localPosition.x * -1, wallCheckPoint.localPosition.y, wallCheckPoint.localPosition.z);
+        }
+        originalGravity = rb.gravityScale;
     }
 
     // Update is called once per frame
@@ -60,6 +66,8 @@ public class Enemy_GroundJump : MonoBehaviour
     {
         if (anim.GetInteger("health") == 0)
         {
+            rb.gravityScale = 100;
+            gameObject.transform.Find("ContactDamage").gameObject.SetActive(false);
             StopCoroutine(JumpAttack());
             //Doesn't make enemy fly in right direction 100% of the time, needs fixing
             if (anim.GetBool("faceRight"))
@@ -72,6 +80,7 @@ public class Enemy_GroundJump : MonoBehaviour
         {
             touchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, checksCircleRadius, groundLayer);
             touchingWall = Physics2D.OverlapCircle(wallCheckPoint.position, checksCircleRadius, groundLayer);
+
             if (!canSeePlayer)
             {
                 canSeePlayer = Physics2D.OverlapBox(alertCenter.position, alertZone, 0, playerLayer);
@@ -111,25 +120,12 @@ public class Enemy_GroundJump : MonoBehaviour
             if (contact.y > 0)
             {
                 isGrounded = true;
+                rb.gravityScale = originalGravity;
                 //Try to target player again
                 canSeePlayer = Physics2D.OverlapBox(alertCenter.position, alertZone, 0, playerLayer);
             }
         }
-/*        else if (other.gameObject.name == "ShieldPower")
-        {
-            Debug.Log("It works?");
-            rb.velocity = (new Vector2(hurtKnockback * -Math.Sign(contact.x), hurtPopUp));
-        }*/
     }
-
-/*    void OnTriggerEnter2D(Collision2D other)
-    {
-*//*        Vector2 contact = other.GetContact(0).normal;
-        if (other.gameObject.name == "ShieldPower")
-        {
-            rb.velocity = (new Vector2(hurtKnockback * Math.Sign(contact.x), hurtPopUp));
-        }*//*
-    }*/
 
     void Patrolling(){
         if(!Physics2D.OverlapCircle(new Vector2 (groundCheckPoint.transform.position.x, groundCheckPoint.transform.position.y), checksCircleRadius, groundLayer) || touchingWall){
@@ -142,9 +138,10 @@ public class Enemy_GroundJump : MonoBehaviour
         allowJump = false;
         anim.SetBool("targetingPlayer", true);
         yield return new WaitForSeconds(jumpCooldown);
-        //jump!
         float distanceFromPlayer = player.position.x - transform.position.x;
+        //jump!
         if (isGrounded){
+            rb.gravityScale = 100;
             rb.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
             anim.SetBool("inAir", true);
             isGrounded = false;
@@ -156,13 +153,15 @@ public class Enemy_GroundJump : MonoBehaviour
         moveDirection *= -1;
         //facingRight = !facingRight;
         anim.SetBool("faceRight", !anim.GetBool("faceRight"));
+        groundCheckPoint.localPosition = new Vector3(groundCheckPoint.localPosition.x * -1, groundCheckPoint.localPosition.y, groundCheckPoint.localPosition.z);
+        wallCheckPoint.localPosition = new Vector3(wallCheckPoint.localPosition.x * -1, wallCheckPoint.localPosition.y, wallCheckPoint.localPosition.z);
     }
 
     private void OnDrawGizmos() {
         //BLUE -- For checking if about to patroll into a wall or off a cliff
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(groundCheckPoint.position, checksCircleRadius);
-        Gizmos.DrawWireSphere(wallCheckPoint.position, checksCircleRadius);
+        Gizmos.DrawWireSphere(groundCheckPoint.position, 1);
+        Gizmos.DrawWireSphere(wallCheckPoint.position, 1);
 
         //RED -- Alert Area
         Gizmos.color = Color.red;

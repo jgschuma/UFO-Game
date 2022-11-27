@@ -13,7 +13,7 @@ public class UpdateUFOHealthUI : MonoBehaviour
     }
     
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         healthUI.SetInteger("health", healthUFO.health);
     }

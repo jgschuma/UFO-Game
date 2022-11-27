@@ -41,6 +41,7 @@ public class Enemy_GroundStationaryShoot: MonoBehaviour
         //Enemy is dead, turn everything off
         if(anim.GetInteger("health") == 0)
         {
+            GetComponent<CircleCollider2D>().enabled = false;
             GetComponent<EntityHealth>().enabled = false;
             GetComponent<Enemy_GroundStationaryShoot>().enabled = false;
         }

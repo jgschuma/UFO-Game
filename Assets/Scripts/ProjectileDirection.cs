@@ -21,14 +21,9 @@ public class ProjectileDirection : MonoBehaviour
             StartCoroutine(CountdownTimer());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        movement = new Vector3((float)(Math.Sin(GetDirectionInRadians()) * speed), (float)(Math.Cos(GetDirectionInRadians()) * speed), 0).normalized;
-    }
-
     void FixedUpdate()
     {
+        movement = new Vector3((float)(Math.Sin(GetDirectionInRadians()) * speed), (float)(Math.Cos(GetDirectionInRadians()) * speed), 0).normalized;
         proj_Rigidbody.MovePosition(transform.position + movement * speed * Time.deltaTime);
     }
 

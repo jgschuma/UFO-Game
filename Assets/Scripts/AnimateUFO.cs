@@ -16,8 +16,7 @@ public class AnimateUFO : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         // Set the movement vector for use in FixedUpdate()
         anim.SetInteger("HoriInput", Math.Sign(cont.horizontalInput));
