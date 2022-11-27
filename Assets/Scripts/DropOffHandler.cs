@@ -30,7 +30,7 @@ public class DropOffHandler : MonoBehaviour
         timer = FindObjectOfType<Timer>();
     }
 
-    void Update(){
+    void FixedUpdate(){
         if (numItemsAquired == 9){
             numItemsAquired = 0;
             AustinEventManager.ScorePoints(AllClearBonus);
