@@ -1464,6 +1464,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 376630
   ImpactOffset: -8
+  MaxDistance: 100
 --- !u!212 &7111197196864003327
 SpriteRenderer:
   m_ObjectHideFlags: 0
