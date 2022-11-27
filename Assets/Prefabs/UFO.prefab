@@ -435,7 +435,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 6493591414821502957}
-  highScoreText: {fileID: 0}
 --- !u!114 &280561921871661932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1463,6 +1462,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 900918
   ImpactOffset: -8
+  MaxDistance: 100
 --- !u!212 &7111197196864003327
 SpriteRenderer:
   m_ObjectHideFlags: 0
