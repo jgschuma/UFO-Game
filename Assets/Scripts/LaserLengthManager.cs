@@ -21,7 +21,7 @@ public class LaserLengthManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Create the raycastHit2D that we'll store our raycast data in
         RaycastHit2D raycastHit2D = Physics2D.Raycast(FirePoint.transform.position, Vector3.up, layerMask);

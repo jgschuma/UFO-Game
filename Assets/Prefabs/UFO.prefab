@@ -450,6 +450,7 @@ MonoBehaviour:
   parTimeInSeconds: 600
   timeMultiplierForPoints: 10
   timerText: {fileID: 6051096305895616295}
+  timerOn: 1
 --- !u!1 &235432701577099734
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +498,7 @@ MonoBehaviour:
     type: 3}
   MainCam: {fileID: 7982308188969726374}
   WarpLocation: {fileID: 0}
+  WarpInProgress: 0
   Player: {fileID: 7982308188281278617}
 --- !u!1 &923969519365598074
 GameObject:
@@ -1267,7 +1269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -110.1001, y: -70}
+  m_AnchoredPosition: {x: -87.53, y: -40}
   m_SizeDelta: {x: 175.06033, y: 61.286766}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9009101537479183959
@@ -1298,13 +1300,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 8e2339f5378b2e144b6981edcc92092a, type: 3}
     m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2189,13 +2191,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9d362d755aca34dac3b9ce371e5b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointValue: 0
   health: 3
   invincibilityPeriod: 2.5
   hurtPeriod: 1
   invincFlashTime: 0.05
   hurtTag: EnemyAttack
   invincible: 0
+  pointValue: 0
   perHPScore: 700
 --- !u!114 &1411353928
 MonoBehaviour:
@@ -2806,7 +2808,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 8e2339f5378b2e144b6981edcc92092a, type: 3}
     m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0

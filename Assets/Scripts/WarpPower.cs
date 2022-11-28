@@ -8,14 +8,14 @@ public class WarpPower : MonoBehaviour
     public GameObject WarpPrefab;
     public Camera MainCam;
     public Transform WarpLocation;
-    private bool WarpInProgress = false;
-    private bool isFinished;
+    public bool WarpInProgress = false;
+    //private bool isFinished;
     public GameObject Player;
     private Animator WarpAnim;
 
     public static event Action PowerWarp;
     
-    void Update(){
+    void FixedUpdate(){
         // While holding the WarpPower pressing Fire2 allows the player to Warp to start
         if(Input.GetButton("Fire2") && WarpInProgress == false){
             WarpInProgress = true;

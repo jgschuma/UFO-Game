@@ -35,7 +35,7 @@ public class EntityHealth : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //Reduce iFrames if they exist
         if (invincibilityLeft > 0)
