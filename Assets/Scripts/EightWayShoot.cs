@@ -13,8 +13,6 @@ public class EightWayShoot : MonoBehaviour
     private int ProjectileDirection;
     [Tooltip("Where does the projectile instantiate")]
     public GameObject ShootFirePoint;
-    [Tooltip("The GameObject Rotating our firePoint (usually it's parent)")]
-    public GameObject ShootFirePointRotator;
     [Tooltip("The prefab to instantiate")]
     public GameObject ProjectilePrefab;
     public Animator shootingModAnim;
@@ -32,7 +30,6 @@ public class EightWayShoot : MonoBehaviour
     {
         // Set ProjectileDirection to the right to match firepoint direction default
         ProjectileDirection = 90;
-        //shootingModAnim.SetInteger("direction", ProjectileDirection);
     }
 
     // Update is called once per frame
@@ -115,8 +112,8 @@ public class EightWayShoot : MonoBehaviour
         //Update fire point direction
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
-            Debug.Log("Direction: " + ProjectileDirection);
-            ShootFirePoint.transform.localPosition = new Vector3(8f * (float)Math.Sin(ProjectileDirection * Math.PI / 180), 8f * (float)Math.Cos(ProjectileDirection * Math.PI / 180), 0f);
+            //Debug.Log("Direction: " + ProjectileDirection);
+            ShootFirePoint.transform.localPosition = new Vector3((float)Math.Ceiling(8 * Math.Sin(ProjectileDirection * Math.PI / 180)), (float)Math.Ceiling(8 * Math.Cos(ProjectileDirection * Math.PI / 180)), 0f);
             shootingModAnim.SetInteger("direction", ProjectileDirection);
         }
     }

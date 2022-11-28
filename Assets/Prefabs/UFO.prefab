@@ -1322,7 +1322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8606904348418511526}
-  - component: {fileID: 8820555705844877084}
+  - component: {fileID: 8797458724058194452}
   m_Layer: 0
   m_Name: GunnerPower
   m_TagString: Untagged
@@ -1345,7 +1345,7 @@ Transform:
   m_Father: {fileID: 7982308187387988244}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8820555705844877084
+--- !u!114 &8797458724058194452
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1354,15 +1354,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4189284486703974659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb41021217ae9164998dd39784571884, type: 3}
+  m_Script: {fileID: 11500000, guid: 803ea08340ff35440b8090f72e6b14c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CooldownDuration: 0.1
-  BulletSpeed: 500
-  GunnerFirePoint: {fileID: 8907518886213084335}
-  GunnerBulletPrefab: {fileID: 5795454818415582696, guid: 17940bb1311d194438539b5d13621d70,
+  ProjectileSpeed: 500
+  ShootFirePoint: {fileID: 8907518886213084335}
+  ProjectilePrefab: {fileID: 5795454818415582696, guid: 17940bb1311d194438539b5d13621d70,
     type: 3}
-  bulletOffset: 2
+  shootingModAnim: {fileID: 5376758279175236068}
+  ProjectileOffset: 2
 --- !u!1 &5319840203183185690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,7 +1463,7 @@ MonoBehaviour:
   LaserImpact: {fileID: 4070652623648770759}
   layerMask:
     serializedVersion: 2
-    m_Bits: 376630
+    m_Bits: 73728
   ImpactOffset: -8
   MaxDistance: 100
 --- !u!212 &7111197196864003327
@@ -1563,10 +1564,9 @@ MonoBehaviour:
   CooldownDuration: 4
   ProjectileSpeed: 50
   ShootFirePoint: {fileID: 6950142064213894336}
-  ShootFirePointRotator: {fileID: 6459055308012190856}
   ProjectilePrefab: {fileID: 793278002603101985, guid: f1dd6e56b6b46c44fa9956ea68bd5382,
     type: 3}
-  shootingModAnim: {fileID: 0}
+  shootingModAnim: {fileID: 1773739794435959341}
   ProjectileOffset: 0
 --- !u!1 &6950142064213894336
 GameObject:
@@ -2265,9 +2265,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 270
-  moveAccel: 3
+  moveAccel: 10
   decelRate: 2
-  dashSpeed: 400
+  dashSpeed: 430
   dashCooldownTime: 1
   dashDecayTime: 0.3
   xSpeed: 0
@@ -2275,9 +2275,9 @@ MonoBehaviour:
   currMaxSpeed: 0
   dashCooldown: 0
   dashDecay: 0
+  movement: {x: 0, y: 0, z: 0}
   horizontalInput: 0
   verticalInput: 0
-  movement: {x: 0, y: 0, z: 0}
 --- !u!114 &5929339704604932273
 MonoBehaviour:
   m_ObjectHideFlags: 0

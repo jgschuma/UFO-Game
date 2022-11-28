@@ -20,10 +20,12 @@ public class PlayerController : MonoBehaviour
     public float dashDecay = 0;
     private Rigidbody2D UFO_Rigidbody;
     private GetControllerInput contInput;
-    public float horizontalInput;
-    public float verticalInput;
     public Vector3 movement;
     BeamController beamControl;
+
+    public float horizontalInput;
+    public float verticalInput;
+    private bool dashButtonPressed;
 
     // Start is called when the game starts
     private void Start()
@@ -43,9 +45,15 @@ public class PlayerController : MonoBehaviour
         // Checks to see if the horzontal or vertical inputs are being pressed
         horizontalInput = contInput.horizontalInput;
         verticalInput = contInput.verticalInput;
+        if (contInput.GetButtonDown("Fire2"))
+            dashButtonPressed = true;
+    }
 
+    // We use FixedUpdate to actually move the player to avoid frame rate causing a difference in move speed
+    void FixedUpdate()
+    {
         //If the button is pressed, the UFO has no item, and the cooldown has worn off, DASH
-        if (contInput.GetButtonDown("Fire2") && beamControl.hasItem == false && dashCooldown == 0 && (horizontalInput != 0 || verticalInput != 0))
+        if (dashButtonPressed && beamControl.hasItem == false && dashCooldown == 0 && (horizontalInput != 0 || verticalInput != 0))
         {
             FindObjectOfType<AudioManager>().Play("Dash");
             xSpeed = dashSpeed * horizontalInput;
@@ -63,7 +71,7 @@ public class PlayerController : MonoBehaviour
                 currMaxSpeed = Math.Min(currMaxSpeed, (float)Math.Sqrt(Math.Pow(xSpeed, 2) + Math.Pow(ySpeed, 2)));
                 currMaxSpeed = Math.Max(currMaxSpeed, moveSpeed);
             }
-            
+
             //If no direction is being held, decelerate
             if (horizontalInput == 0)
                 xSpeed = Math.Max(Math.Abs(xSpeed) - moveAccel, 0) * Math.Sign(xSpeed);
@@ -93,11 +101,8 @@ public class PlayerController : MonoBehaviour
         }
         else
             movement = new Vector3(xSpeed, ySpeed, 0);
-    }
 
-    // We use FixedUpdate to actually move the player to avoid frame rate causing a difference in move speed
-    void FixedUpdate()
-    {
+        //Actually move the UFO
         UFO_Rigidbody.MovePosition(transform.position + movement * Time.deltaTime);
         if (dashCooldown > 0)
             dashCooldown = Math.Max(dashCooldown - Time.deltaTime, 0);
@@ -107,6 +112,9 @@ public class PlayerController : MonoBehaviour
             FindObjectOfType<AudioManager>().StopInteractable("UFOMovement");
         else
             FindObjectOfType<AudioManager>().PlayInteractable("UFOMovement");
+
+        //Reset the dash button pressed check
+        dashButtonPressed = false;
     }
 
     public double GetDirectionInRadians()

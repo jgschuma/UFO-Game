@@ -38,9 +38,6 @@ public class LaserLengthManager : MonoBehaviour
             
             Vector3 middlePoint = (FirePoint.transform.position + HitLocation)/2f;
             LaserLine.transform.position = middlePoint;
-
-            // Here we can check to see if an enemy was hit and we can have them take damage
-                // Do the damage check
         }
         else{
             Vector3 HitLocation = FirePoint.transform.position + new Vector3(0, MaxDistance, 0);
