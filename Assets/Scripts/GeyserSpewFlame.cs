@@ -37,7 +37,7 @@ public class GeyserSpewFlame : MonoBehaviour
         yield return new WaitForSeconds(flameDelay);
         //Debug.Log("Dir: " + -transform.rotation.eulerAngles.z);
         flamePrefab.GetComponent<ProjectileDirection>().direction = -transform.rotation.eulerAngles.z;
-        Instantiate(flamePrefab, transform.position, Quaternion.Euler(0, 0, 0));
+        Instantiate(flamePrefab, transform.position, Quaternion.identity);
         lastCoroutine = StartCoroutine(SpewFlame());
     }
 }
