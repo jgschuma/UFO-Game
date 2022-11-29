@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class WarpBox : MonoBehaviour
 {
     public GameObject WarpPrefab;
+    public GameObject UFO;
     public Camera MainCam;
     public Transform WarpLocation;
 
@@ -14,6 +16,8 @@ public class WarpBox : MonoBehaviour
     private GameObject Player;
     private Animator WarpAnim;
 
+    public static event Action RiftDisabled;
+
     // Update is called once per frame
     void Update()
     {
@@ -22,7 +26,6 @@ public class WarpBox : MonoBehaviour
         {
             //Debug.Log("THEY DID THE WARP THING :O");
             WarpInProgress = true;
-            // Disable player movement
             // Play warp effect
             GameObject WarpEffect = Instantiate(WarpPrefab, transform.position, Quaternion.identity);
             WarpEffect.GetComponent<Canvas>().worldCamera = MainCam;
@@ -38,12 +41,14 @@ public class WarpBox : MonoBehaviour
             }
     }
 
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
             if(Player == null){
                 Player = other.gameObject;
+                UFO = Player;
             }
             PlayerCollision = true;
             //Debug.Log("Player can do the warp thing :)");
@@ -57,5 +62,12 @@ public class WarpBox : MonoBehaviour
             PlayerCollision = false;
             //Debug.Log("Player can't do the warp thing :(");
         }
+    }
+
+    void OnDisable(){
+        RiftDisabled?.Invoke();
+        WarpInProgress = false;
+        //RestoreUFOControls();
+        Debug.Log("Disable the rift");
     }
 }
