@@ -2603,13 +2603,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '\u2022<indent=1em>Item Implementation</indent>
+  m_text: '\u2022<indent=1em>Item Management</indent>
 
-    \u2022<indent=1em></indent>
+    \u2022<indent=1em>Item
+    Powers</indent>
 
-    \u2022<indent=1em></indent>
+    \u2022<indent=1em>Item Handling</indent>
 
-    \u2022<indent=1em></indent>
+    \u2022<indent=1em>UFO
+    Beam Design</indent>
 
 '
   m_isRightToLeft: 0
@@ -2680,10 +2682,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 576461259}
-    characterCount: 27
+    characterCount: 62
     spriteCount: 0
-    spaceCount: 5
-    wordCount: 2
+    spaceCount: 9
+    wordCount: 9
     linkCount: 0
     lineCount: 4
     pageCount: 1
