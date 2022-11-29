@@ -19,7 +19,7 @@ public class Enemy_AirCharge : MonoBehaviour
     public Rigidbody2D enemyRigidBody;
 
     Animator anim;
-    private bool atHome = true;
+    public bool atHome = true;
     private Vector2 homebase;
     private float distanceToPlayer;
     private float distanceFromHome;
@@ -43,13 +43,13 @@ public class Enemy_AirCharge : MonoBehaviour
         distanceFromHome = Vector2.Distance(transform.position, homebase);
 
         //Enemy is dead, float downward
-        if(anim.GetInteger("health") == 0)
+        if (anim.GetInteger("health") == 0)
         {
             gameObject.transform.Find("ContactDamage").gameObject.SetActive(false);
             transform.position -= new Vector3(0, 0.3f, 0);
         }
         //Enemy is not dead
-        else if(!anim.GetBool("hurt"))
+        else if (!anim.GetBool("hurt"))
         {
             //Flip the sprite if the enemy is Agro'd
             if (anim.GetBool("isTargetingPlayer"))
@@ -64,7 +64,7 @@ public class Enemy_AirCharge : MonoBehaviour
                 else if (distanceFromHome > patrolRange)
                     anim.SetBool("faceRight", !anim.GetBool("faceRight"));
                 //Patrol left and right
-                if(anim.GetBool("faceRight") && atHome)
+                if (anim.GetBool("faceRight") && atHome)
                     transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
                 else if (atHome)
                     transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
@@ -90,6 +90,12 @@ public class Enemy_AirCharge : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, homebase, Math.Min(speed * Time.deltaTime, distanceFromHome));
             }
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "ShieldEffect")
+            atHome = false;
     }
 
     private void OnDrawGizmos()
