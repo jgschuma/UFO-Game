@@ -24,7 +24,7 @@ public class LaserLengthManager : MonoBehaviour
     void FixedUpdate()
     {
         // Create the raycastHit2D that we'll store our raycast data in
-        RaycastHit2D raycastHit2D = Physics2D.Raycast(FirePoint.transform.position, Vector3.up, layerMask);
+        RaycastHit2D raycastHit2D = Physics2D.Raycast(FirePoint.transform.position, Vector3.up, Mathf.Infinity, layerMask);//layerMask);
         //Physics2D.queriesHitTriggers = false;
         if(raycastHit2D && Vector3.Distance(raycastHit2D.point, FirePoint.transform.position) < MaxDistance){
             // Store the location the raycast hit and move the LaserImpact to the Impact location
