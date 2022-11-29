@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     private GameObject mainMenu;
     private GameObject optionsMenu;
     private GameObject scoreMenu;
+    private GameObject creditsMenu;
 
     
     
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour
         mainMenu = GameObject.Find("MainCanvas/MainMenu");
         optionsMenu = GameObject.Find("MainCanvas/OptionsMenu");
         scoreMenu = GameObject.Find("MainCanvas/Scores");
+        creditsMenu = GameObject.Find("MainCanvas/Credits");
         HighName1 = GameObject.Find("MainCanvas/Scores/Canvas/HighName1").GetComponent<Text>();
         HighName2 = GameObject.Find("MainCanvas/Scores/Canvas/HighName2").GetComponent<Text>();
         HighName3 = GameObject.Find("MainCanvas/Scores/Canvas/HighName3").GetComponent<Text>();
@@ -62,6 +64,7 @@ public class GameManager : MonoBehaviour
         mainMenu.SetActive(true);
         optionsMenu.SetActive(false);
         scoreMenu.SetActive(false);
+        creditsMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -121,6 +124,7 @@ public class GameManager : MonoBehaviour
             mainMenu = GameObject.Find("MainCanvas/MainMenu");
             optionsMenu = GameObject.Find("MainCanvas/OptionsMenu");
             scoreMenu = GameObject.Find("MainCanvas/Scores");
+            creditsMenu = GameObject.Find("MainCanvas/Credits");
             HighName1 = GameObject.Find("MainCanvas/Scores/Canvas/HighName1").GetComponent<Text>();
             HighName2 = GameObject.Find("MainCanvas/Scores/Canvas/HighName2").GetComponent<Text>();
             HighName3 = GameObject.Find("MainCanvas/Scores/Canvas/HighName3").GetComponent<Text>();
@@ -133,6 +137,7 @@ public class GameManager : MonoBehaviour
             mainMenu.SetActive(false);
             optionsMenu.SetActive(false);
             scoreMenu.SetActive(true);
+            creditsMenu.SetActive(false);
             Debug.Log(newNamePos);
             if (newNamePos == 1){
                 Debug.Log("High Score in pos 1");
@@ -152,6 +157,7 @@ public class GameManager : MonoBehaviour
                 mainMenu.SetActive(true);
                 optionsMenu.SetActive(false);
                 scoreMenu.SetActive(false);
+                creditsMenu.SetActive(false);
             }
         };
     }
