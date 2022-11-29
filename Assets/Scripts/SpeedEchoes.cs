@@ -38,6 +38,9 @@ public class SpeedEchoes : MonoBehaviour
                 string spriteID = GetComponent<SpriteRenderer>().sprite.name;
                 spriteID = spriteID.Substring(spriteID.IndexOf('O') + 8);
                 //Debug.Log("Sprite ID: " + spriteID);
+                //The hurt exception, gets the right sprite if the UFO is hurt
+                if (int.Parse(spriteID) >= 35)
+                    spriteID = (int.Parse(spriteID) - 5).ToString();
                 //Change sprite of echo to match current sprite
                 speedEcho.GetComponent<SpriteRenderer>().sprite = (Sprite)echoSprites[int.Parse(spriteID)];
                 speedEcho.GetComponent<SpriteRenderer>().flipX = GetComponent<SpriteRenderer>().flipX;
