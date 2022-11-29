@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
     private GameObject mainMenu;
     private GameObject optionsMenu;
     private GameObject scoreMenu;
+    private GameObject creditsMenu;
 
     public Text highScore1Text;
     public Text highScore2Text;
@@ -32,6 +33,7 @@ public class MainMenu : MonoBehaviour
         mainMenu = GameObject.Find("MainCanvas/MainMenu");
         optionsMenu = GameObject.Find("MainCanvas/OptionsMenu");
         scoreMenu = GameObject.Find("MainCanvas/Scores");
+        creditsMenu = GameObject.Find("MainCanvas/Credits");
     }
 
     void Start(){
