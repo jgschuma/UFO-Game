@@ -24,6 +24,7 @@ public class WarpEffectController : MonoBehaviour
         WarpEffectAnim.SetBool("StartDone", true);
     }
     public void EndAnimisFinished(){
+        WarpBox.RiftDisabled -= WarpAndPickup;
         Destroy(this.gameObject);
     }
 
