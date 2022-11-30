@@ -500,6 +500,7 @@ MonoBehaviour:
   WarpLocation: {fileID: 0}
   WarpInProgress: 0
   Player: {fileID: 7982308188281278617}
+  WarpAnim: {fileID: 0}
 --- !u!1 &923969519365598074
 GameObject:
   m_ObjectHideFlags: 0

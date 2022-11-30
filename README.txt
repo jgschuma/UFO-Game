@@ -24,7 +24,7 @@ HOW TO PLAY: The game consists of a series of caves with hazards, enemies, and p
              finished. The sooner you turn in an item, the more points it will be worth.
 	     Flying into the captain's chair will end the level, awarding bonus points for
 	     the final time and health remaining. The goal of the game is to collect as
-	     as many points as possible as fast as possible and make it out alive.
+	     many points as possible as fast as possible and make it out alive.
 		Good luck.
 
 ABOUT:
