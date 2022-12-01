@@ -5,9 +5,10 @@ using System;
 
 public class WarpProjectile : MonoBehaviour
 {
-    private Animator Anim;
+    public Animator Anim;
+    public GameObject WarpRiftStart;
     private Collider2D[] WarpZone;
-    public static event Action<bool> RiftOpen;
+    //public static event Action<bool> RiftOpen;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class WarpProjectile : MonoBehaviour
     {
         OnTrigger(other);
     }
-    // When the Projectile is on the ground open the rift
+    //When the Projectile is on the ground open the rift
     void OnTrigger(Collider2D other)
     {
         if (other.CompareTag("Terrain") || other.CompareTag("ItemPickup"))
@@ -40,7 +41,10 @@ public class WarpProjectile : MonoBehaviour
             // Create the rift above the puck
             Anim.SetBool("open", true);
             // Also open the start rift
-            RiftOpen?.Invoke(true);
+            if(WarpRiftStart.GetComponent<WarpStart>().Anim.GetBool("open") == false){
+                WarpRiftStart.GetComponent<WarpStart>().CanStartWarp(true);
+            }
+            //RiftOpen?.Invoke(true); // Problem spot???
         }
     }
 
@@ -53,7 +57,8 @@ public class WarpProjectile : MonoBehaviour
             // Close the rift above the puck
             Anim.SetBool("open", false);
             // Also close the start rift
-            RiftOpen?.Invoke(false);
+            //RiftOpen?.Invoke(false);
+            WarpRiftStart.GetComponent<WarpStart>().CanStartWarp(false);
         }
     }
 }

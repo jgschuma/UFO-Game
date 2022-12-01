@@ -6,7 +6,6 @@ using System;
 public class WarpBox : MonoBehaviour
 {
     public GameObject WarpPrefab;
-    public GameObject UFO;
     public Camera MainCam;
     public Transform WarpLocation;
 
@@ -14,7 +13,7 @@ public class WarpBox : MonoBehaviour
     private bool WarpInProgress = false;
     private bool isFinished;
     private GameObject Player;
-    private Animator WarpAnim;
+    public Animator WarpAnim;
 
     public static event Action RiftDisabled;
 
@@ -38,6 +37,7 @@ public class WarpBox : MonoBehaviour
                 // Enable player movement;
                 WarpInProgress = false;
                 WarpAnim.SetBool("TeleportDone", true);
+                WarpAnim = null;
             }
     }
 
@@ -48,7 +48,6 @@ public class WarpBox : MonoBehaviour
         {
             if(Player == null){
                 Player = other.gameObject;
-                UFO = Player;
             }
             PlayerCollision = true;
             //Debug.Log("Player can do the warp thing :)");

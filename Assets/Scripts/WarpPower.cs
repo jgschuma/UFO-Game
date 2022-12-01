@@ -11,13 +11,13 @@ public class WarpPower : MonoBehaviour
     public bool WarpInProgress = false;
     //private bool isFinished;
     public GameObject Player;
-    private Animator WarpAnim;
+    public Animator WarpAnim;
 
     public static event Action PowerWarp;
     
     void Update(){
         // While holding the WarpPower pressing Fire2 allows the player to Warp to start
-        if(Input.GetButton("Fire2") && WarpInProgress == false){
+        if(Input.GetButton("Fire2") && WarpInProgress == false && WarpAnim == null){
             WarpInProgress = true;
             GameObject WarpEffect = Instantiate(WarpPrefab, transform.position, Quaternion.identity);
             WarpEffect.GetComponent<Canvas>().worldCamera = MainCam;
@@ -34,6 +34,7 @@ public class WarpPower : MonoBehaviour
          
             WarpInProgress = false;
             WarpAnim.SetBool("TeleportDone", true);
+            WarpAnim = null;
         }
     }
 
