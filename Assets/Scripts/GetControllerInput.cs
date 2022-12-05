@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 
 public class GetControllerInput : MonoBehaviour
@@ -18,8 +19,15 @@ public class GetControllerInput : MonoBehaviour
     void Update()
     {
         // Checks to see if the horzontal or vertical inputs are being pressed
-        horizontalInput = Math.Sign(Input.GetAxis("Horizontal"));
-        verticalInput = Math.Sign(Input.GetAxis("Vertical"));
+        if (Input.GetButton("Reset"))
+        {
+            ResetGame();
+        }
+        else
+        {
+            horizontalInput = Math.Sign(Input.GetAxis("Horizontal"));
+            verticalInput = Math.Sign(Input.GetAxis("Vertical"));
+        }
     }
 
     public bool GetButton(string _b)
@@ -41,5 +49,11 @@ public class GetControllerInput : MonoBehaviour
     {
         horizontalInput = 0;
         verticalInput = 0;
+    }
+
+    private void ResetGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AustinEventManager.StartGame();
     }
 }
