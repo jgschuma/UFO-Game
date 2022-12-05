@@ -11,6 +11,8 @@ Keyboard / Xbox controller
        Z / A	- Activate tractor beam/drop item
        X / X	- Use ability
        F / Y	- Travel through rift in dropped Warp Rift
+       R / Select - Reset the game
+
 NOTE: Several aspects of the game like menu navigation or entering initials
       for a high score will require use of keyboard and mouse, so not everything
       can be done controller only.
